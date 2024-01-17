@@ -4,5 +4,19 @@
     "lang_selected": "English",
     "main_menu_aria": "Open main menu",
     "main_menu_item_home": "Home",
-    "main_menu_item_services": "Services"
+    "main_menu_item_services": "Services",
+    "services_menu_item_mobile_studio": "Mobile Studio",
+    "services_menu_item_shopify_builders": "Shopify Builders",
+    "services_menu_item_web3_studio": "Web3 Studio",
+    "main_menu_item_portfolio": "Portfolio",
+    "main_menu_item_about_us": "About Us",
+    "about_us_menu_item_our_team": "Our team",
+    "about_us_menu_item_faq": "FAQ",
+    "about_us_menu_item_contact": "Contact",
+    "about_us_menu_item_careers": "Careers",
+    "main_menu_item_blog": "Blog",
+    "main_menu_book_a_call": "Book a Call",
+    "main_menu_lang_eng": "English",
+    "main_menu_lang_es": "Spanish",
+    "main_menu_lang_it": "Italian"
 }

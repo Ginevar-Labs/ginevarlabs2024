@@ -41,38 +41,38 @@ export default function Header() {
                         <div id="dropdownNavbar" className="z-10 hidden font-normal bg-[#FAF9E4] divide-y divide-gray-100 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] w-full lg:w-44 dark:divide-gray-600">
                             <ul className="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
                             <li>
-                            <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">Mobile Studio</a>
+                            <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_mobile_studio')}</a>
                             </li>
                             <li>
-                            <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">Shopify Builders</a>
+                            <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('services_menu_item_shopify_builders')}</a>
                             </li>
                             <li>
-                            <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">Web3 Studio</a>
+                            <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('services_menu_item_web3_studio')}</a>
                             </li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                    <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E] mt-1" aria-current="page">Portfolio</a>
+                    <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E] mt-1" aria-current="page">{t('main_menu_item_portfolio')}</a>
                     </li>
                     
                     <li>
-                        <button id="dropdownNavbarLinkAboutUs" data-dropdown-toggle="dropdownAboutUs" className="flex items-center justify-between w-full py-2 px-3 text-black rounded lg:border-0 lg:p-0 lg:w-auto transition duration-200 fontedBebas hover:text-[#FF78B9] mt-1">About Us <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <button id="dropdownNavbarLinkAboutUs" data-dropdown-toggle="dropdownAboutUs" className="flex items-center justify-between w-full py-2 px-3 text-black rounded lg:border-0 lg:p-0 lg:w-auto transition duration-200 fontedBebas hover:text-[#FF78B9] mt-1">{t('main_menu_item_about_us')} <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
             </svg></button>
                         <div id="dropdownAboutUs" className="z-10 hidden font-normal bg-[#FAF9E4] divide-y divide-gray-100 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] w-44 dark:divide-gray-600">
                             <ul className="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">Our Team</a>
+                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_our_team')}</a>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">FAQ</a>
+                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('about_us_menu_item_faq')}</a>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">Contact</a>
+                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('about_us_menu_item_contact')}</a>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">Careers</a>
+                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_careers')}</a>
                             </li>
                             </ul>
                         </div>
@@ -81,10 +81,10 @@ export default function Header() {
                     <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#6E6E6E] mt-1" aria-current="page">Careers</a>
                     </li> */}
                     <li>
-                    <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page">Blog</a>
+                    <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page">{t('main_menu_item_blog')}</a>
                     </li>
                     <li>
-                    <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button title='Book a call'></Button></a>
+                    <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button title={t('main_menu_book_a_call')}></Button></a>
                     </li>
                     <li>
                     <a href="#" data-dropdown-toggle="dropdownLanguage" className="flex block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page"> <svg className='mt-1 mr-2 hover:text-[#78A6FF]' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 80 80" fill="none">
@@ -104,17 +104,17 @@ export default function Header() {
                             <li>
                                 <a onClick={() => {
                                     router.push('/', undefined, { locale: 'en'})
-                                }} href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">English</a>
+                                }} href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('main_menu_lang_eng')}</a>
                             </li>
                             <li>
                                 <a onClick={() => {
                                     router.push('/', undefined, { locale: 'es'})
-                                }} href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">Spanish</a>
+                                }} href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('main_menu_lang_es')}</a>
                             </li>
                             <li>
                                 <a onClick={() => {
                                     router.push('/', undefined, { locale: 'it'})
-                                }} href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">Italian</a>
+                                }} href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('main_menu_lang_it')}</a>
                             </li>
                             </ul>
                         </div>

@@ -1,4 +1,22 @@
 {
     "app_title": "Ginevar",
-    "lang_selected": "Español"
+    "app_description": "Ginevar",
+    "lang_selected": "Español",
+    "main_menu_aria": "Abrir menu principal",
+    "main_menu_item_home": "Inicio",
+    "main_menu_item_services": "Servicios",
+    "services_menu_item_mobile_studio": "Mobile Studio",
+    "services_menu_item_shopify_builders": "Shopify Builders",
+    "services_menu_item_web3_studio": "Web3 Studio",
+    "main_menu_item_portfolio": "Portfolio",
+    "main_menu_item_about_us": "Quienes Somos",
+    "about_us_menu_item_our_team": "Nuestro equipo",
+    "about_us_menu_item_faq": "Preguntas Frecuentes",
+    "about_us_menu_item_contact": "Contacto",
+    "about_us_menu_item_careers": "Trabaja con nosotros",
+    "main_menu_item_blog": "Blog",
+    "main_menu_book_a_call": "Habla con nosotros",
+    "main_menu_lang_eng": "Ingles",
+    "main_menu_lang_es": "Español",
+    "main_menu_lang_it": "Italiano"
 }
