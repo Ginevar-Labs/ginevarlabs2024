@@ -11,6 +11,7 @@ interface EngineeringBlogBoxProps {
 
 export default function EngineeringBlogBox(props: EngineeringBlogBoxProps) {
     const { t } = useTranslation();
+    const [indexSelected, setIndexSelected] = useState(0);
   
     return (
         <div id='blog' className='my-10'>
@@ -33,40 +34,51 @@ export default function EngineeringBlogBox(props: EngineeringBlogBoxProps) {
                         </div> : null
                     }
                     {
-                        props.posts.length == 1 ? <div className='h-[300px] text-center justify-center items-center p-0'>
-                            <div className='w-full h-full bg-green-200'>
+                        props.posts.length == 1 ? <div className='h-[300px] text-center justify-center items-center p-0 flex'>
+                        {
+                            props.posts.map((item, index) => <div className={`w-full transition-all duration-300 h-full bg-green-200 cursor-pointer`} onClick={() => {
+                                setIndexSelected(index)
+                            }} key={index}>
+                            
                             <figure className={`relative w-full h-full transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0`}>
-                                <a href="/blog/">
-                                    <img src={props.posts[0].image} alt={t(props.posts[0].title)} className='w-full h-full object-cover' />
-                                </a>
+                                
+                                    <img src={item.image} alt={t(item.title)} className='w-full h-full object-cover' />
+                                
                                 <figcaption className={`absolute px-8 py-4 text-lg bottom-0 bg-[#FFF238] transition duration-200  text-white hover:text-[#82A5F8] hover:bg-opacity-100 bg-opacity-75 w-full h-[140px] text-left`}>
-                                {/* <p className={`drop-shadow-[1px_1px_rgba(255,242,56,1)] hover:text-[${props.posts[0].titleColor}]`}>Do you want to get notified when a new component is added to Flowbite?</p> */}
-                                <div className='flex'> <img src={props.posts[0].category.icon} className='w-6 h-6 mr-2' /> <p className={`text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(props.posts[0].category.title, {ns: 'eb'})}</p></div>
-                                <p className={`line-clamp-2 mt-2 text-[36px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(props.posts[0].title, {ns: 'eb'})}</p>
-                                <p className='text-[16px] text-black transition duration-200 opacity-50'>{props.posts[0].date}</p>
+                                <div className='flex'> <img src={item.category.icon} className='w-6 h-6 mr-2' /> <p className={`line-clamp-1 text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(item.category.title, {ns: 'eb'})}</p></div>
+                                <a href={`/blog/${item.url}`}>
+                                <p className={`leading-none line-clamp-2 mt-0 text-[30px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(item.title, {ns: 'eb'})}</p>
+                                <p className='absolute bottom-0 text-[16px] text-black transition duration-200 opacity-50'>{item.date}</p>
+                                </a>
                                 <div></div>
                             </figcaption>
                             </figure>
-                            </div>
-                        </div> : null
+                            
+                            </div>)
+                        }
+                    </div> : null
                     }
                     {
                         props.posts.length == 2 ? <div className='h-[300px] text-center justify-center items-center p-0 flex'>
                             {
-                                props.posts.map((item, index) => <div className={`${index == 0 ? 'w-[65%]' : 'w-[35%]'} h-full bg-green-200`} key={index}>
-                                <a href={`/blog/${item.url}`}>
+                                props.posts.map((item, index) => <div className={`${index == indexSelected ? 'w-[65%]' : 'w-[35%]'} transition-all duration-300 h-full bg-green-200 cursor-pointer`} onClick={() => {
+                                    setIndexSelected(index)
+                                }} key={index}>
+                                
                                 <figure className={`relative w-full h-full transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0`}>
                                     
                                         <img src={item.image} alt={t(item.title)} className='w-full h-full object-cover' />
                                     
                                     <figcaption className={`absolute px-8 py-4 text-lg bottom-0 bg-[#FFF238] transition duration-200  text-white hover:text-[#82A5F8] hover:bg-opacity-100 bg-opacity-75 w-full h-[140px] text-left`}>
-                                    <div className='flex'> <img src={item.category.icon} className='w-6 h-6 mr-2' /> <p className={`text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(item.category.title, {ns: 'eb'})}</p></div>
-                                    <p className={`leading-none line-clamp-2 mt-0 text-[36px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(item.title, {ns: 'eb'})}</p>
+                                    <div className='flex'> <img src={item.category.icon} className='w-6 h-6 mr-2' /> <p className={`line-clamp-1 text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(item.category.title, {ns: 'eb'})}</p></div>
+                                    <a href={`/blog/${item.url}`}>
+                                    <p className={`leading-none line-clamp-2 mt-0 text-[30px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(item.title, {ns: 'eb'})}</p>
                                     <p className='absolute bottom-0 text-[16px] text-black transition duration-200 opacity-50'>{item.date}</p>
+                                    </a>
                                     <div></div>
                                 </figcaption>
                                 </figure>
-                                </a>
+                                
                                 </div>)
                             }
                         </div> : null
@@ -74,20 +86,24 @@ export default function EngineeringBlogBox(props: EngineeringBlogBoxProps) {
                     {
                         props.posts.length == 3 ? <div className='h-[300px] text-center justify-center items-center p-0 flex'>
                             {
-                                props.posts.map((item, index) => <div className={`${index == 0 ? 'w-[50%]' : 'w-[25%]'} h-full bg-green-200`} key={index}>
-                                <a href={`/blog/${item.url}`}>
+                                props.posts.map((item, index) => <div className={`${index == indexSelected ? 'w-[50%]' : 'w-[25%]'} transition-all duration-300 h-full bg-green-200 cursor-pointer`} onClick={() => {
+                                    setIndexSelected(index)
+                                }} key={index}>
+                                
                                 <figure className={`relative w-full h-full transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0`}>
                                     
                                         <img src={item.image} alt={t(item.title)} className='w-full h-full object-cover' />
                                     
                                     <figcaption className={`absolute px-8 py-4 text-lg bottom-0 bg-[#FFF238] transition duration-200  text-white hover:text-[#82A5F8] hover:bg-opacity-100 bg-opacity-75 w-full h-[140px] text-left`}>
-                                    <div className='flex'> <img src={item.category.icon} className='w-6 h-6 mr-2' /> <p className={`text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(item.category.title, {ns: 'eb'})}</p></div>
-                                    <p className={`leading-none line-clamp-2 mt-0 text-[36px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(item.title, {ns: 'eb'})}</p>
+                                    <div className='flex'> <img src={item.category.icon} className='w-6 h-6 mr-2' /> <p className={`line-clamp-1 text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(item.category.title, {ns: 'eb'})}</p></div>
+                                    <a href={`/blog/${item.url}`}>
+                                    <p className={`leading-none line-clamp-2 mt-0 text-[30px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(item.title, {ns: 'eb'})}</p>
                                     <p className='absolute bottom-0 text-[16px] text-black transition duration-200 opacity-50'>{item.date}</p>
+                                    </a>
                                     <div></div>
                                 </figcaption>
                                 </figure>
-                                </a>
+                                
                                 </div>)
                             }
                         </div> : null
