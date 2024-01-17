@@ -95,7 +95,7 @@ export default function handler(
             date: '02/01/2024',
             image: "/assets/blog/eb-2test.png",
             content: "eb-2test",
-        }
+        },
       ]
   })
 }
