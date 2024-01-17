@@ -18,5 +18,18 @@
     "main_menu_book_a_call": "Contattaci",
     "main_menu_lang_eng": "Inglese",
     "main_menu_lang_es": "Spagnolo",
-    "main_menu_lang_it": "Italiano"
+    "main_menu_lang_it": "Italiano",
+    "contact_box_input_full_name": "Nome*",
+    "contact_box_input_full_name_ph": "Nome completo",
+    "contact_box_input_email": "Email*",
+    "contact_box_input_email_ph": "Indirizzo email",
+    "contact_box_service_requested": "Servizio richiesto",
+    "contact_box_input_describe_project": "Parlaci del tuo progetto*",
+    "contact_box_nda_message": "Se hai bisogno di farci firmare un NDA, caricalo insieme agli altri documenti",
+    "contact_box_files_attach": "Carica i documenti",
+    "contact_box_files_limits": "Massimo 5 documenti di 5MB ciascuno. Formatti permessi doc, docx, pdf, ppt, pptx",
+    "contact_box_files_file_too_big": "Uno o più documenti sono troppo grandi. Il peso massimo per documento è 5 MB",
+    "contact_box_files_files_uploaded": "Documenti caricati:",
+    "contact_box_files_accept_policies": "Acceto le Politiche di Privacy e di Cookies",
+    "contact_box_send_now": "Invio!"
 }

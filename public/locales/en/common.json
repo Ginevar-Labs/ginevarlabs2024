@@ -18,5 +18,18 @@
     "main_menu_book_a_call": "Book a Call",
     "main_menu_lang_eng": "English",
     "main_menu_lang_es": "Spanish",
-    "main_menu_lang_it": "Italian"
+    "main_menu_lang_it": "Italian",
+    "contact_box_input_full_name": "Full name*",
+    "contact_box_input_full_name_ph": "Full name",
+    "contact_box_input_email": "Email*",
+    "contact_box_input_email_ph": "Email Address",
+    "contact_box_service_requested": "Service requested",
+    "contact_box_input_describe_project": "Describe your project*",
+    "contact_box_nda_message": "If you need us to sign an nda before telling us about your project, send it as well",
+    "contact_box_files_attach": "Attach files",
+    "contact_box_files_limits": "Max 5 files. 5mb limit each. Formats allowed doc, docx, pdf, ppt, pptx",
+    "contact_box_files_file_too_big": "One or more files are too big. Max size per file is 5 MB",
+    "contact_box_files_files_uploaded": "Files uploaded:",
+    "contact_box_files_accept_policies": "I accept privacy policy and cookies",
+    "contact_box_send_now": "Send now!"
 }
