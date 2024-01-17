@@ -36,7 +36,8 @@ const config: Config = {
     },
   },
   plugins: [
-    require("flowbite/plugin")
+    require("flowbite/plugin"),
+    require('@tailwindcss/line-clamp'),
   ],
 }
 export default config

@@ -32,5 +32,10 @@
     "contact_box_files_file_too_big": "Uno o più documenti sono troppo grandi. Il peso massimo per documento è 5 MB",
     "contact_box_files_files_uploaded": "Documenti caricati:",
     "contact_box_files_accept_policies": "Acceto le Politiche di Privacy e di Cookies",
-    "contact_box_send_now": "Invio!"
+    "contact_box_send_now": "Invio!",
+    "engineering_blog_title_part_1": "Engineering",
+    "engineering_blog_title_part_2": "Blog",
+    "engineering_blog_explore_button": "Vedi tutto",
+    "engineering_blog_latest_articles": "Ultimi Articoli",
+    "engineering_blog_no_articles": "Senza posts (ancora!)"
 }

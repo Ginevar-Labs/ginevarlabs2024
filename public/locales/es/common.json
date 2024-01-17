@@ -32,5 +32,10 @@
     "contact_box_files_file_too_big": "Uno o mas archivos son demasiado grandes. El maximo tamaño por archivo es 5 MB",
     "contact_box_files_files_uploaded": "Archivos cargados:",
     "contact_box_files_accept_policies": "Acepto las Politicas de Privacidad y de cookies",
-    "contact_box_send_now": "Enviar ahora!"
+    "contact_box_send_now": "Enviar ahora!",
+    "engineering_blog_title_part_1": "Tech",
+    "engineering_blog_title_part_2": "Blog",
+    "engineering_blog_explore_button": "Ver mas",
+    "engineering_blog_latest_articles": "Ultimos Posts",
+    "engineering_blog_no_articles": "Sin articulos (todavia!)"
 }
