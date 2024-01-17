@@ -1,4 +1,8 @@
 {
     "app_title": "Ginevar",
-    "lang_selected": "English"
+    "app_description": "Ginevar",
+    "lang_selected": "English",
+    "main_menu_aria": "Open main menu",
+    "main_menu_item_home": "Home",
+    "main_menu_item_services": "Services"
 }
