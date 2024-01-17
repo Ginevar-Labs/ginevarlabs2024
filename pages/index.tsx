@@ -1,4 +1,6 @@
+import ContactBox from '@/components/ContactBox';
 import Header from '@/components/Header';
+import TrustedByBox from '@/components/TrustedByBox';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
@@ -9,9 +11,10 @@ export default function Home() {
     <>
       <Header />
       <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24`}
+        className={`flex min-h-screen flex-col`}
       >
-        
+        <TrustedByBox/>
+        <ContactBox/>
       </main>
     </>
   )

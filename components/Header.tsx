@@ -25,8 +25,8 @@ export default function Header() {
                 <button data-collapse-toggle="navbar-dropdown" type="button" className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none" aria-controls="navbar-dropdown" aria-expanded="false">
                     <span className="sr-only">{t('main_menu_aria')}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140" fill="none">
-                    <path d="M27.75 43.75H110.25M27.75 70H110.25M27.75 96.25H110.25" stroke="#FFF238" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M18.75 33.75H101.25M18.75 60H101.25M18.75 86.25H101.25" stroke="black" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M27.75 43.75H110.25M27.75 70H110.25M27.75 96.25H110.25" stroke="#FFF238" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M18.75 33.75H101.25M18.75 60H101.25M18.75 86.25H101.25" stroke="black" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </button>
                 <div className="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
@@ -69,10 +69,10 @@ export default function Header() {
                                 <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('about_us_menu_item_faq')}</a>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('about_us_menu_item_contact')}</a>
+                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_careers')}</a>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_careers')}</a>
+                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('about_us_menu_item_contact')}</a>
                             </li>
                             </ul>
                         </div>
