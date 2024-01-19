@@ -15,6 +15,7 @@
     "about_us_menu_item_contact": "Contact",
     "about_us_menu_item_careers": "Careers",
     "main_menu_item_blog": "Blog",
+    "main_menu_item_blog_full": "Engineering Blog",
     "main_menu_book_a_call": "Book a Call",
     "main_menu_lang_eng": "English",
     "main_menu_lang_es": "Spanish",
@@ -37,5 +38,12 @@
     "engineering_blog_title_part_2": "Blog",
     "engineering_blog_explore_button": "Explore",
     "engineering_blog_latest_articles": "Latest Articles",
-    "engineering_blog_no_articles": "No articles (yet!)"
+    "engineering_blog_no_articles": "No articles (yet!)",
+    "home_message_box_message_1": "We assist entrepreneurs transforming their ideas into reality, improving the world we live through technology.",
+    "footer_location": "Monza, Italy",
+    "footer_privacy_policy": "Privacy Policy",
+    "footer_cookies_policy": "Cookies Policy",
+    "footer_sitemap_menu": "Sitemap & Menu",
+    "footer_social_networks_title": "Social Networks",
+    "footer_copyright": "Copyright © 2024 Ginevar labs srl. All Right Reserved."
 }

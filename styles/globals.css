@@ -40,3 +40,91 @@ body {
   letter-spacing: 3px;
   font-size: 22px;
 }
+
+
+
+#comunidad-bts {
+  position: relative;
+  display: flex;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+#comunidad-bts li {
+    position: relative;
+    list-style: none;
+    margin: 0 0px;
+    cursor: pointer;
+}
+#comunidad-bts li a {
+    text-decoration: none;
+}
+#comunidad-bts li a .fa-brands {
+    font-size: 1.5em;
+    color: #222;
+    padding-top: 0.25em;
+}
+#comunidad-bts li a .fab {
+    font-size: 3em;
+    color: #222;
+    padding-top: 0.25em;
+}
+#comunidad-bts li a::before {
+    font-family: "Font Awesome 5 Brands";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+/* @media (max-width: 701px){
+  #comunidad-bts li a::before {
+    left: 20px;
+}
+} */
+
+#comunidad-bts #cbts-ig a::before {
+    content: "\f16d";
+    background-image: linear-gradient(45deg, 
+      #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
+      #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid #dc2743;
+}
+#comunidad-bts #cbts-md a::before {
+    content: "\f23a";
+    color: black;
+    border-bottom: 4px solid black;
+}
+#comunidad-bts #cbts-li a::before {
+    content: "\f08c";
+    color: #0077B5;
+    border-bottom: 4px solid #0077B5;
+}
+
+#comunidad-bts #cbts-github a::before {
+    content: "\f09b";
+    color: #B3C73E;
+    border-bottom: 4px solid #B3C73E;
+}
+
+#comunidad-bts #cbts-behance a::before {
+  content: "\f1b4";
+  color: #FF78B9;
+  border-bottom: 4px solid #FF78B9;
+}
+
+#comunidad-bts #cbts-twitter a::before {
+  content: "\f099";
+  color: #78A6FF;
+  border-bottom: 4px solid #78A6FF;
+}
+
+#comunidad-bts li:hover a::before {
+    height: 100%;
+}

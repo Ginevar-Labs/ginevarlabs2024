@@ -67,37 +67,37 @@ export default function ContactBox(props: ContactBoxProps) {
 
             <div className='sm:col-span-1 col-span-1 items-center lg:p-6 p-0 px-12 w-full lg:pr-[200px] px-12'>
                 <div className='flex w-full my-6 mt-10'>
-                    <label className='fontedBebas w-[200px]'>{t('contact_box_input_full_name')}</label>
+                    <label className='fontedBebas w-[200px]'>{t('contact_box_input_full_name', { ns: 'common'})}</label>
                     <div className='w-full border-b-4 border-black drop-shadow-[4px_4px_rgba(255,242,56,0.25)] '>
-                        <input className='fontedBebas leading-none w-full appearance-none bg-transparent border-none focus:outline-none focus:outline-non placeholder-gray-500 placeholder-opacity-[0.25]' value={inputFullName} onChange={(e) => setInputFullName(e.target.value)} placeholder={t('contact_box_input_full_name_ph')} />
+                        <input className='fontedBebas leading-none w-full appearance-none bg-transparent border-none focus:outline-none focus:outline-non placeholder-gray-500 placeholder-opacity-[0.25]' value={inputFullName} onChange={(e) => setInputFullName(e.target.value)} placeholder={t('contact_box_input_full_name_ph', { ns: 'common'})} />
                     </div>
                 </div>
                 <div className='flex w-full my-6'>
-                    <label className='fontedBebas w-[200px]'>{t('contact_box_input_email')}</label>
+                    <label className='fontedBebas w-[200px]'>{t('contact_box_input_email', { ns: 'common'})}</label>
                     <div className='w-full border-b-4 border-black drop-shadow-[4px_4px_rgba(255,242,56,0.25)] '>
-                        <input className={`fontedBebas leading-none w-full appearance-none bg-transparent border-none focus:outline-none placeholder-gray-500 placeholder-opacity-[0.25]`} value={inputEmail} onChange={(e) => setInputEmail(e.target.value)} placeholder={t('contact_box_input_email_ph')} />
+                        <input className={`fontedBebas leading-none w-full appearance-none bg-transparent border-none focus:outline-none placeholder-gray-500 placeholder-opacity-[0.25]`} value={inputEmail} onChange={(e) => setInputEmail(e.target.value)} placeholder={t('contact_box_input_email_ph', { ns: 'common'})} />
                     </div>
                 </div>
                 <div className=' w-full my-6'>
-                    <label className='fontedBebas w-[200px]'>{t('contact_box_service_requested')}</label>
+                    <label className='fontedBebas w-[200px]'>{t('contact_box_service_requested', { ns: 'common'})}</label>
                     <div className='grid grid-cols-2'>
                         <div className='sm:col-span-1 col-span-1 items-center'>
                             <div className='flex'>
                                 <input id='serv-req-0' type='radio' value="0" checked={inputServiceRequested == 0} onChange={(e) => setInputServiceRequested(0)} name='serv-req-radio' className="mt-1 mr-2 before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-green-gray-200 text-green-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:before:bg-green-500 hover:before:opacity-10"></input>
-                                <label onClick={() => setInputServiceRequested(0)} className={`cursor-pointer fontedBebas w-[200px] transition duration-200 ${inputServiceRequested == 0 ? 'opacity-[1]' : 'opacity-[0.25]'}`}>{t('services_menu_item_mobile_studio')}</label>
+                                <label onClick={() => setInputServiceRequested(0)} className={`cursor-pointer fontedBebas w-[200px] transition duration-200 ${inputServiceRequested == 0 ? 'opacity-[1]' : 'opacity-[0.25]'}`}>{t('services_menu_item_mobile_studio', { ns: 'common'})}</label>
                             </div>
                         </div>
                         <div className='sm:col-span-1 col-span-1 items-center'>
                             <div className='flex'>
                                 <input id='serv-req-1' type='radio' value="1" checked={inputServiceRequested == 1} onChange={(e) => setInputServiceRequested(1)} name='serv-req-radio' className="mt-1 mr-2 before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-green-gray-200 text-green-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:before:bg-green-500 hover:before:opacity-10"></input>
-                                <label onClick={() => setInputServiceRequested(1)} className={`cursor-pointer fontedBebas w-[200px] transition duration-200 ${inputServiceRequested == 1 ? 'opacity-[1]' : 'opacity-[0.25]'}`}>{t('services_menu_item_shopify_builders')}</label>
+                                <label onClick={() => setInputServiceRequested(1)} className={`cursor-pointer fontedBebas w-[200px] transition duration-200 ${inputServiceRequested == 1 ? 'opacity-[1]' : 'opacity-[0.25]'}`}>{t('services_menu_item_shopify_builders', { ns: 'common'})}</label>
                             </div>
                         </div>
 
                         <div className='sm:col-span-1 col-span-1 items-center'>
                             <div className='flex'>
                                 <input id='serv-req-2' type='radio' value="2" checked={inputServiceRequested == 2} onChange={(e) => setInputServiceRequested(2)} name='serv-req-radio' className="mt-1 mr-2 before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-green-gray-200 text-green-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:before:bg-green-500 hover:before:opacity-10"></input>
-                                <label onClick={() => setInputServiceRequested(2)} className={`cursor-pointer fontedBebas w-[200px] transition duration-200 ${inputServiceRequested == 2 ? 'opacity-[1]' : 'opacity-[0.25]'}`}>{t('services_menu_item_web3_studio')}</label>
+                                <label onClick={() => setInputServiceRequested(2)} className={`cursor-pointer fontedBebas w-[200px] transition duration-200 ${inputServiceRequested == 2 ? 'opacity-[1]' : 'opacity-[0.25]'}`}>{t('services_menu_item_web3_studio', { ns: 'common'})}</label>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@ export default function ContactBox(props: ContactBoxProps) {
                 </div>
 
                 <div className=' w-full my-6'>
-                    <label className='fontedBebas w-[200px]'>{t('contact_box_input_describe_project')}</label>
+                    <label className='fontedBebas w-[200px]'>{t('contact_box_input_describe_project', { ns: 'common'})}</label>
                     <div className='w-full border-b-4 border-black drop-shadow-[4px_4px_rgba(255,242,56,0.25)] '>
                         <textarea rows={4} style={{resize: 'none'}} className={`fontedBebas focus:ring-0 leading-none w-full appearance-none bg-transparent border-none focus:outline-none placeholder-gray-500 placeholder-opacity-[0.25]`} value={inputDescription} onChange={(e) => setInputDescription(e.target.value)} placeholder='' />
                     </div>
@@ -115,7 +115,7 @@ export default function ContactBox(props: ContactBoxProps) {
         </div>
         <div className='grid sm:grid-cols-2 grid-cols-1 border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block lg:mx-40'>
             <div className='sm:col-span-1 h-full col-span-1 flex items-center lg:p-20 p-4 px-12 border-dashed lg:border-r-[2px] border-r-[0px] border-gray-800'>
-                <p className='fontedBebas lg:w-[75%] w-full lg:text-left text-center'>{t('contact_box_nda_message')}</p>
+                <p className='fontedBebas lg:w-[75%] w-full lg:text-left text-center'>{t('contact_box_nda_message', { ns: 'common'})}</p>
             </div>
             <div className='sm:col-span-1 h-full col-span-1 flex items-center lg:p-20 p-4 px-12'>
                 <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full cursor-pointer">
@@ -131,9 +131,9 @@ export default function ContactBox(props: ContactBoxProps) {
                                             </clipPath>
                                         </defs>
                                         </svg>
-                                        <p className="ml-2 text-black fontedBebas"><span className="font-semibold">{t('contact_box_files_attach')}</span></p>
+                                        <p className="ml-2 text-black fontedBebas"><span className="font-semibold">{t('contact_box_files_attach', { ns: 'common'})}</span></p>
                                 </div>
-                                <p className="text-center text-black fontedBebas">{t('contact_box_files_limits')}</p>
+                                <p className="text-center text-black fontedBebas">{t('contact_box_files_limits', { ns: 'common'})}</p>
                             </div>
                             <input onChange={(e) => {
                               if(e.target.files == undefined) { return; }
@@ -160,13 +160,13 @@ export default function ContactBox(props: ContactBoxProps) {
             </div>
         </div>
         <div className='w-full my-6'>
-            <div className='flex justify-center'>
+            <div className='flex justify-center mx-20 lg:text-left text-center'>
                                 <input id='terms-accepted' type='radio' value="true" checked={inputTermsAccepted == 'true'} onChange={(e) => setInputTermsAccepted(inputTermsAccepted == 'true' ? 'false' : 'true')} name='terms-accepted' className="mt-1 mr-2 before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-green-gray-200 text-green-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:before:bg-green-500 hover:before:opacity-10"></input>
-                                <label className={`fontedBebas transition duration-200 ${inputTermsAccepted == 'true' ? 'opacity-[1]' : 'opacity-[0.25]'}`}>{t('contact_box_files_accept_policies')}</label>
+                                <label className={`fontedBebas transition duration-200 ${inputTermsAccepted == 'true' ? 'opacity-[1]' : 'opacity-[0.25]'}`}>{t('contact_box_files_accept_policies', { ns: 'common'})}</label>
             </div>
             <div className='w-full'>
                 <div className='mx-auto w-[200px] my-4 fontedBebas'>
-                    <Button title={t('contact_box_send_now')}/>
+                    <Button title={t('contact_box_send_now', { ns: 'common'})}/>
                 </div>
             </div>
         </div>
