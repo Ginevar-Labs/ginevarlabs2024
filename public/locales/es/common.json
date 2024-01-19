@@ -47,5 +47,9 @@
     "footer_cookies_policy": "Politica de Cookies",
     "footer_sitemap_menu": "Sitemap & Menu",
     "footer_social_networks_title": "Redes Sociales",
-    "footer_copyright": "Copyright © 2024 Ginevar labs srl. Todos los derechos reservados."
+    "footer_copyright": "Copyright © 2024 Ginevar labs srl. Todos los derechos reservados.",
+    "service_offering_box_read_more": "Ver mas",
+    "service_offering_box_mobile_native": "Nativo",
+    "service_offering_box_mobile_cross_platform": "Multiplataforma",
+    "service_offering_box_close": "Cerrar"
 }

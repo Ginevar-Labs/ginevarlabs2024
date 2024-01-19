@@ -44,7 +44,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
 
             <div className='lg:absolute lg:left-10 lg:bottom-4'>
                     <div className='w-[140px] lg:mx-0 mx-auto'>
-                        <Button title='Read more'/>
+                        <Button title={t('service_offering_box_read_more', { ns: 'common'})}/>
                     </div>
                 </div>
             
@@ -65,7 +65,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
 
             <div className='lg:absolute lg:left-10 lg:bottom-4'>
                     <div className='w-[140px] lg:mx-0 mx-auto'>
-                    <Button title='Read more'/>
+                    <Button title={t('service_offering_box_read_more', { ns: 'common'})}/>
                 </div>
             </div>
             </div>
@@ -85,7 +85,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
                 <div className='relative w-full h-[50%] grid grid-cols-2'>
                     <div className='relative h-full w-full col-span-1'>
                         <div className='w-full h-[30%] border-dashed border-b-[2px] border-r-[2px] border-gray-800'>
-                            <div className='w-full col-span-1 text-left py-0 px-8'> <p className='text-[#78A6FF] text-[44px]'>Native</p> </div>
+                            <div className='w-full col-span-1 text-left py-0 px-8'> <p className='text-[#78A6FF] text-[44px]'>{t('service_offering_box_mobile_native', { ns: 'common'})}</p> </div>
                         </div>
                         <div className='w-full h-[70%] border-dashed border-r-[2px] border-gray-800 flex justify-center items-center '>
                         <div className='w-[25%] px-3 transition-all duration-500 opacity-50 hover:opacity-100'><img src='/assets/icons/techstack/icon_swift.png' alt='Swift' className=''/></div>
@@ -94,7 +94,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
                     </div>
                     <div className='w-full col-span-1'>
                         <div className='w-full h-[30%] border-dashed border-b-[2px] border-gray-800'>
-                        <div className='w-full col-span-1 text-left py-0 px-8'> <p className='text-[#78A6FF] text-[44px]'>Cross Platform</p> </div>
+                        <div className='w-full col-span-1 text-left py-0 px-8'> <p className='text-[#78A6FF] text-[44px]'>{t('service_offering_box_mobile_cross_platform', { ns: 'common' })}</p> </div>
                         </div>
                         <div className='w-full h-[70%] flex justify-center items-center '>
                         <div className='w-[25%] px-3 transition-all duration-500 opacity-50 hover:opacity-100'><img src='/assets/icons/techstack/icon_flutter.png' alt='Flutter' className=''/></div>
@@ -120,7 +120,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
                     setTimeout(() => {
                         setTechStackOpen(false)
                     }, 500);
-                }} className='cursor-pointer absolute transition-all duration-500 hover:bg-[#FAF9E4] top-0 right-0 w-[160px] py-1 border-dashed border-b-[2px] border-l-[2px] border-gray-800'><p>Close</p></div>
+                }} className='cursor-pointer absolute transition-all duration-500 hover:bg-[#FAF9E4] top-0 right-0 w-[160px] hover:w-[200px] py-2 h-[50px] border-dashed border-b-[2px] border-l-[2px] border-gray-800'><p>{t('service_offering_box_close', { ns: 'common'})}</p></div>
             </div> : null
             }
                 
@@ -143,7 +143,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
             <div className={`relative inline-block transition-all duration-500 ${techStackFadeIn ? 'h-full' : 'pt-6 h-[20px]'} w-full border-dashed border-l-[2px] border-r-[2px] border-b-[2px] border-gray-800 px-2 overflow-hidden`}>
                 {
                     props.techStack == ServiceFlipBoxStack.MOBILE ? <div className={` transition-all duration-500 ${techStackFadeIn ? 'opacity-100' : 'opacity-0'}`}>
-                    <p className='text-[#78A6FF] text-[32px]'>Native</p>
+                    <p className='text-[#78A6FF] text-[32px]'>{t('service_offering_box_mobile_native', { ns: 'common'})}</p>
                     <div className='flex'>
                         <div className='w-[50px] h-[50px] m-2'>
                             <img className='w-full h-full transition duration-200 opacity-50 hover:opacity-100' alt='Swift' src='/assets/icons/techstack/icon_swift.png'/>
@@ -152,7 +152,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
                             <img className='w-full h-full transition duration-200 opacity-50 hover:opacity-100' alt='Kotlin' src='/assets/icons/techstack/icon_kotlin.png'/>
                         </div>
                     </div>
-                    <p className='text-[#78A6FF] text-[32px]'>Cross Platform</p>
+                    <p className='text-[#78A6FF] text-[32px]'>{t('service_offering_box_mobile_cross_platform', { ns: 'common'})}</p>
                     <div className='flex'>
                         <div className='w-[50px] h-[50px] m-2'>
                             <img className='w-full h-full transition duration-200 opacity-50 hover:opacity-100' alt='Flutter' src='/assets/icons/techstack/icon_flutter.png'/>
