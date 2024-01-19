@@ -44,6 +44,9 @@ export default function Header() {
                         <div id="dropdownNavbar" className="z-10 hidden font-normal bg-[#FAF9E4] divide-y divide-gray-100 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] w-full lg:w-44 dark:divide-gray-600">
                             <ul className="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
                             <li>
+                            <a href="/#services" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_solutions', { ns: 'common'})}</a>
+                            </li>
+                            <li>
                             <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_mobile_studio', { ns: 'common'})}</a>
                             </li>
                             <li>
