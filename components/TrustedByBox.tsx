@@ -10,7 +10,7 @@ export default function TrustedByBox(props: TrustedByBoxProps) {
     const { t } = useTranslation();
   
     return (
-      <div className='pt-2'>
+      <div className='py-2 mb-4'>
         <h1 className='fontedBebas text-center'>{t('trusted_by_title', { ns: 'common'})}</h1>
             <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] my-10 mt-4">
                 

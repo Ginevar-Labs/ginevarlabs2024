@@ -25,7 +25,10 @@ export default function EngineeringBlogBox(props: EngineeringBlogBoxProps) {
             </div>
             <div className='grid sm:grid-cols-6 grid-cols-1 lg:px-40 px-10'>
                 <div className='sm:col-span-1 w-full col-span-1 flex items-center justify-center fontedBebas'>
-                    <h2 className='lg:-rotate-90 -rotate-0 text-[#FF78B9] ml-10 lg:mt-20 mt-4 text-[42px] w-full whitespace-nowrap'>{t('engineering_blog_latest_articles', { ns: 'common'})}</h2>
+                    <h2 className='lg:-rotate-90 -rotate-0 text-[#FF78B9] ml-[-100px] lg:mt-20 mt-4 text-[42px] w-full whitespace-nowrap' style={{
+                        textDecoration: 'underline',
+                        textDecorationColor: '#9DC79C'
+                    }}>{t('engineering_blog_latest_articles', { ns: 'common'})}</h2>
                 </div>
                 <div className='sm:col-span-5 w-full col-span-1 fontedBebas lg:text-left text-center border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
                     {
