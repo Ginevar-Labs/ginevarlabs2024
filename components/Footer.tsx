@@ -29,7 +29,7 @@ export default function Footer() {
                             </div>
                             </div>
                         <div className='w-full px-6 '>
-                            <a href="mailto:info@ginevar.com" className='transition duration-200 opacity-25 hover:opacity-100'>info@ginevar.com</a>
+                            <a href="mailto:info@ginevar.com" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF78B9]'>info@ginevar.com</a>
                             <div className="clutch-widget w-[200px]" data-url="https://widget.clutch.co" data-widget-type="14" data-height="50" data-nofollow="true" data-expandifr="true" data-scale="100" data-clutchcompany-id="2313923">
                                 
                             </div>
@@ -37,10 +37,10 @@ export default function Footer() {
                             
                         </div>
                         <div className='w-full px-6'>
-                        <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'>{t('footer_privacy_policy', { ns: 'common'})}</a>
+                        <a href="#" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'>{t('footer_privacy_policy', { ns: 'common'})}</a>
                         </div>
                         <div className='w-full px-6'>
-                        <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'>{t('footer_cookies_policy', { ns: 'common'})}</a>
+                        <a href="#" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#8BC694]'>{t('footer_cookies_policy', { ns: 'common'})}</a>
                         </div>
                             
                     </div>
@@ -59,23 +59,23 @@ export default function Footer() {
                             </div>
                         <div className='grid grid-cols-2 '>
                             <div className='col-span-1 w-full lg:px-6 px-0 lg:text-left text-center'>
-                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('main_menu_item_home', { ns: 'common'})}</p></a>
+                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#B3C73E]'><p>{t('main_menu_item_home', { ns: 'common'})}</p></a>
                                 <hr className='my-4'/>
-                                <a href="#" className='transition duration-200 opacity-10 hover:opacity-75'><p>{t('main_menu_item_services', { ns: 'common'})}</p></a>
-                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('services_menu_item_mobile_studio', { ns: 'common'})}</p></a>
-                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('services_menu_item_shopify_builders', { ns: 'common'})}</p></a>
-                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('services_menu_item_web3_studio', { ns: 'common'})}</p></a>
+                                <a href="#" className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#78A6FF]'><p>{t('main_menu_item_services', { ns: 'common'})}</p></a>
+                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF78B9]'><p>{t('services_menu_item_mobile_studio', { ns: 'common'})}</p></a>
+                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'><p>{t('services_menu_item_shopify_builders', { ns: 'common'})}</p></a>
+                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#B3C73E]'><p>{t('services_menu_item_web3_studio', { ns: 'common'})}</p></a>
                                 <hr className='my-4'/>
-                                <a href="#" className='transition duration-200 opacity-10 hover:opacity-75'><p> {t('main_menu_item_portfolio', { ns: 'common'})} </p></a>
+                                <a href="#" className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#8BC694]'><p> {t('main_menu_item_portfolio', { ns: 'common'})} </p></a>
                             </div>
                             <div className='col-span-1 w-full lg:px-6 px-0 lg:text-left text-center'>
                                 <a href="#" className='transition duration-200 opacity-10 hover:opacity-75'><p>{t('main_menu_item_about_us', { ns: 'common'})}</p></a>
-                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('about_us_menu_item_our_team', { ns: 'common'})}</p></a>
-                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('about_us_menu_item_faq', { ns: 'common'})}</p></a>
+                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF78B9]'><p>{t('about_us_menu_item_our_team', { ns: 'common'})}</p></a>
+                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#8BC694]'><p>{t('about_us_menu_item_faq', { ns: 'common'})}</p></a>
                                 <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('about_us_menu_item_careers', { ns: 'common'})}</p></a>
-                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('about_us_menu_item_contact', { ns: 'common'})}</p></a>
+                                <a href="#" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'><p>{t('about_us_menu_item_contact', { ns: 'common'})}</p></a>
                                 <hr className='my-4'/>
-                                <a href="#" className='transition duration-200 opacity-10 hover:opacity-75'><p>{t('main_menu_item_blog_full', { ns: 'common'})}</p></a>
+                                <a href="#" className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#FF78B9]'><p>{t('main_menu_item_blog_full', { ns: 'common'})}</p></a>
                                 
                             </div>
                         </div>
