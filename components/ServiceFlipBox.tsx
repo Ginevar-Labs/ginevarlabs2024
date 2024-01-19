@@ -79,7 +79,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
                 }
             }, 500);
         }} className={`lg:block hidden ${techStackFadeIn == true ? '' : 'cursor-pointer'} transition-all duration-500 absolute top-0 right-0 border-dashed border-gray-800 ${techStackOpen ? 'w-full h-full bg-[#FAF9E4] border-b-[0px] border-l-[0px] ' : 'py-2 hover:py-3 border-b-[2px] border-l-[2px] bg-transparent hover:bg-[#FAF9E4] h-[50px] w-[160px] hover:w-[200px]'} text-center`}>
-            <p className={`font-[16px] transition-all duration-500 ${techStackOpen == true ? 'opacity-0' : 'opacity-100'} ${techStackOpen == true ? 'hidden' : 'block'}`}>Tech Stack</p>
+            <p className={`font-[16px] transition-all duration-500 ${techStackOpen == true ? 'opacity-0' : 'opacity-100'} ${techStackOpen == true ? 'hidden' : 'block'}`}>{t('service_offering_box_tech_stack', { ns: 'common'})}</p>
             {
                     props.techStack == ServiceFlipBoxStack.MOBILE ? <div className={`relative w-full h-full transition-all duration-500 ${techStackOpen == true ? 'block' : 'hidden' } ${techStackFadeIn == true ? 'opacity-1 ' : 'opacity-0'}`}>
                 <div className='relative w-full h-[50%] grid grid-cols-2'>
@@ -129,10 +129,10 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
 
         <div className='lg:hidden block relative w-full'>
             <div onClick={() => {
-                setTechStackFadeIn(true);
+                setTechStackFadeIn(!techStackFadeIn);
             }} className='relative w-full border-dashed border-[2px] border-gray-800 px-4 py-1 flex grid grid-cols-2 place-content-between'>
                 <div className='col-span-1'>
-                <p>Tech stack</p>
+                <p>{t('service_offering_box_tech_stack', { ns: 'common'})}</p>
                 </div>
                 <div className='col-span-1 relative'>
                 <svg xmlns="http://www.w3.org/2000/svg" className={`absolute right-0 mt-1 transition-all duration-200 ${techStackFadeIn ? '-rotate-180' : ''}`} width="20" height="20" viewBox="0 0 60 60" fill="none">
