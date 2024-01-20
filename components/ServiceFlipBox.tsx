@@ -123,6 +123,29 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
                 }} className='cursor-pointer absolute transition-all duration-500 hover:bg-[#FAF9E4] top-0 right-0 w-[160px] hover:w-[200px] py-2 h-[50px] border-dashed border-b-[2px] border-l-[2px] border-gray-800'><p>{t('service_offering_box_close', { ns: 'common'})}</p></div>
             </div> : null
             }
+
+{
+                    props.techStack == ServiceFlipBoxStack.SHOPIFY ? <div className={`relative w-full h-full transition-all duration-500 ${techStackOpen == true ? 'block' : 'hidden' } ${techStackFadeIn == true ? 'opacity-1 ' : 'opacity-0'}`}>
+                <div className='w-full h-[100%] relative'>
+                    <div className='relative w-[60%] h-full mx-[20%] flex justify-center items-center'>
+                    <div className='w-[25%] px-3 transition-all duration-500 opacity-50 hover:opacity-100'><img src='/assets/icons/techstack/icon_react.png' alt='React.js' className=''/></div>
+                    <div className='w-[25%] px-3 transition-all duration-500 opacity-50 hover:opacity-100'><img src='/assets/icons/techstack/icon_shopify.png' alt='Shopify' className=''/></div>
+                            <div className='w-[25%] px-3 transition-all duration-500 opacity-50 hover:opacity-100'><img src='/assets/icons/techstack/icon_woo.png' alt='WooCommerce' className=''/></div>
+                    </div>
+                </div>
+
+                <div className='w-full h-[50%] grid col-cols-1'>
+                    <div className='col-span-1'></div>
+                </div>
+                <div onClick={(e) => {
+                    e.preventDefault();
+                    setTechStackFadeIn(false);
+                    setTimeout(() => {
+                        setTechStackOpen(false)
+                    }, 500);
+                }} className='cursor-pointer absolute transition-all duration-500 hover:bg-[#FAF9E4] top-0 right-0 w-[160px] hover:w-[200px] py-2 h-[50px] border-dashed border-b-[2px] border-l-[2px] border-gray-800'><p>{t('service_offering_box_close', { ns: 'common'})}</p></div>
+            </div> : null
+            }
                 
         </div>
     
@@ -174,6 +197,22 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
                         </div>
                         <div className='w-[50px] h-[50px] m-2'>
                             <img className='w-full h-full transition duration-200 opacity-50 hover:opacity-100' alt='React.js' src='/assets/icons/techstack/icon_sketch.png'/>
+                        </div>
+                    </div>
+                </div> : null
+                }
+                {
+                    props.techStack == ServiceFlipBoxStack.SHOPIFY ? <div className={` transition-all duration-500 ${techStackFadeIn ? 'opacity-100' : 'opacity-0'}`}>
+                    
+                    <div className='flex items-center justify-center'>
+                        <div className='w-[50px] h-[50px] m-2'>
+                            <img className='w-full h-full transition duration-200 opacity-50 hover:opacity-100' alt='React.js' src='/assets/icons/techstack/icon_react.png'/>
+                        </div>
+                        <div className='w-[50px] h-[50px] m-2'>
+                            <img className='w-full h-full transition duration-200 opacity-50 hover:opacity-100' alt='Shopify' src='/assets/icons/techstack/icon_shopify.png'/>
+                        </div>
+                        <div className='w-[50px] h-[50px] m-2'>
+                            <img className='w-full h-full transition duration-200 opacity-50 hover:opacity-100' alt='WooCommerce' src='/assets/icons/techstack/icon_woo.png'/>
                         </div>
                     </div>
                 </div> : null
