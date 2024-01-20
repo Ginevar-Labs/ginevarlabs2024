@@ -43,6 +43,33 @@ export default function ServiceOfferingBox() {
                     techStack={ServiceFlipBoxStack.MOBILE}
                 />
         </div>
+        <div className='mt-10 w-full grid lg:grid-cols-6 grid-cols-1 lg:px-20 px-0'>
+                <div className='w-full col-span-1 items-center justify-center fontedBebas'>
+                    <h2 className='lg:-rotate-90 -rotate-0 text-[#EE807C] lg:text-left text-center lg:mt-40 lg:ml-[-45px] ml-0 mt-0 text-[42px] w-full whitespace-nowrap' style={{
+                        textDecoration: 'underline',
+                        textDecorationColor: '#B7C656'
+                    }}>{t('services_menu_item_shopify', { ns: 'common'})}</h2>
+                </div>
+                <ServiceFlipBox left={{
+                    title: t('service_offering_ecommerce_pack', { ns: 'common'}),
+                    htmlItems: [
+                        <p className='text-[16px]'><span className='text-[#98C498]'>{t('service_offering_shopify_pack_1_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_1_post', { ns: 'common'})}</p>,
+                        <p className='text-[16px]'><span className='text-[#EE80B7]'>{t('service_offering_shopify_pack_2_a_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_2_a_post', { ns: 'common'})} <span className='text-[#EE80B7]'>{t('service_offering_shopify_pack_2_b_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_2_b_post', { ns: 'common'})}</p>,
+                        <p className='text-[16px]'>{t('service_offering_shopify_pack_3_a_pre', { ns: 'common'})} <span className='text-[#EE807C]'>{t('service_offering_shopify_pack_3_a_post', { ns: 'common'})}</span> {t('service_offering_shopify_pack_3_b_pre', { ns: 'common'})} <span className='text-[#78A6FF]'>{t('service_offering_shopify_pack_3_b_post', { ns: 'common'})}</span>{t('service_offering_shopify_pack_4_post', { ns: 'common'})}</p>,
+                        <p className='text-[16px]'>{t('service_offering_shopify_pack_4_pre', { ns: 'common'})} <span className='text-[#78A6FF]'>{t('service_offering_shopify_pack_4_post', { ns: 'common'})}</span></p>,
+                        <p className='text-[16px]'>{t('service_offering_shopify_pack_5_0', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_offering_shopify_pack_5_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_5_post', { ns: 'common'})}</p>,
+                    ]
+                }} right={{
+                    title: t('service_offering_staff_augmentation', { ns: 'common'}),
+                    htmlItems: [
+                        <p className='text-[16px]'>{t('service_offering_shopify_staff_augmentation_1_pre', { ns: 'common'})}<u className='text-[#EE807C]'>React.js</u> {t('service_offering_shopify_staff_augmentation_1_post', { ns: 'common'})}</p>,
+                        <p className='text-[16px]'>{t('service_offering_shopify_staff_augmentation_2_a_pre', { ns: 'common'})}<span className='text-[#78A6FF]'>{t('service_offering_shopify_staff_augmentation_2_a_post', { ns: 'common'})}</span>{t('service_offering_shopify_staff_augmentation_2_b_pre', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_offering_shopify_staff_augmentation_2_b_post', { ns: 'common'})}</span>{t('service_offering_shopify_staff_augmentation_2_c', { ns: 'common'})}</p>,
+                        <p className='text-[16px]'>{t('service_offering_staff_augmentation_4_a', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_a_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_a_mid', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_b_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_b_mid', { ns: 'common'})}</p>
+                    ]
+                }} 
+                    techStack={ServiceFlipBoxStack.SHOPIFY}
+                />
+        </div>
       </div>
     )
   }
