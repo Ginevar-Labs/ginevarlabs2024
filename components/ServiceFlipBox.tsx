@@ -44,7 +44,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
 
             <div className='lg:absolute lg:left-10 lg:bottom-4'>
                     <div className='w-[140px] lg:mx-0 mx-auto'>
-                        <Button title={t('service_offering_box_read_more', { ns: 'common'})}/>
+                        <a href={props.techStack == ServiceFlipBoxStack.MOBILE ? "/mobile-studio" : props.techStack == ServiceFlipBoxStack.SHOPIFY ? '/shopify-builders' : '/web3-studio'}><Button title={t('service_offering_box_read_more', { ns: 'common'})}/></a>
                     </div>
                 </div>
             
@@ -65,7 +65,7 @@ export default function ServiceFlipBox(props: ServiceFlipBoxProps) {
 
             <div className='lg:absolute lg:left-10 lg:bottom-4'>
                     <div className='w-[140px] lg:mx-0 mx-auto'>
-                    <Button title={t('service_offering_box_read_more', { ns: 'common'})}/>
+                    <a href={props.techStack == ServiceFlipBoxStack.MOBILE ? "/mobile-studio" : props.techStack == ServiceFlipBoxStack.SHOPIFY ? '/shopify-builders' : '/web3-studio'}><Button title={t('service_offering_box_read_more', { ns: 'common'})}/></a>
                 </div>
             </div>
             </div>

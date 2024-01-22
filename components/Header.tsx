@@ -6,7 +6,11 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import Link from 'next/link';
 
-export default function Header() {
+interface HeaderProps {
+    currentPage: string
+}
+
+export default function Header(props: HeaderProps) {
     const { t } = useTranslation();
     const router = useRouter();
   
@@ -35,7 +39,7 @@ export default function Header() {
                 <div className="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
                 <ul className="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0">
                     <li>
-                    <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#FF7878] mt-1" aria-current="page">{t('main_menu_item_home', { ns: 'common'})}</a>
+                    <a href={props.currentPage == 'home' ? '#' : '/#'} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#FF7878] mt-1" aria-current="page">{t('main_menu_item_home', { ns: 'common'})}</a>
                     </li>
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" className="flex items-center justify-between w-full py-2 px-3 text-black rounded lg:border-0 lg:p-0 lg:w-auto transition duration-200 fontedBebas hover:text-[#8BC694] mt-1">{t('main_menu_item_services', { ns: 'common'})} <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -44,22 +48,22 @@ export default function Header() {
                         <div id="dropdownNavbar" className="z-10 hidden font-normal bg-[#FAF9E4] divide-y divide-gray-100 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] w-full lg:w-44 dark:divide-gray-600">
                             <ul className="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
                             <li>
-                            <a href="/#services" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_solutions', { ns: 'common'})}</a>
+                            <a href={props.currentPage == 'home' ? '#services' : '/#services'} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_solutions', { ns: 'common'})}</a>
                             </li>
                             <li>
-                            <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_mobile_studio', { ns: 'common'})}</a>
+                            <a href="/mobile-studio" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_mobile_studio', { ns: 'common'})}</a>
                             </li>
                             <li>
-                            <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('services_menu_item_shopify_builders', { ns: 'common'})}</a>
+                            <a href="/shopify-builders" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('services_menu_item_shopify_builders', { ns: 'common'})}</a>
                             </li>
                             <li>
-                            <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('services_menu_item_web3_studio', { ns: 'common'})}</a>
+                            <a href="/web3-studio" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('services_menu_item_web3_studio', { ns: 'common'})}</a>
                             </li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                    <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E] mt-1" aria-current="page">{t('main_menu_item_portfolio', { ns: 'common'})}</a>
+                    <a href={props.currentPage == 'home' ? '#portfolio' : '/#portfolio'} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E] mt-1" aria-current="page">{t('main_menu_item_portfolio', { ns: 'common'})}</a>
                     </li>
                     
                     <li>
@@ -69,16 +73,16 @@ export default function Header() {
                         <div id="dropdownAboutUs" className="z-10 hidden font-normal bg-[#FAF9E4] divide-y divide-gray-100 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] w-44 dark:divide-gray-600">
                             <ul className="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_our_team', { ns: 'common'})}</a>
+                                <a href={props.currentPage == 'aboutus' ? '#ourteam' : '/aboutus#ourteam'} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_our_team', { ns: 'common'})}</a>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('about_us_menu_item_faq', { ns: 'common'})}</a>
+                                <a href={props.currentPage == 'aboutus' ? '#faq' : '/aboutus#faq'} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('about_us_menu_item_faq', { ns: 'common'})}</a>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_careers', { ns: 'common'})}</a>
+                                <a href={props.currentPage == 'aboutus' ? '#careers' : '/aboutus#careers'} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_careers', { ns: 'common'})}</a>
                             </li>
                             <li>
-                                <Link href="/#contact" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('about_us_menu_item_contact', { ns: 'common'})}</Link>
+                                <Link href="#contact" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('about_us_menu_item_contact', { ns: 'common'})}</Link>
                             </li>
                             </ul>
                         </div>
@@ -87,7 +91,7 @@ export default function Header() {
                     <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#6E6E6E] mt-1" aria-current="page">Careers</a>
                     </li> */}
                     <li>
-                    <Link href="/#blog" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page">{t('main_menu_item_blog', { ns: 'common'})}</Link>
+                    <Link href={props.currentPage == 'home' ? '#blog' : '/#blog'} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page">{t('main_menu_item_blog', { ns: 'common'})}</Link>
                     </li>
                     <li>
                     <a href="#contact" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button title={t('main_menu_book_a_call', { ns: 'common'})}></Button></a>

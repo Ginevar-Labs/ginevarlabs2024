@@ -16,7 +16,7 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
 
   return (
     <>
-      <Header />
+      <Header currentPage='home' />
       <main
         className={`flex min-h-screen flex-col`}
       >
@@ -27,7 +27,7 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
         <EngineeringBlogBox categories={blog.categories} posts={blog.posts} />
         <ContactBox/>
       </main>
-      <Footer/>
+      <Footer currentPage='home'/>
     </>
   )
 }
