@@ -17,7 +17,7 @@ export default function HomeHero() {
                 <img src='/assets/ginevar_logo_dark.png' className='transition duration-500 opacity-25 hover:opacity-100'></img>
             </div>
             <div className='col-span-3 lg:h-[500px] w-full'>
-                <div className='fontedBebas transition-all duration-500 opacity-50 hover:opacity-100'>
+                <div className='fontedBebas transition-all duration-500 '>
                     <h2>{t('home_hero_native_cross', { ns: 'common'})}</h2>
                     <div className='relative w-full grid lg:grid-cols-6 grid-cols-1 lg:h-[200px]'>
                         <div className='col-span-1 lg:leading-[100px] leading-[60px]'>
@@ -35,7 +35,7 @@ export default function HomeHero() {
                         </div>
                     </div>
                 </div>
-                <div className='fontedBebas transition-all duration-500 opacity-50 hover:opacity-100 border-dashed border-t-[2px] border-gray-800'>
+                <div className='fontedBebas transition-all duration-500  border-dashed border-t-[2px] border-gray-800'>
                     <h2>{t('home_hero_uxui_design', { ns: 'common'})}</h2>
                     <div className='relative w-full grid lg:grid-cols-6 grid-cols-1 lg:h-[200px]'>
                         <div className='col-span-2 lg:leading-[100px] leading-[60px]'>
@@ -54,7 +54,7 @@ export default function HomeHero() {
             </div>
         </div>
         <div className='fontedBebas w-full grid lg:grid-cols-2 grid-cols-1 lg:h-[300px] border-dashed border-t-[2px] border-gray-800'>
-            <div className='relative col-span-1 border-dashed lg:border-r-[2px] border-gray-800 transition-all duration-500 opacity-50 hover:opacity-100'>
+            <div className='relative col-span-1 border-dashed lg:border-r-[2px] border-gray-800 transition-all duration-500 '>
                 <h2>{t('home_hero_e_commerce', { ns: 'common'})}</h2>
                 <h2 className='lg:leading-[100px] leading-[60px] opacity-75 lg:text-[72px] text-[56px] drop-shadow-[4px_4px_rgba(255,242,56,1)]' style={{letterSpacing: '20px'}}><span className='text-black'>{t('home_hero_e_commerce_shopify', { ns: 'common'})}</span></h2>
                 <div className='w-full text-[#FF78B9] text-left transition-all duration-500 lg:opacity-50 opacity-75 hover:opacity-100'><span className='text-[#78A6FF]'>{t('home_hero_e_commerce_template_design_part_a', { ns: 'common'})}</span> <span className=''>{t('home_hero_e_commerce_template_design_part_b', { ns: 'common'})}</span></div>
@@ -62,7 +62,7 @@ export default function HomeHero() {
                 <div className='w-full text-[#FF78B9] text-left transition-all duration-500 lg:opacity-50 opacity-75 hover:opacity-100'> <span className='text-[#FF7878]'>{t('home_hero_e_commerce_shopify_apps', { ns: 'common'})}</span></div>
                 <img src='/assets/icons/icon-shopify.png' className='absolute lg:h-[100px] h-[50px] lg:right-10 right-0 lg:top-20 top-24' alt='Shopify' />
             </div>
-            <div className='relative col-span-1 border-dashed lg:border-t-[0px] border-t-[2px] border-gray-800 lg:text-right text-left transition-all duration-500 opacity-50 hover:opacity-100'>
+            <div className='relative col-span-1 border-dashed lg:border-t-[0px] border-t-[2px] border-gray-800 lg:text-right text-left transition-all duration-500'>
                 <h2>Blockchain</h2>
                 <h2 className='lg:leading-[100px] leading-[60px] opacity-75 lg:text-[72px] text-[56px] drop-shadow-[4px_4px_rgba(255,242,56,1)]' style={{letterSpacing: '20px'}}><span className='text-black'>NFT</span></h2>
                 <div className='w-full text-[#FF78B9] lg:text-right text-left transition-all duration-500 lg:opacity-50 opacity-75 hover:opacity-100'><span className='text-[#8BC694]'>Smart</span> <span className='text-[#78A6FF]'>Contracts</span></div>
