@@ -103,7 +103,7 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
                         textDecorationColor: '#7D7D72'
                     }}>Landing Pages</h2>
                 </div>
-                <div className='px-20 flex items-center justify-center lg:mb-0 relative lg:col-span-5 col-span-1 w-full min-h-[400px] fontedBebas text-left border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
+                <div className='lg:px-20 px-10 lg:text-center text-justify flex items-center justify-center lg:mb-0 relative lg:col-span-5 col-span-1 w-full min-h-[400px] fontedBebas text-left border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
                     <p className='transition-all duration-500 text-[#7D7D72]'>A landing page typically hosts <u>marketing information</u> of the App, screenshots, reviews and <u>links</u> for downloading on each store, as well as terms and conditions. It also adds SEO capability in order to <span className='text-black'>maximize your public</span>.</p>
                 </div>
             </div>
@@ -115,7 +115,7 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
                         textDecorationColor: '#EE807C'
                     }}>Backend</h2>
                 </div>
-                <div className='px-20 flex items-center justify-center lg:mb-0 relative lg:col-span-5 col-span-1 w-full min-h-[400px] fontedBebas text-left border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
+                <div className='lg:px-20 px-10 lg:text-center text-justify flex items-center justify-center lg:mb-0 relative lg:col-span-5 col-span-1 w-full min-h-[400px] fontedBebas text-left border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
                     <p className='transition-all duration-500 text-[#7D7D72]'>Developing and hosting a backend is a must when dealing with account creation, content on demand, email handling and <u>network-oriented features</u>. <span className='text-black'>We take care of it</span> using Node.js, managing databases with PostgreSQL/MongoDB, and hosting it on the cloud at a provider <span className='text-black'>of your choice</span>.</p>
                 </div>
             </div>
@@ -127,7 +127,7 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
                         textDecorationColor: '#82A5F8'
                     }}>Deployment</h2>
                 </div>
-                <div className='px-20 flex items-center justify-center lg:mb-0 relative lg:col-span-5 col-span-1 w-full min-h-[400px] fontedBebas text-left border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
+                <div className='lg:px-20 px-10 lg:text-center text-justify flex items-center justify-center lg:mb-0 relative lg:col-span-5 col-span-1 w-full min-h-[400px] fontedBebas text-left border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
                     <p className='transition-all duration-500 text-[#7D7D72]'>We understand the importance of the deployment phase, from <span className='text-black'>submitting store-compliant information</span>, <span className='text-black'>handling stores feedback</span> on the development, and organizing a <span className='text-black'><u>soft and synchronized launch</u></span>. We will be <u>online with you at launch</u> as well, so we can handle any unexpected behaviour within the app.</p>
                 </div>
             </div>
