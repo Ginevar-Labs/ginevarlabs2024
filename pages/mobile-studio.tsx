@@ -23,78 +23,78 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
       >
         <div id='home' className='my-10 w-full '>
             <div className='w-full lg:px-40 px-10 fontedBebas lg:text-left text-center'>
-                <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>Mobile Studio</h1>
+                <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>{t('services_menu_item_mobile_studio', { ns: 'common'})}</h1>
             </div>
 
-            <CommonMarquee text='Full Cycle'/>
+            <CommonMarquee text={t('mobile_studio_marquee_full_cycle', { ns: 'common'})}/>
 
             <div className='lg:px-40 px-10 my-12'>
                 <div className='grid lg:grid-cols-3 grid-cols-1 fontedBebas text-justify my-12'>
-                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#82A5F8]'>Consultation</span></div>
+                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#82A5F8]'>{t('mobile_studio_fc_consultation', { ns: 'common'})}</span></div>
                     <div className='lg:col-span-2 col-span-1 text-[#7D7D72]'>
-                        We learn about your <u>company</u>, your <u>values</u> and your <u>product</u>. We do a <span className=' text-[#82A5F8]'>deep research</span> on your <b className='text-black'>niche</b>, your <b className='text-black'>target audience</b> and your <b className='text-black'>competition</b>
+                        {t('mobile_studio_fc_consultation_1a', { ns: 'common'})} <u>{t('mobile_studio_fc_consultation_1b', { ns: 'common'})}</u>{t('mobile_studio_fc_consultation_1c', { ns: 'common'})}<u>{t('mobile_studio_fc_consultation_1d', { ns: 'common'})}</u>{t('mobile_studio_fc_consultation_1e', { ns: 'common'})} <u>{t('mobile_studio_fc_consultation_1f', { ns: 'common'})}</u>{t('mobile_studio_fc_consultation_1g', { ns: 'common'})}<span className=' text-[#82A5F8]'>{t('mobile_studio_fc_consultation_1h', { ns: 'common'})}</span>{t('mobile_studio_fc_consultation_1i', { ns: 'common'})} <b className='text-black'>{t('mobile_studio_fc_consultation_1j', { ns: 'common'})}</b>{t('mobile_studio_fc_consultation_1k', { ns: 'common'})}<b className='text-black'>{t('mobile_studio_fc_consultation_1l', { ns: 'common'})}</b>{t('mobile_studio_fc_consultation_1m', { ns: 'common'})}<b className='text-black'>{t('mobile_studio_fc_consultation_1n', { ns: 'common'})}</b>
                     </div>
                     <div className='lg:col-span-3 col-span-1 text-[#7D7D72]'>
-                    to have a better understanding on the value being added. 
+                    {t('mobile_studio_fc_consultation_2', { ns: 'common'})}
                     </div>
                     <div className='lg:col-span-3 col-span-1 text-[#7D7D72]'>
-                    This step is free, and we will prepare a proposal with the analysis done and budget/time estimations. Our projects typically fall between the 2-5 months and are priced between 7500 and 25000 EUR.
+                    {t('mobile_studio_fc_consultation_3', { ns: 'common'})}
                     </div>
                 </div>
 
                 <div className='grid lg:grid-cols-3 grid-cols-1 fontedBebas text-justify my-12'>
-                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#9DC79C]'>Prototyping</span></div>
+                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#9DC79C]'>{t('mobile_studio_fc_prototyping', { ns: 'common'})}</span></div>
                     <div className='lg:col-span-2 col-span-1 text-[#7D7D72]'>
-                    We design a <span className='text-[#9DC79C]'>brand identity</span> for your product, a <span className='text-[#9DC79C]'>stylesheet</span> for <u>colours</u>, <u>logos</u> and <u>fonts</u>, continued by the <span className='text-black'>wireframe prototyping</span>.
+                    {t('mobile_studio_fc_prototyping_1a', { ns: 'common'})}<span className='text-[#9DC79C]'>{t('mobile_studio_fc_prototyping_1b', { ns: 'common'})}</span>{t('mobile_studio_fc_prototyping_1c', { ns: 'common'})}<span className='text-[#9DC79C]'>{t('mobile_studio_fc_prototyping_1d', { ns: 'common'})}</span>{t('mobile_studio_fc_prototyping_1e', { ns: 'common'})}<u>{t('mobile_studio_fc_prototyping_1f', { ns: 'common'})}</u>{t('mobile_studio_fc_prototyping_1g', { ns: 'common'})}<u>{t('mobile_studio_fc_prototyping_1h', { ns: 'common'})}</u>{t('mobile_studio_fc_prototyping_1i', { ns: 'common'})}<u>{t('mobile_studio_fc_prototyping_1j', { ns: 'common'})}</u>{t('mobile_studio_fc_prototyping_1k', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_prototyping_1l', { ns: 'common'})}</span>{t('mobile_studio_fc_prototyping_1m', { ns: 'common'})}
                     </div>
                     <div className='lg:col-span-3 col-span-1 text-[#7D7D72]'>
-                    After a validation from the client, we proceed to design the final application views and flow.
+                    {t('mobile_studio_fc_prototyping_2', { ns: 'common'})}
                     </div>
                 </div>
 
                 <div className='grid lg:grid-cols-4 grid-cols-1 fontedBebas text-justify my-12'>
-                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#747473]'>Building</span></div>
+                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#747473]'>{t('mobile_studio_fc_building', { ns: 'common'})}</span></div>
                     <div className='lg:col-span-3 col-span-1 text-[#7D7D72]'>
-                    After the <u>client approval</u> on the design, our developers start working on your app following a <span className='text-black'>schedule</span> shared with the client. 
+                    {t('mobile_studio_fc_building_1a', { ns: 'common'})}<u>{t('mobile_studio_fc_building_1b', { ns: 'common'})}</u>{t('mobile_studio_fc_building_1c', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_building_1d', { ns: 'common'})}</span>{t('mobile_studio_fc_building_1e', { ns: 'common'})}
                     </div>
                     <div className='lg:col-span-4 col-span-1 text-[#7D7D72]'>
-                    The Schedule will be composed of <span className='text-black'>stages</span>, in which you will be able to check the current process.
+                    {t('mobile_studio_fc_building_2a', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_building_2b', { ns: 'common'})}</span>{t('mobile_studio_fc_building_2c', { ns: 'common'})}
                     </div>
                 </div>
 
                 <div className='grid lg:grid-cols-4 grid-cols-1 fontedBebas text-justify my-12'>
-                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#EE807C]'>Testing</span></div>
+                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#EE807C]'>{t('mobile_studio_fc_testing', { ns: 'common'})}</span></div>
                     <div className='lg:col-span-3 col-span-1 text-[#7D7D72]'>
-                    Next step is testing the app in the <span className='text-[#EE807C]'>most used devices</span> and on <span className='text-[#EE807C]'>different environments</span>. we aim for a <span className='text-black'>clean launch</span> where there is no space for surprise bugs.
+                    {t('mobile_studio_fc_testing_1a', { ns: 'common'})}<span className='text-[#EE807C]'>{t('mobile_studio_fc_testing_1b', { ns: 'common'})}</span>{t('mobile_studio_fc_testing_1c', { ns: 'common'})}<span className='text-[#EE807C]'>{t('mobile_studio_fc_testing_1d', { ns: 'common'})}</span>{t('mobile_studio_fc_testing_1e', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_testing_1f', { ns: 'common'})}</span>{t('mobile_studio_fc_testing_1g', { ns: 'common'})}
                     </div>
                     <div className='lg:col-span-4 col-span-1 text-[#7D7D72]'>
-                    We also use this phase to apply the <u><span className='text-black'>last changes asked by the client</span></u>, understanding that even days before launch there could be a crucial marketing directive
+                    {t('mobile_studio_fc_testing_2a', { ns: 'common'})}<u><span className='text-black'>{t('mobile_studio_fc_testing_2b', { ns: 'common'})}</span></u>{t('mobile_studio_fc_testing_2c', { ns: 'common'})}
                     </div>
                 </div>
 
                 <div className='grid lg:grid-cols-4 grid-cols-1 fontedBebas text-justify my-12'>
-                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#EE80B7]'>Launch</span></div>
+                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#EE80B7]'>{t('mobile_studio_fc_launch', { ns: 'common'})}</span></div>
                     <div className='lg:col-span-3 col-span-1 text-[#7D7D72]'>
-                    Launching an app includes <span className='text-[#EE80B7]'>filling app details</span>, getting <span className='text-[#EE80B7]'>assets ready</span>, and <span className='text-[#EE80B7]'>pushing to stores</span>. Google (and mostly <span className='text-black'>apple</span>) can ask for <u>code changes</u> to keep up with
+                    {t('mobile_studio_fc_launch_1a', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('mobile_studio_fc_launch_1b', { ns: 'common'})}</span>{t('mobile_studio_fc_launch_1c', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('mobile_studio_fc_launch_1d', { ns: 'common'})}</span>{t('mobile_studio_fc_launch_1e', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('mobile_studio_fc_launch_1f', { ns: 'common'})}</span>{t('mobile_studio_fc_launch_1g', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_launch_1h', { ns: 'common'})}</span>{t('mobile_studio_fc_launch_1i', { ns: 'common'})}<u>{t('mobile_studio_fc_launch_1j', { ns: 'common'})}</u>{t('mobile_studio_fc_launch_1k', { ns: 'common'})}
                     </div>
                     <div className='lg:col-span-4 col-span-1 text-[#7D7D72]'>
-                    the <span className='text-black'>latest standards</span> according to each market, and we need to be <u>fast</u> and <u>reactive</u> to get to the <span className='text-black'>launch date safe and sound</span>.
+                    {t('mobile_studio_fc_launch_2a', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_launch_2b', { ns: 'common'})}</span>{t('mobile_studio_fc_launch_2c', { ns: 'common'})}<u>{t('mobile_studio_fc_launch_2d', { ns: 'common'})}</u>{t('mobile_studio_fc_launch_2e', { ns: 'common'})}<u>{t('mobile_studio_fc_launch_2f', { ns: 'common'})}</u>{t('mobile_studio_fc_launch_2g', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_launch_2h', { ns: 'common'})}</span>{t('mobile_studio_fc_launch_2i', { ns: 'common'})}
                     </div>
                 </div>
 
                 <div className='grid lg:grid-cols-3 grid-cols-1 fontedBebas text-justify my-12'>
-                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#B7C656]'>Maintenance</span></div>
+                    <div className='col-span-1 pt-2'><span className='leading-[60px] lg:text-[68px] text-[46px] text-[#B7C656]'>{t('mobile_studio_fc_maintenance', { ns: 'common'})}</span></div>
                     <div className='lg:col-span-2 col-span-1 text-[#7D7D72]'>
-                    Updating an app is rather different than a website. we handle that process offering <span className='text-black'>updates</span> (not only <span className='text-[#B7C656]'>changes</span> but <span className='text-[#B7C656]'>new</span>
+                    {t('mobile_studio_fc_maintenance_1a', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_maintenance_1b', { ns: 'common'})}</span>{t('mobile_studio_fc_maintenance_1c', { ns: 'common'})}<span className='text-[#B7C656]'>{t('mobile_studio_fc_maintenance_1d', { ns: 'common'})}</span>{t('mobile_studio_fc_maintenance_1e', { ns: 'common'})}<span className='text-[#B7C656]'>{t('mobile_studio_fc_maintenance_1f', { ns: 'common'})}</span>
                     </div>
                     <div className='lg:col-span-3 col-span-1 text-[#7D7D72]'>
-                    <span className='text-[#B7C656]'>implementations/redesigns</span>) in a <u>monthly basis</u>, giving access to both <span className='text-black'>design</span> and <span className='text-black'>code</span>.
+                    <span className='text-[#B7C656]'>{t('mobile_studio_fc_maintenance_2a', { ns: 'common'})}</span>{t('mobile_studio_fc_maintenance_2b', { ns: 'common'})}<u>{t('mobile_studio_fc_maintenance_2c', { ns: 'common'})}</u>{t('mobile_studio_fc_maintenance_2d', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_maintenance_2e', { ns: 'common'})}</span>{t('mobile_studio_fc_maintenance_2f', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_fc_maintenance_2g', { ns: 'common'})}</span>{t('mobile_studio_fc_maintenance_2h', { ns: 'common'})}
                     </div>
                 </div>
                 
             </div>
 
-            <CommonMarquee text='Extra Services'/>
+            <CommonMarquee text={t('mobile_studio_marquee_extra_services', { ns: 'common'})}/>
 
             <div className='w-full grid lg:grid-cols-6 grid-cols-1 lg:px-20 px-0 my-6'>
                 <div className='w-full col-span-1 items-center justify-center fontedBebas'>
@@ -104,7 +104,7 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
                     }}>Landing Pages</h2>
                 </div>
                 <div className='lg:px-20 px-10 lg:text-center text-justify flex items-center justify-center lg:mb-0 relative lg:col-span-5 col-span-1 w-full min-h-[400px] fontedBebas text-left border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
-                    <p className='transition-all duration-500 text-[#7D7D72]'>A landing page typically hosts <u>marketing information</u> of the App, screenshots, reviews and <u>links</u> for downloading on each store, as well as terms and conditions. It also adds SEO capability in order to <span className='text-black'>maximize your public</span>.</p>
+                    <p className='transition-all duration-500 text-[#7D7D72]'>{t('mobile_studio_landing_pages_a', { ns: 'common'})}<u>{t('mobile_studio_landing_pages_b', { ns: 'common'})}</u>{t('mobile_studio_landing_pages_c', { ns: 'common'})}<u>{t('mobile_studio_landing_pages_d', { ns: 'common'})}</u>{t('mobile_studio_landing_pages_e', { ns: 'common'})} <span className='text-black'>{t('mobile_studio_landing_pages_f', { ns: 'common'})}</span>{t('mobile_studio_landing_pages_g', { ns: 'common'})}</p>
                 </div>
             </div>
 
@@ -116,7 +116,7 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
                     }}>Backend</h2>
                 </div>
                 <div className='lg:px-20 px-10 lg:text-center text-justify flex items-center justify-center lg:mb-0 relative lg:col-span-5 col-span-1 w-full min-h-[400px] fontedBebas text-left border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
-                    <p className='transition-all duration-500 text-[#7D7D72]'>Developing and hosting a backend is a must when dealing with account creation, content on demand, email handling and <u>network-oriented features</u>. <span className='text-black'>We take care of it</span> using Node.js, managing databases with PostgreSQL/MongoDB, and hosting it on the cloud at a provider <span className='text-black'>of your choice</span>.</p>
+                    <p className='transition-all duration-500 text-[#7D7D72]'>{t('mobile_studio_backend_a', { ns: 'common'})}<u>{t('mobile_studio_backend_b', { ns: 'common'})}</u>{t('mobile_studio_backend_c', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_backend_d', { ns: 'common'})}</span>{t('mobile_studio_backend_e', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_backend_f', { ns: 'common'})}</span>{t('mobile_studio_backend_g', { ns: 'common'})}</p>
                 </div>
             </div>
 
@@ -128,11 +128,11 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
                     }}>Deployment</h2>
                 </div>
                 <div className='lg:px-20 px-10 lg:text-center text-justify flex items-center justify-center lg:mb-0 relative lg:col-span-5 col-span-1 w-full min-h-[400px] fontedBebas text-left border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
-                    <p className='transition-all duration-500 text-[#7D7D72]'>We understand the importance of the deployment phase, from <span className='text-black'>submitting store-compliant information</span>, <span className='text-black'>handling stores feedback</span> on the development, and organizing a <span className='text-black'><u>soft and synchronized launch</u></span>. We will be <u>online with you at launch</u> as well, so we can handle any unexpected behaviour within the app.</p>
+                    <p className='transition-all duration-500 text-[#7D7D72]'>{t('mobile_studio_deployment_a', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_deployment_b', { ns: 'common'})}</span>{t('mobile_studio_deployment_c', { ns: 'common'})}<span className='text-black'>{t('mobile_studio_deployment_d', { ns: 'common'})}</span>{t('mobile_studio_deployment_e', { ns: 'common'})}<span className='text-black'><u>{t('mobile_studio_deployment_f', { ns: 'common'})}</u></span>{t('mobile_studio_deployment_g', { ns: 'common'})}<u>{t('mobile_studio_deployment_h', { ns: 'common'})}</u>{t('mobile_studio_deployment_i', { ns: 'common'})}</p>
                 </div>
             </div>
 
-            <CommonMarquee text='Use Cases'/>
+            <CommonMarquee text={t('mobile_studio_marquee_use_cases', { ns: 'common'})}/>
 
         </div>
         
