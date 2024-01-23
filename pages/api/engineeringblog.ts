@@ -13,6 +13,7 @@ type EngineeringBlogPost = {
     date: string;
     image: string;
     content: string;
+    externallink: string;
 }
 
 type Data = {
@@ -76,7 +77,8 @@ export default function handler(
             category: _categoryIosDevelopment,
             date: '17/01/2024',
             image: "/assets/blog/eb-0test.png",
-            content: "eb-0test"
+            content: "eb-0test",
+            externallink: 'https://medium.com'
         },
 
         {
@@ -86,6 +88,7 @@ export default function handler(
             date: '10/01/2024',
             image: "/assets/blog/eb-1test.png",
             content: "eb-1test",
+            externallink: 'https://medium.com'
         },
 
         {
@@ -95,6 +98,7 @@ export default function handler(
             date: '02/01/2024',
             image: "/assets/blog/eb-2test.png",
             content: "eb-2test",
+            externallink: 'https://medium.com'
         },
       ]
   })

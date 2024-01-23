@@ -80,7 +80,7 @@ export default function Footer(props: FooterProps) {
                                 <Link locale={props.locale} href={props.currentPage == 'aboutus' ? '#careers' : '/aboutus#careers'} className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('about_us_menu_item_careers', { ns: 'common'})}</p></Link>
                                 <Link locale={props.locale} href="#contact" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'><p>{t('about_us_menu_item_contact', { ns: 'common'})}</p></Link>
                                 <hr className='my-4'/>
-                                <Link locale={props.locale} href={props.currentPage == 'home' ? '#blog' : '/#blog'} className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#FF78B9]'><p>{t('main_menu_item_blog_full', { ns: 'common'})}</p></Link>
+                                <Link locale={props.locale} href={props.currentPage == 'home' ? '#blog' : '/blog'} className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#FF78B9]'><p>{t('main_menu_item_blog_full', { ns: 'common'})}</p></Link>
                                 
                             </div>
                         </div>

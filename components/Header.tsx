@@ -8,7 +8,8 @@ import Link from 'next/link';
 
 interface HeaderProps {
     currentPage: string,
-    locale: string
+    locale: string,
+    subtitle?: string
 }
 
 export default function Header(props: HeaderProps) {
@@ -18,7 +19,7 @@ export default function Header(props: HeaderProps) {
     return (
       <header>
         <Head>
-            <title>{t('app_title', { ns: 'common'})}</title>
+            <title>{props.subtitle ? `${props.subtitle} - ` : ""} {t('app_title', { ns: 'common'})}</title>
             <meta name="description" content={t('app_description', { ns: 'common'})} />
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <link rel="icon" href="/favicon.ico" />
@@ -92,7 +93,7 @@ export default function Header(props: HeaderProps) {
                     <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#6E6E6E] mt-1" aria-current="page">Careers</a>
                     </li> */}
                     <li>
-                    <Link href={props.currentPage == 'home' ? '#blog' : '/#blog'} locale={props.locale} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page">{t('main_menu_item_blog', { ns: 'common'})}</Link>
+                    <Link href={props.currentPage == 'home' ? '#blog' : '/blog'} locale={props.locale} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page">{t('main_menu_item_blog', { ns: 'common'})}</Link>
                     </li>
                     <li>
                     <Link href="#contact" locale={props.locale} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button title={t('main_menu_book_a_call', { ns: 'common'})}></Button></Link>
