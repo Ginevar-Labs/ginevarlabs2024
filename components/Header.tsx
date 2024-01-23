@@ -114,17 +114,17 @@ export default function Header(props: HeaderProps) {
                             <ul className="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
                             <li>
                                 <a onClick={() => {
-                                    router.push('/', undefined, { locale: 'en'})
+                                    router.push('#', undefined, { locale: 'en'})
                                 }} href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('main_menu_lang_eng', { ns: 'common'})}</a>
                             </li>
                             <li>
                                 <a onClick={() => {
-                                    router.push('/', undefined, { locale: 'es'})
+                                    router.push('#', undefined, { locale: 'es'})
                                 }} href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('main_menu_lang_es', { ns: 'common'})}</a>
                             </li>
                             <li>
                                 <a onClick={() => {
-                                    router.push('/', undefined, { locale: 'it'})
+                                    router.push('#', undefined, { locale: 'it'})
                                 }} href="#" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('main_menu_lang_it', { ns: 'common'})}</a>
                             </li>
                             </ul>
