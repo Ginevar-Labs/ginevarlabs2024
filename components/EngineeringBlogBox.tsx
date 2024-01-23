@@ -3,10 +3,12 @@ import 'flowbite';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Button from './Button';
+import Link from 'next/link';
 
 interface EngineeringBlogBoxProps {
     categories: any[]
     posts: any[]
+    locale: string
 }
 
 export default function EngineeringBlogBox(props: EngineeringBlogBoxProps) {
@@ -20,7 +22,7 @@ export default function EngineeringBlogBox(props: EngineeringBlogBoxProps) {
                     <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>{t('engineering_blog_title_part_1', { ns: 'common'})} <span className='text-[#78A6FF]'>{t('engineering_blog_title_part_2', { ns: 'common'})}</span></h1>
                 </div>
                 <div className='sm:col-span-1 w-full col-span-1 flex items-center justify-center'>
-                    <a href="/blog/" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button title={t('engineering_blog_explore_button', { ns: 'common'})}></Button></a>
+                    <Link locale={props.locale} href="/blog/" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button title={t('engineering_blog_explore_button', { ns: 'common'})}></Button></Link>
                 </div>
             </div>
             <div className='grid sm:grid-cols-6 grid-cols-1 lg:px-40 px-10'>
@@ -54,10 +56,10 @@ export default function EngineeringBlogBox(props: EngineeringBlogBoxProps) {
                                         
                                         <figcaption className={`absolute px-8 py-4 text-lg bottom-0 bg-[#FFF238] transition duration-200  text-white hover:text-[#82A5F8] hover:bg-opacity-100 bg-opacity-75 w-full h-[140px] text-left`}>
                                         <div className='flex'> <img src={item.category.icon} className='w-6 h-6 mr-2' /> <p className={`line-clamp-1 text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(item.category.title, {ns: 'eb'})}</p></div>
-                                        <a href={`/blog/${item.url}`}>
+                                        <Link href={`/blog/${item.url}`} locale={props.locale}>
                                         <p className={`leading-none line-clamp-2 mt-0 text-[30px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(item.title, {ns: 'eb'})}</p>
                                         <p className='absolute bottom-0 text-[16px] text-black transition duration-200 opacity-50'>{item.date}</p>
-                                        </a>
+                                        </Link>
                                         <div></div>
                                     </figcaption>
                                     </figure>
@@ -77,10 +79,10 @@ export default function EngineeringBlogBox(props: EngineeringBlogBoxProps) {
                                         
                                         <figcaption className={`absolute px-8 py-4 text-lg bottom-0 bg-[#FFF238] transition duration-200  text-white hover:text-[#82A5F8] hover:bg-opacity-100 bg-opacity-75 w-full h-[140px] text-left`}>
                                         <div className='flex'> <img src={item.category.icon} className='w-6 h-6 mr-2' /> <p className={`line-clamp-1 text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(item.category.title, {ns: 'eb'})}</p></div>
-                                        <a href={`/blog/${item.url}`}>
+                                        <Link href={`/blog/${item.url}`} locale={props.locale}>
                                         <p className={`leading-none line-clamp-2 mt-0 text-[30px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(item.title, {ns: 'eb'})}</p>
                                         <p className='absolute bottom-0 text-[16px] text-black transition duration-200 opacity-50'>{item.date}</p>
-                                        </a>
+                                        </Link>
                                         <div></div>
                                     </figcaption>
                                     </figure>

@@ -12,12 +12,12 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useEffect } from 'react';
 
-export default function Home({ blog }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Home({ blog, locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
 
   return (
     <>
-      <Header currentPage='mobilestudio'/>
+      <Header currentPage='mobilestudio' locale={locale}/>
       <main
         className={`flex min-h-screen flex-col`}
       >
@@ -136,9 +136,9 @@ export default function Home({ blog }: InferGetServerSidePropsType<typeof getSer
 
         </div>
         
-        <ContactBox/>
+        <ContactBox locale={locale}/>
       </main>
-      <Footer currentPage='mobilestudio'/>
+      <Footer currentPage='mobilestudio' locale={locale}/>
     </>
   )
 }
@@ -151,7 +151,8 @@ export const getServerSideProps = async (context: any) => {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common', 'eb'])),
-      blog: _blogData
+      blog: _blogData,
+      locale: locale
     },
   };
 };

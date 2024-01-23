@@ -7,7 +7,8 @@ import Script from 'next/script';
 import Link from 'next/link';
 
 interface FooterProps {
-    currentPage: string
+    currentPage: string,
+    locale: string
 }
 
 export default function Footer(props: FooterProps) {
@@ -41,10 +42,10 @@ export default function Footer(props: FooterProps) {
                             
                         </div>
                         <div className='w-full px-6'>
-                        <a href="/privacy-policy" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'>{t('footer_privacy_policy', { ns: 'common'})}</a>
+                        <Link href="/privacy-policy" locale={props.locale} className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'>{t('footer_privacy_policy', { ns: 'common'})}</Link>
                         </div>
                         <div className='w-full px-6'>
-                        <a href="/cookies-policy" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#8BC694]'>{t('footer_cookies_policy', { ns: 'common'})}</a>
+                        <Link href="/cookies-policy" locale={props.locale} className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#8BC694]'>{t('footer_cookies_policy', { ns: 'common'})}</Link>
                         </div>
                             
                     </div>
@@ -63,23 +64,23 @@ export default function Footer(props: FooterProps) {
                             </div>
                         <div className='grid grid-cols-2 '>
                             <div className='col-span-1 w-full lg:px-6 px-0 lg:text-left text-center'>
-                                <a href={props.currentPage == 'home' ? '#' : '/#'} className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#B3C73E]'><p>{t('main_menu_item_home', { ns: 'common'})}</p></a>
+                                <Link locale={props.locale} href={props.currentPage == 'home' ? '#' : '/#'} className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#B3C73E]'><p>{t('main_menu_item_home', { ns: 'common'})}</p></Link>
                                 <hr className='my-4'/>
-                                <a href={props.currentPage == 'home' ? '#services' : '/#services'} className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#78A6FF]'><p>{t('main_menu_item_services', { ns: 'common'})}</p></a>
-                                <a href="/mobile-studio" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF78B9]'><p>{t('services_menu_item_mobile_studio', { ns: 'common'})}</p></a>
-                                <a href="/shopify-builders" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'><p>{t('services_menu_item_shopify_builders', { ns: 'common'})}</p></a>
-                                <a href="/web3-studio" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#B3C73E]'><p>{t('services_menu_item_web3_studio', { ns: 'common'})}</p></a>
+                                <Link locale={props.locale} href={props.currentPage == 'home' ? '#services' : '/#services'} className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#78A6FF]'><p>{t('main_menu_item_services', { ns: 'common'})}</p></Link>
+                                <Link locale={props.locale} href="/mobile-studio" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF78B9]'><p>{t('services_menu_item_mobile_studio', { ns: 'common'})}</p></Link>
+                                <Link locale={props.locale} href="/shopify-builders" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'><p>{t('services_menu_item_shopify_builders', { ns: 'common'})}</p></Link>
+                                <Link locale={props.locale} href="/web3-studio" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#B3C73E]'><p>{t('services_menu_item_web3_studio', { ns: 'common'})}</p></Link>
                                 <hr className='my-4'/>
-                                <a href={props.currentPage == 'home' ? '#portfolio' : '/#portfolio'} className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#8BC694]'><p> {t('main_menu_item_portfolio', { ns: 'common'})} </p></a>
+                                <Link locale={props.locale} href={props.currentPage == 'home' ? '#portfolio' : '/#portfolio'} className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#8BC694]'><p> {t('main_menu_item_portfolio', { ns: 'common'})} </p></Link>
                             </div>
                             <div className='col-span-1 w-full lg:px-6 px-0 lg:text-left text-center'>
-                                <a href={props.currentPage == 'aboutus' ? '#' : '/aboutus#'} className='transition duration-200 opacity-10 hover:opacity-75'><p>{t('main_menu_item_about_us', { ns: 'common'})}</p></a>
-                                <a href={props.currentPage == 'aboutus' ? '#ourteam' : '/aboutus#ourteam'} className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF78B9]'><p>{t('about_us_menu_item_our_team', { ns: 'common'})}</p></a>
-                                <a href={props.currentPage == 'aboutus' ? '#faq' : '/aboutus#faq'} className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#8BC694]'><p>{t('about_us_menu_item_faq', { ns: 'common'})}</p></a>
-                                <a href={props.currentPage == 'aboutus' ? '#careers' : '/aboutus#careers'} className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('about_us_menu_item_careers', { ns: 'common'})}</p></a>
-                                <a href="#contact" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'><p>{t('about_us_menu_item_contact', { ns: 'common'})}</p></a>
+                                <Link locale={props.locale} href={props.currentPage == 'aboutus' ? '#' : '/aboutus#'} className='transition duration-200 opacity-10 hover:opacity-75'><p>{t('main_menu_item_about_us', { ns: 'common'})}</p></Link>
+                                <Link locale={props.locale} href={props.currentPage == 'aboutus' ? '#ourteam' : '/aboutus#ourteam'} className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF78B9]'><p>{t('about_us_menu_item_our_team', { ns: 'common'})}</p></Link>
+                                <Link locale={props.locale} href={props.currentPage == 'aboutus' ? '#faq' : '/aboutus#faq'} className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#8BC694]'><p>{t('about_us_menu_item_faq', { ns: 'common'})}</p></Link>
+                                <Link locale={props.locale} href={props.currentPage == 'aboutus' ? '#careers' : '/aboutus#careers'} className='transition duration-200 opacity-25 hover:opacity-100'><p>{t('about_us_menu_item_careers', { ns: 'common'})}</p></Link>
+                                <Link locale={props.locale} href="#contact" className='transition duration-200 opacity-25 hover:opacity-100 hover:text-[#FF7878]'><p>{t('about_us_menu_item_contact', { ns: 'common'})}</p></Link>
                                 <hr className='my-4'/>
-                                <a href={props.currentPage == 'home' ? '#blog' : '/#blog'} className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#FF78B9]'><p>{t('main_menu_item_blog_full', { ns: 'common'})}</p></a>
+                                <Link locale={props.locale} href={props.currentPage == 'home' ? '#blog' : '/#blog'} className='transition duration-200 opacity-10 hover:opacity-75 hover:text-[#FF78B9]'><p>{t('main_menu_item_blog_full', { ns: 'common'})}</p></Link>
                                 
                             </div>
                         </div>

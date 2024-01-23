@@ -7,7 +7,8 @@ import Script from 'next/script';
 import Link from 'next/link';
 
 interface HeaderProps {
-    currentPage: string
+    currentPage: string,
+    locale: string
 }
 
 export default function Header(props: HeaderProps) {
@@ -26,9 +27,9 @@ export default function Header(props: HeaderProps) {
 
           <nav className="border-gray-200">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <Link href="/" locale={props.locale} className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="/assets/ginevar_banner_dark.png" className="h-16" alt="Ginevar Logo" />
-                </a>
+                </Link>
                 <button data-collapse-toggle="navbar-dropdown" type="button" className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none" aria-controls="navbar-dropdown" aria-expanded="false">
                     <span className="sr-only">{t('main_menu_aria', { ns: 'common'})}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140" fill="none">
@@ -39,7 +40,7 @@ export default function Header(props: HeaderProps) {
                 <div className="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
                 <ul className="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0">
                     <li>
-                    <a href={props.currentPage == 'home' ? '#' : '/#'} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#FF7878] mt-1" aria-current="page">{t('main_menu_item_home', { ns: 'common'})}</a>
+                    <Link href={props.currentPage == 'home' ? '#' : '/#'} locale={props.locale} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#FF7878] mt-1" aria-current="page">{t('main_menu_item_home', { ns: 'common'})}</Link>
                     </li>
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" className="flex items-center justify-between w-full py-2 px-3 text-black rounded lg:border-0 lg:p-0 lg:w-auto transition duration-200 fontedBebas hover:text-[#8BC694] mt-1">{t('main_menu_item_services', { ns: 'common'})} <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -48,22 +49,22 @@ export default function Header(props: HeaderProps) {
                         <div id="dropdownNavbar" className="z-10 hidden font-normal bg-[#FAF9E4] divide-y divide-gray-100 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] w-full lg:w-44 dark:divide-gray-600">
                             <ul className="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
                             <li>
-                            <a href={props.currentPage == 'home' ? '#services' : '/#services'} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_solutions', { ns: 'common'})}</a>
+                            <Link href={props.currentPage == 'home' ? '#services' : '/#services'} locale={props.locale} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_solutions', { ns: 'common'})}</Link>
                             </li>
                             <li>
-                            <a href="/mobile-studio" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_mobile_studio', { ns: 'common'})}</a>
+                            <Link href="/mobile-studio" locale={props.locale} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('services_menu_item_mobile_studio', { ns: 'common'})}</Link>
                             </li>
                             <li>
-                            <a href="/shopify-builders" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('services_menu_item_shopify_builders', { ns: 'common'})}</a>
+                            <Link href="/shopify-builders" locale={props.locale} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('services_menu_item_shopify_builders', { ns: 'common'})}</Link>
                             </li>
                             <li>
-                            <a href="/web3-studio" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('services_menu_item_web3_studio', { ns: 'common'})}</a>
+                            <Link href="/web3-studio" locale={props.locale} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('services_menu_item_web3_studio', { ns: 'common'})}</Link>
                             </li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                    <a href={props.currentPage == 'home' ? '#portfolio' : '/#portfolio'} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E] mt-1" aria-current="page">{t('main_menu_item_portfolio', { ns: 'common'})}</a>
+                    <Link href={props.currentPage == 'home' ? '#portfolio' : '/#portfolio'} locale={props.locale} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E] mt-1" aria-current="page">{t('main_menu_item_portfolio', { ns: 'common'})}</Link>
                     </li>
                     
                     <li>
@@ -73,16 +74,16 @@ export default function Header(props: HeaderProps) {
                         <div id="dropdownAboutUs" className="z-10 hidden font-normal bg-[#FAF9E4] divide-y divide-gray-100 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] w-44 dark:divide-gray-600">
                             <ul className="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href={props.currentPage == 'aboutus' ? '#ourteam' : '/aboutus#ourteam'} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_our_team', { ns: 'common'})}</a>
+                                <Link href={props.currentPage == 'aboutus' ? '#ourteam' : '/aboutus#ourteam'} locale={props.locale} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_our_team', { ns: 'common'})}</Link>
                             </li>
                             <li>
-                                <a href={props.currentPage == 'aboutus' ? '#faq' : '/aboutus#faq'} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('about_us_menu_item_faq', { ns: 'common'})}</a>
+                                <Link href={props.currentPage == 'aboutus' ? '#faq' : '/aboutus#faq'} locale={props.locale} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#FF7878]">{t('about_us_menu_item_faq', { ns: 'common'})}</Link>
                             </li>
                             <li>
-                                <a href={props.currentPage == 'aboutus' ? '#careers' : '/aboutus#careers'} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_careers', { ns: 'common'})}</a>
+                                <Link href={props.currentPage == 'aboutus' ? '#careers' : '/aboutus#careers'} locale={props.locale} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#78A6FF]">{t('about_us_menu_item_careers', { ns: 'common'})}</Link>
                             </li>
                             <li>
-                                <Link href="#contact" className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('about_us_menu_item_contact', { ns: 'common'})}</Link>
+                                <Link href="#contact" locale={props.locale} className="block px-4 py-2 transition duration-200 fontedBebas hover:text-[#B3C73E]">{t('about_us_menu_item_contact', { ns: 'common'})}</Link>
                             </li>
                             </ul>
                         </div>
@@ -91,10 +92,10 @@ export default function Header(props: HeaderProps) {
                     <a href="#" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#6E6E6E] mt-1" aria-current="page">Careers</a>
                     </li> */}
                     <li>
-                    <Link href={props.currentPage == 'home' ? '#blog' : '/#blog'} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page">{t('main_menu_item_blog', { ns: 'common'})}</Link>
+                    <Link href={props.currentPage == 'home' ? '#blog' : '/#blog'} locale={props.locale} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page">{t('main_menu_item_blog', { ns: 'common'})}</Link>
                     </li>
                     <li>
-                    <a href="#contact" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button title={t('main_menu_book_a_call', { ns: 'common'})}></Button></a>
+                    <Link href="#contact" locale={props.locale} className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button title={t('main_menu_book_a_call', { ns: 'common'})}></Button></Link>
                     </li>
                     <li>
                     <a href="#" data-dropdown-toggle="dropdownLanguage" className="flex block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#78A6FF] mt-1" aria-current="page"> <svg className='mt-1 mr-2 hover:text-[#78A6FF]' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 80 80" fill="none">

@@ -11,23 +11,23 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useEffect } from 'react';
 
-export default function Home({ blog }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Home({ blog, locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
 
   return (
     <>
-      <Header currentPage='home' />
+      <Header currentPage='home' locale={locale} />
       <main
         className={`flex min-h-screen flex-col`}
       >
         <HomeHero/>
-        <ServiceOfferingBox/>
+        <ServiceOfferingBox locale={locale}/>
         <TrustedByBox/>
         <HomeMessageBox message={t('home_message_box_message_1', { ns: 'common'})}/>
-        <EngineeringBlogBox categories={blog.categories} posts={blog.posts} />
-        <ContactBox/>
+        <EngineeringBlogBox locale={locale} categories={blog.categories} posts={blog.posts} />
+        <ContactBox locale={locale}/>
       </main>
-      <Footer currentPage='home'/>
+      <Footer currentPage='home' locale={locale}/>
     </>
   )
 }
@@ -40,7 +40,8 @@ export const getServerSideProps = async (context: any) => {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common', 'eb'])),
-      blog: _blogData
+      blog: _blogData,
+      locale: locale
     },
   };
 };

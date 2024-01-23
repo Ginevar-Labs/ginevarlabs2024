@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Button from './Button';
 
 interface ContactBoxProps {
-    
+    locale: string
 }
 
 export default function ContactBox(props: ContactBoxProps) {

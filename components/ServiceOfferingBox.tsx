@@ -5,7 +5,11 @@ import Button from './Button';
 import Link from 'next/link';
 import ServiceFlipBox, { ServiceFlipBoxStack } from './ServiceFlipBox';
 
-export default function ServiceOfferingBox() {
+interface ServiceOfferingBoxProps {
+    locale: string
+}
+
+export default function ServiceOfferingBox(props: ServiceOfferingBoxProps) {
     const { t } = useTranslation();
     const router = useRouter();
 
@@ -42,6 +46,7 @@ export default function ServiceOfferingBox() {
                     ]
                 }} 
                     techStack={ServiceFlipBoxStack.MOBILE}
+                    locale={props.locale}
                 />
         </div>
         <div className='mt-10 w-full grid lg:grid-cols-6 grid-cols-1 lg:px-20 px-0'>
@@ -69,6 +74,7 @@ export default function ServiceOfferingBox() {
                     ]
                 }} 
                     techStack={ServiceFlipBoxStack.SHOPIFY}
+                    locale={props.locale}
                 />
         </div>
         <div className='mt-10 w-full grid lg:grid-cols-6 grid-cols-1 lg:px-20 px-0'>
@@ -96,6 +102,7 @@ export default function ServiceOfferingBox() {
                     ]
                 }} 
                     techStack={ServiceFlipBoxStack.WEB3}
+                    locale={props.locale}
                 />
         </div>
       </div>
