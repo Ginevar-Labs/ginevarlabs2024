@@ -32,7 +32,7 @@ export default function Home({ post, markdown, locale }: any) {
         <div id='home' className='my-10 w-full '>
             <div className='lg:px-40 px-10 my-12'>
             <div onClick={(e) => {
-                }} className='grid grid-cols-1 lg:mx-40 mx-20 my-12 transition-all duration-500'>
+                }} className='grid grid-cols-1 lg:mx-40 mx-0 my-12 transition-all duration-500'>
                     <div className='col-span-1'>
                         <img src={post.image} className='h-[300px] w-full object-cover'/>
                     </div>
@@ -41,14 +41,14 @@ export default function Home({ post, markdown, locale }: any) {
                         <div className='flex'>
                         <img src={post.category.icon} className='w-6 h-6 mr-2' /> <p className={`line-clamp-1 text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(post.category.title, {ns: 'eb'})}</p>
                         </div>
-                            <p className={`leading-none line-clamp-2 mt-0 text-[30px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(post.title, {ns: 'eb'})}</p>
+                            <p className={`leading-none mt-0 text-[30px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(post.title, {ns: 'eb'})}</p>
                             <p className='text-[16px] text-black transition duration-200 opacity-50'>{post.date}</p>
                             <Link href={post.externallink} locale={locale}>{t('eng_blog_external_link', { ns: 'common'})}</Link>
                     </div>
             </div>
             </div>
 
-            <ReactMarkdown remarkPlugins={[remarkGfm]} className="fontedBebas text-black dark:text-black my-12 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 markdown text-justify" components={{
+            <ReactMarkdown remarkPlugins={[remarkGfm]} className="lg:mx-40 mx-10 fontedBebas text-black dark:text-black my-12 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 markdown text-justify" components={{
                 h1: ({node, ...props}) => <h2 className="mb-4 text-2xl font-extrabold tracking-none leading-none text-gray-900 md:text-3xl lg:text-4xl sm:px-16" {...props} />,
                 h3: ({node, ...props}) => <h3 className="mb-4 text-2xl font-extrabold tracking-none leading-none text-gray-900 md:text-3xl lg:text-4xl sm:px-16" {...props} />,
                 h2: ({node, ...props}) => <p className="my-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 " {...props} />,

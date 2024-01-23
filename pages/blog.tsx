@@ -40,12 +40,12 @@ export default function Home({ blog, locale }: InferGetServerSidePropsType<typeo
                 blog.posts.map((item: any, index: any) =>  <div key={index} onClick={(e) => {
                     e.preventDefault();
                     router.push(`/blog/${item.url}`, undefined, { locale: locale});
-                }} className='grid grid-cols-2 lg:mx-40 mx-20 my-12 transition-all duration-500 opacity-50 hover:opacity-100 cursor-pointer'>
+                }} className='grid lg:grid-cols-2 grid-cols-1 lg:mx-40 mx-10 my-12 transition-all duration-500 opacity-50 hover:opacity-100 cursor-pointer'>
                     <div className='col-span-1'>
                         <img src={item.image} className='h-[250px] w-full object-cover'/>
                     </div>
 
-                    <div className='col-span-1 fontedBebas px-10 py-0 border-dashed border-t-[2px] border-b-[2px] border-r-[2px] border-gray-800 py-4'>
+                    <div className='col-span-1 fontedBebas px-10 py-0 border-dashed lg:border-t-[2px] border-t-[0px] lg:border-l-[0px] border-l-[2px] border-b-[2px] border-r-[2px] border-gray-800 py-4'>
                         <div className='flex'>
                         <img src={item.category.icon} className='w-6 h-6 mr-2' /> <p className={`line-clamp-1 text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(item.category.title, {ns: 'eb'})}</p>
                         </div>
