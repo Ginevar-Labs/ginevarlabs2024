@@ -13,9 +13,15 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import fs from 'node:fs';
 import path from 'node:path';
+import 'flowbite';
+import { initFlowbite } from 'flowbite';
 
 export default function Home({ post, markdown, locale }: any) {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    initFlowbite();
+  }, [])
 
   return (
     <>
@@ -52,7 +58,7 @@ export default function Home({ post, markdown, locale }: any) {
                 em: ({node, ...props}) => <i style={{color: 'red'}} {...props} />
               }}>{markdown}</ReactMarkdown>
 
-        <div className='flex flex-start lg:px-40 px-20 my-10'>
+        <div className='flex flex-start lg:px-40 px-20 my-10 fontedBebas'>
                 <Link href='/blog' locale={locale}><Button title={t('eng_blog_back', { ns: 'common'})}/></Link>
             </div>
         </div>
@@ -61,6 +67,7 @@ export default function Home({ post, markdown, locale }: any) {
         <ContactBox locale={locale}/>
       </main>
       <Footer currentPage='mobilestudio' locale={locale}/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     </>
   )
 }

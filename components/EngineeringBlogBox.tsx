@@ -1,6 +1,4 @@
 import { useTranslation } from 'next-i18next';
-import 'flowbite';
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Button from './Button';
 import Link from 'next/link';

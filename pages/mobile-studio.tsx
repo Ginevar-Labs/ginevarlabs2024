@@ -11,9 +11,15 @@ import { InferGetServerSidePropsType } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useEffect } from 'react';
+import 'flowbite';
+import { initFlowbite } from 'flowbite';
 
 export default function Home({ blog, locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    initFlowbite();
+  }, [])
 
   return (
     <>
@@ -139,6 +145,7 @@ export default function Home({ blog, locale }: InferGetServerSidePropsType<typeo
         <ContactBox locale={locale}/>
       </main>
       <Footer currentPage='mobilestudio' locale={locale}/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     </>
   )
 }

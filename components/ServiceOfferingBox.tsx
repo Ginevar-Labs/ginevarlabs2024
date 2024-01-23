@@ -1,8 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import 'flowbite';
 import { useRouter } from 'next/router';
-import Button from './Button';
-import Link from 'next/link';
 import ServiceFlipBox, { ServiceFlipBoxStack } from './ServiceFlipBox';
 
 interface ServiceOfferingBoxProps {
@@ -29,20 +26,20 @@ export default function ServiceOfferingBox(props: ServiceOfferingBoxProps) {
                 <ServiceFlipBox left={{
                     title: t('service_offering_mobile_app_pack', { ns: 'common'}),
                     htmlItems: [
-                        <p className='text-[16px]'><span className='text-[#EE807C]'>{t('service_offering_mobile_app_pack_1_col', { ns: 'common'})}</span> {t('service_offering_mobile_app_pack_1_text', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_mobile_app_pack_2_pre_text', { ns: 'common'})} <span className='text-[#EE80B7]'>{t('service_offering_mobile_app_pack_2_col', { ns: 'common'})}</span> {t('service_offering_mobile_app_pack_2_post_text', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_mobile_app_pack_3_pre_text', { ns: 'common'})} <span className='text-[#B7C656]'>{t('service_offering_mobile_app_pack_3_col', { ns: 'common'})}</span> {t('service_offering_mobile_app_pack_3_post_text', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_mobile_app_pack_4_pre_text', { ns: 'common'})}<span className='text-[#9DC79C]'> {t('service_offering_mobile_app_pack_4_col', { ns: 'common'})}</span></p>,
-                        <p className='text-[16px]'>{t('service_offering_mobile_app_pack_5_pre_text', { ns: 'common'})}<span className='text-[#82A5F8]'> {t('service_offering_mobile_app_pack_5_col', { ns: 'common'})} </span>{t('service_offering_mobile_app_pack_5_post_text', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_mobile_app_pack_6_pre', { ns: 'common'})}<span className='text-[#EE807C]'> {t('service_offering_mobile_app_pack_6_post', { ns: 'common'})} </span></p>
+                        <p key={0} className='text-[16px]'><span className='text-[#EE807C]'>{t('service_offering_mobile_app_pack_1_col', { ns: 'common'})}</span> {t('service_offering_mobile_app_pack_1_text', { ns: 'common'})}</p>,
+                        <p key={1} className='text-[16px]'>{t('service_offering_mobile_app_pack_2_pre_text', { ns: 'common'})} <span className='text-[#EE80B7]'>{t('service_offering_mobile_app_pack_2_col', { ns: 'common'})}</span> {t('service_offering_mobile_app_pack_2_post_text', { ns: 'common'})}</p>,
+                        <p key={2} className='text-[16px]'>{t('service_offering_mobile_app_pack_3_pre_text', { ns: 'common'})} <span className='text-[#B7C656]'>{t('service_offering_mobile_app_pack_3_col', { ns: 'common'})}</span> {t('service_offering_mobile_app_pack_3_post_text', { ns: 'common'})}</p>,
+                        <p key={3} className='text-[16px]'>{t('service_offering_mobile_app_pack_4_pre_text', { ns: 'common'})}<span className='text-[#9DC79C]'> {t('service_offering_mobile_app_pack_4_col', { ns: 'common'})}</span></p>,
+                        <p key={4} className='text-[16px]'>{t('service_offering_mobile_app_pack_5_pre_text', { ns: 'common'})}<span className='text-[#82A5F8]'> {t('service_offering_mobile_app_pack_5_col', { ns: 'common'})} </span>{t('service_offering_mobile_app_pack_5_post_text', { ns: 'common'})}</p>,
+                        <p key={5} className='text-[16px]'>{t('service_offering_mobile_app_pack_6_pre', { ns: 'common'})}<span className='text-[#EE807C]'> {t('service_offering_mobile_app_pack_6_post', { ns: 'common'})} </span></p>
                     ]
                 }} right={{
                     title: t('service_offering_staff_augmentation', { ns: 'common'}),
                     htmlItems: [
-                        <p className='text-[16px]'>{t('service_offering_staff_augmentation_1_pre', { ns: 'common'})} <u className='text-[#EE807C]'>Flutter</u> {t('service_offering_staff_augmentation_1_mid', { ns: 'common'})} <u className='text-[#747473]'>React Native</u> {t('service_offering_staff_augmentation_1_post', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_staff_augmentation_2_pre', { ns: 'common'})} <u className='text-[#9DC79C]'>Swift+Objective C</u> {t('service_offering_staff_augmentation_2_mid', { ns: 'common'})} <u className='text-[#9DC79C]'>Kotlin</u> {t('service_offering_staff_augmentation_2_post', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'><span className='text-[#EE80B7]'>{t('service_offering_staff_augmentation_3_pre', { ns: 'common'})}</span> {t('service_offering_staff_augmentation_3_mid', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_staff_augmentation_4_a', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_a_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_a_mid', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_b_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_b_mid', { ns: 'common'})}</p>
+                        <p key={0} className='text-[16px]'>{t('service_offering_staff_augmentation_1_pre', { ns: 'common'})} <u className='text-[#EE807C]'>Flutter</u> {t('service_offering_staff_augmentation_1_mid', { ns: 'common'})} <u className='text-[#747473]'>React Native</u> {t('service_offering_staff_augmentation_1_post', { ns: 'common'})}</p>,
+                        <p key={1} className='text-[16px]'>{t('service_offering_staff_augmentation_2_pre', { ns: 'common'})} <u className='text-[#9DC79C]'>Swift+Objective C</u> {t('service_offering_staff_augmentation_2_mid', { ns: 'common'})} <u className='text-[#9DC79C]'>Kotlin</u> {t('service_offering_staff_augmentation_2_post', { ns: 'common'})}</p>,
+                        <p key={2} className='text-[16px]'><span className='text-[#EE80B7]'>{t('service_offering_staff_augmentation_3_pre', { ns: 'common'})}</span> {t('service_offering_staff_augmentation_3_mid', { ns: 'common'})}</p>,
+                        <p key={3} className='text-[16px]'>{t('service_offering_staff_augmentation_4_a', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_a_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_a_mid', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_b_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_b_mid', { ns: 'common'})}</p>
                     ]
                 }} 
                     techStack={ServiceFlipBoxStack.MOBILE}
@@ -59,18 +56,18 @@ export default function ServiceOfferingBox(props: ServiceOfferingBoxProps) {
                 <ServiceFlipBox left={{
                     title: t('service_offering_ecommerce_pack', { ns: 'common'}),
                     htmlItems: [
-                        <p className='text-[16px]'><span className='text-[#98C498]'>{t('service_offering_shopify_pack_1_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_1_post', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'><span className='text-[#EE80B7]'>{t('service_offering_shopify_pack_2_a_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_2_a_post', { ns: 'common'})} <span className='text-[#EE80B7]'>{t('service_offering_shopify_pack_2_b_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_2_b_post', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_shopify_pack_3_a_pre', { ns: 'common'})} <span className='text-[#EE807C]'>{t('service_offering_shopify_pack_3_a_post', { ns: 'common'})}</span> {t('service_offering_shopify_pack_3_b_pre', { ns: 'common'})} <span className='text-[#78A6FF]'>{t('service_offering_shopify_pack_3_b_post', { ns: 'common'})}</span>{t('service_offering_shopify_pack_4_post', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_shopify_pack_4_pre', { ns: 'common'})} <span className='text-[#78A6FF]'>{t('service_offering_shopify_pack_4_post', { ns: 'common'})}</span></p>,
-                        <p className='text-[16px]'>{t('service_offering_shopify_pack_5_0', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_offering_shopify_pack_5_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_5_post', { ns: 'common'})}</p>,
+                        <p key={0} className='text-[16px]'><span className='text-[#98C498]'>{t('service_offering_shopify_pack_1_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_1_post', { ns: 'common'})}</p>,
+                        <p key={1} className='text-[16px]'><span className='text-[#EE80B7]'>{t('service_offering_shopify_pack_2_a_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_2_a_post', { ns: 'common'})} <span className='text-[#EE80B7]'>{t('service_offering_shopify_pack_2_b_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_2_b_post', { ns: 'common'})}</p>,
+                        <p key={2} className='text-[16px]'>{t('service_offering_shopify_pack_3_a_pre', { ns: 'common'})} <span className='text-[#EE807C]'>{t('service_offering_shopify_pack_3_a_post', { ns: 'common'})}</span> {t('service_offering_shopify_pack_3_b_pre', { ns: 'common'})} <span className='text-[#78A6FF]'>{t('service_offering_shopify_pack_3_b_post', { ns: 'common'})}</span>{t('service_offering_shopify_pack_4_post', { ns: 'common'})}</p>,
+                        <p key={3} className='text-[16px]'>{t('service_offering_shopify_pack_4_pre', { ns: 'common'})} <span className='text-[#78A6FF]'>{t('service_offering_shopify_pack_4_post', { ns: 'common'})}</span></p>,
+                        <p key={4} className='text-[16px]'>{t('service_offering_shopify_pack_5_0', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_offering_shopify_pack_5_pre', { ns: 'common'})}</span> {t('service_offering_shopify_pack_5_post', { ns: 'common'})}</p>,
                     ]
                 }} right={{
                     title: t('service_offering_staff_augmentation', { ns: 'common'}),
                     htmlItems: [
-                        <p className='text-[16px]'>{t('service_offering_shopify_staff_augmentation_1_pre', { ns: 'common'})}<u className='text-[#EE807C]'>React.js</u> {t('service_offering_shopify_staff_augmentation_1_post', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_shopify_staff_augmentation_2_a_pre', { ns: 'common'})}<span className='text-[#78A6FF]'>{t('service_offering_shopify_staff_augmentation_2_a_post', { ns: 'common'})}</span>{t('service_offering_shopify_staff_augmentation_2_b_pre', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_offering_shopify_staff_augmentation_2_b_post', { ns: 'common'})}</span>{t('service_offering_shopify_staff_augmentation_2_c', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_offering_staff_augmentation_4_a', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_a_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_a_mid', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_b_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_b_mid', { ns: 'common'})}</p>
+                        <p key={0} className='text-[16px]'>{t('service_offering_shopify_staff_augmentation_1_pre', { ns: 'common'})}<u className='text-[#EE807C]'>React.js</u> {t('service_offering_shopify_staff_augmentation_1_post', { ns: 'common'})}</p>,
+                        <p key={1} className='text-[16px]'>{t('service_offering_shopify_staff_augmentation_2_a_pre', { ns: 'common'})}<span className='text-[#78A6FF]'>{t('service_offering_shopify_staff_augmentation_2_a_post', { ns: 'common'})}</span>{t('service_offering_shopify_staff_augmentation_2_b_pre', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_offering_shopify_staff_augmentation_2_b_post', { ns: 'common'})}</span>{t('service_offering_shopify_staff_augmentation_2_c', { ns: 'common'})}</p>,
+                        <p key={2} className='text-[16px]'>{t('service_offering_staff_augmentation_4_a', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_a_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_a_mid', { ns: 'common'})} <u>{t('service_offering_staff_augmentation_4_b_pre', { ns: 'common'})}</u> {t('service_offering_staff_augmentation_4_b_mid', { ns: 'common'})}</p>
                     ]
                 }} 
                     techStack={ServiceFlipBoxStack.SHOPIFY}
@@ -87,18 +84,18 @@ export default function ServiceOfferingBox(props: ServiceOfferingBoxProps) {
                 <ServiceFlipBox left={{
                     title: t('service_web3_studio_nft_project', { ns: 'common'}),
                     htmlItems: [
-                        <p className='text-[16px]'><span className='text-[#98C498]'>{t('service_web3_studio_nft_project_pack_a_pre', { ns: 'common'})}</span>{t('service_web3_studio_nft_project_pack_a_text', { ns: 'common'})}<span className='text-[#B3C73E]'>{t('service_web3_studio_nft_project_pack_a_post', { ns: 'common'})}</span> </p>,
-                        <p className='text-[16px]'><span className='text-[#EE80B7]'>{t('service_web3_studio_nft_project_pack_b_pre', { ns: 'common'})}</span>{t('service_web3_studio_nft_project_pack_b_post', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'><span className='text-[#EE807C]'>{t('service_web3_studio_nft_project_pack_d', { ns: 'common'})}</span></p>,
-                        <p className='text-[16px]'>{t('service_web3_studio_nft_project_pack_c_pre', { ns: 'common'})}<span className='text-[#78A6FF]'>{t('service_web3_studio_nft_project_pack_c_post', { ns: 'common'})}</span></p>,
-                        <p className='text-[16px]'><span className='text-[#B3C73E]'>{t('service_web3_studio_nft_project_pack_e_pre', { ns: 'common'})}</span>{t('service_web3_studio_nft_project_pack_e_pretext', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_web3_studio_nft_project_pack_e_post', { ns: 'common'})}</span>{t('service_web3_studio_nft_project_pack_e_posttext', { ns: 'common'})}</p>,
+                        <p key={0} className='text-[16px]'><span className='text-[#98C498]'>{t('service_web3_studio_nft_project_pack_a_pre', { ns: 'common'})}</span>{t('service_web3_studio_nft_project_pack_a_text', { ns: 'common'})}<span className='text-[#B3C73E]'>{t('service_web3_studio_nft_project_pack_a_post', { ns: 'common'})}</span> </p>,
+                        <p key={1} className='text-[16px]'><span className='text-[#EE80B7]'>{t('service_web3_studio_nft_project_pack_b_pre', { ns: 'common'})}</span>{t('service_web3_studio_nft_project_pack_b_post', { ns: 'common'})}</p>,
+                        <p key={2} className='text-[16px]'><span className='text-[#EE807C]'>{t('service_web3_studio_nft_project_pack_d', { ns: 'common'})}</span></p>,
+                        <p key={3} className='text-[16px]'>{t('service_web3_studio_nft_project_pack_c_pre', { ns: 'common'})}<span className='text-[#78A6FF]'>{t('service_web3_studio_nft_project_pack_c_post', { ns: 'common'})}</span></p>,
+                        <p key={4} className='text-[16px]'><span className='text-[#B3C73E]'>{t('service_web3_studio_nft_project_pack_e_pre', { ns: 'common'})}</span>{t('service_web3_studio_nft_project_pack_e_pretext', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_web3_studio_nft_project_pack_e_post', { ns: 'common'})}</span>{t('service_web3_studio_nft_project_pack_e_posttext', { ns: 'common'})}</p>,
                     ]
                 }} right={{
                     title: t('service_offering_staff_augmentation', { ns: 'common'}),
                     htmlItems: [
-                        <p className='text-[16px]'>{t('service_web3_studio_staff_augmentation_1_pre', { ns: 'common'})}<u className='text-[#EE807C]'>React.js + Next.js</u> {t('service_web3_studio_staff_augmentation_1_post', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_web3_studio_staff_augmentation_2_0', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_web3_studio_staff_augmentation_2_0_post', { ns: 'common'})}</span>{t('service_web3_studio_staff_augmentation_2_a_pre', { ns: 'common'})}<span className='text-[#78A6FF]'>{t('service_web3_studio_staff_augmentation_2_a_post', { ns: 'common'})}</span>{t('service_web3_studio_staff_augmentation_2_b', { ns: 'common'})}</p>,
-                        <p className='text-[16px]'>{t('service_web3_studio_staff_augmentation_3_a', { ns: 'common'})} <u className='text-[#B3C73E]'>{t('service_web3_studio_staff_augmentation_3_a_pre', { ns: 'common'})}</u> {t('service_web3_studio_staff_augmentation_3_a_mid', { ns: 'common'})} <u className='text-[#B3C73E]'>{t('service_web3_studio_staff_augmentation_3_b_pre', { ns: 'common'})}</u>{t('service_web3_studio_staff_augmentation_3_b_mid', { ns: 'common'})}</p>
+                        <p key={0} className='text-[16px]'>{t('service_web3_studio_staff_augmentation_1_pre', { ns: 'common'})}<u className='text-[#EE807C]'>React.js + Next.js</u> {t('service_web3_studio_staff_augmentation_1_post', { ns: 'common'})}</p>,
+                        <p key={1} className='text-[16px]'>{t('service_web3_studio_staff_augmentation_2_0', { ns: 'common'})}<span className='text-[#EE80B7]'>{t('service_web3_studio_staff_augmentation_2_0_post', { ns: 'common'})}</span>{t('service_web3_studio_staff_augmentation_2_a_pre', { ns: 'common'})}<span className='text-[#78A6FF]'>{t('service_web3_studio_staff_augmentation_2_a_post', { ns: 'common'})}</span>{t('service_web3_studio_staff_augmentation_2_b', { ns: 'common'})}</p>,
+                        <p key={2} className='text-[16px]'>{t('service_web3_studio_staff_augmentation_3_a', { ns: 'common'})} <u className='text-[#B3C73E]'>{t('service_web3_studio_staff_augmentation_3_a_pre', { ns: 'common'})}</u> {t('service_web3_studio_staff_augmentation_3_a_mid', { ns: 'common'})} <u className='text-[#B3C73E]'>{t('service_web3_studio_staff_augmentation_3_b_pre', { ns: 'common'})}</u>{t('service_web3_studio_staff_augmentation_3_b_mid', { ns: 'common'})}</p>
                     ]
                 }} 
                     techStack={ServiceFlipBoxStack.WEB3}

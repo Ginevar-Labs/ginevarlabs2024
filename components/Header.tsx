@@ -1,10 +1,10 @@
 import { useTranslation } from 'next-i18next';
-import 'flowbite';
 import Head from 'next/head';
 import Button from './Button';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import Link from 'next/link';
+
 
 interface HeaderProps {
     currentPage: string,
@@ -23,7 +23,9 @@ export default function Header(props: HeaderProps) {
             <meta name="description" content={t('app_description', { ns: 'common'})} />
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <link rel="icon" href="/favicon.ico" />
+            <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" />
             <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
+            
           </Head>
 
           <nav className="border-gray-200">

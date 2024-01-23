@@ -1,5 +1,4 @@
 import { useTranslation } from 'next-i18next';
-import 'flowbite';
 import { useRouter } from 'next/router';
 import Button from './Button';
 import Link from 'next/link';
