@@ -44,7 +44,7 @@ export default function JobPost(props: JobPostProps) {
                     </div>
                     <div className={`col-span-9 ${selected == true ? '' : 'min-h-[160px]'} px-10 py-4 w-full col-span-1 fontedBebas lg:text-left text-center border-dashed lg:border-[2px] border-[2px] border-gray-800 inline-block`}>
                         <p className='text-black'>{props.position}</p>
-                        <p className='text-[#6E6E6E]'>{props.location}</p>
+                        <p className='text-[#6E6E6E]'>{t(props.location, { ns: 'common'})}</p>
                         <div className={`${selected ? 'h-auto' : 'h-[1px]'} overflow-hidden transition-all duration-300`}>
                             <div className={`${selected ? 'opacity-100' : 'opacity-0'} text-left mt-4 overflow-hidden transition-all duration-300`}>
                             <ReactMarkdown remarkPlugins={[remarkGfm]} className="fontedBebas text-black dark:text-black my-4 text-lg font-normal text-gray-500 lg:text-xl  markdown text-left" components={{
@@ -59,7 +59,10 @@ export default function JobPost(props: JobPostProps) {
                             </div>
                         </div>
                         <br/>
-                        <p onClick={() => { setSelected(!selected) }} className='cursor-pointer text-[#6E6E6E] hover:text-black transition duration-300'>{selected ? t('aboutus_careers_job_post_category_close', { ns: 'common'}) : t('aboutus_careers_job_post_category_read_more', { ns: 'common'})}</p>
+                        <p className={`${selected ? 'h-auto' : 'h-[1px]'} overflow-hidden transition-all duration-300`}>{t('aboutus_careers_job_post_apply', { ns: 'common'})}<a href='mailto:careers@ginevar.com'>careers@ginevar.com</a></p>
+                        <div className='flex'>
+                        <p onClick={() => { setSelected(!selected) }} className='mr-4 cursor-pointer text-[#6E6E6E] hover:text-black transition duration-300'>{selected ? t('aboutus_careers_job_post_category_close', { ns: 'common'}) : t('aboutus_careers_job_post_category_read_more', { ns: 'common'})}</p>
+                        </div>
 
                     </div>
                 </div>

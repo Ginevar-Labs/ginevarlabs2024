@@ -275,10 +275,22 @@
     "mobile_studio_deployment_i": " as well, so we can handle any unexpected behaviour within the app.",
     "eng_blog_back": "Back",
     "eng_blog_external_link": "External Link",
+    "aboutus_careers_title": "Careers",
+    "aboutus_careers_marquee": "Careers",
+    "aboutus_careers_location_monza": "Monza, Italy",
+    "aboutus_careers_location_remote": "Remote",
+    "aboutus_careers_job_posts_title": "Job Posts",
     "aboutus_careers_job_post_category_sales": "Sales",
     "aboutus_careers_job_post_category_design": "Design",
     "aboutus_careers_job_post_category_dev": "Development",
     "aboutus_careers_job_post_category_close": "Close",
-    "aboutus_careers_job_post_category_read_more": "Read more"
+    "aboutus_careers_job_post_category_read_more": "Read more",
+    "aboutus_careers_job_post_apply": "To apply send your application to ",
+    "aboutus_careers_join_our_team": "Join our team",
+    "aboutus_careers_join_our_team_text": "At Ginevar, we believe in the power of innovation, collaboration, and talent. We are a dynamic team of software developers who are passionate about crafting cutting-edge solutions for our clients.",
+    "aboutus_careers_current_job_openings": "Check out our current job openings below.",
+    "aboutus_careers_current_job_openings_text": "If you find a role that aligns with your skills and aspirations, we'd love to hear from you. Don't hesitate to submit your application and be part of our journey!",
+    "aboutus_careers_spont_candidation": "No Position that matches your skillset? No Problem!",
+    "aboutus_careers_spont_candidation_text": "We're always on the lookout for exceptional talent. If you're enthusiastic about joining our team but don't see a suitable position listed, we encourage you to send us your portfolio and CV through a spontaneous application to careers@ginevar.com. We value initiative and are eager to discover passionate individuals who can contribute to our success."
     
 }

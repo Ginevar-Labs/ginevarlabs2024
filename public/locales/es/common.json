@@ -276,9 +276,21 @@
     "mobile_studio_deployment_i": " para poder seguir su correcta funcionalidad.",
     "eng_blog_back": "Atras",
     "eng_blog_external_link": "Link Externo",
+    "aboutus_careers_title": "Careers",
+    "aboutus_careers_marquee": "Trabaja con Nosotros",
+    "aboutus_careers_location_monza": "Monza, Italia",
+    "aboutus_careers_location_remote": "Remoto",
+    "aboutus_careers_job_posts_title": "Posiciones abiertas",
     "aboutus_careers_job_post_category_sales": "Ventas",
     "aboutus_careers_job_post_category_design": "Diseño",
     "aboutus_careers_job_post_category_dev": "Desarrollo",
     "aboutus_careers_job_post_category_close": "Cerrar",
-    "aboutus_careers_job_post_category_read_more": "Ver mas"
+    "aboutus_careers_job_post_category_read_more": "Leer mas",
+    "aboutus_careers_job_post_apply": "Para aplicar a esta posicion envia tu aplicacion a ",
+    "aboutus_careers_join_our_team": "Trabaja con Nosotros",
+    "aboutus_careers_join_our_team_text": "En Ginevar, creemos en el poder de la innovación, la colaboración y el talento. Somos un equipo dinámico de desarrolladores de software apasionados por crear soluciones de vanguardia para nuestros clientes.",
+    "aboutus_careers_current_job_openings": "Echa un vistazo a nuestras vacantes actuales a continuación.",
+    "aboutus_careers_current_job_openings_text": "Si encuentras un puesto que se alinee con tus habilidades y aspiraciones, nos encantaría saber de ti. ¡No dudes en enviar tu solicitud y ser parte de Ginevar!",
+    "aboutus_careers_spont_candidation": "¿No hay ninguna posición que encaje con tu perfil? ¡No hay problema!",
+    "aboutus_careers_spont_candidation_text": "Siempre estamos en busca de talento excepcional. Si tienes entusiasmo por unirte a nuestro equipo pero no ves una posición adecuada en la lista, te animamos a enviarnos tu portafolio y currículum a través de una solicitud espontánea a careers@ginevar.com. Valoramos la iniciativa y estamos ansiosos por descubrir personas apasionadas que puedan contribuir a nuestro éxito."
 }

@@ -8,7 +8,7 @@ import HomeMessageBox from '@/components/HomeMessageBox';
 import ServiceOfferingBox from '@/components/ServiceOfferingBox';
 import TrustedByBox from '@/components/TrustedByBox';
 import { InferGetServerSidePropsType } from 'next';
-import { useTranslation } from 'next-i18next';
+import { i18n, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -121,23 +121,23 @@ export default function Home({ blog, locale, faq, jobposts }: InferGetServerSide
                 }
             </div>
 
-            <CommonMarquee text='Careers'/>
+            <CommonMarquee text={t('aboutus_careers_marquee', { ns: 'common'})}/>
             <div id='careers' className='w-full lg:px-40 px-10 fontedBebas lg:text-left text-center'>
-                <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>Careers</h1>
+                <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>{t('aboutus_careers_title', { ns: 'common'})}</h1>
             </div>
 
             <div className='lg:px-40 px-10 fontedBebas text-left lg:mx-10 mx-0'>
-                <h2>Join our team</h2>
-                <p className='text-[#7D7D72]'>At Ginevar, we believe in the power of innovation, collaboration, and talent. We are a dynamic team of software developers who are passionate about crafting cutting-edge solutions for our clients.</p>
+                <h2>{t('aboutus_careers_join_our_team', { ns: 'common'})}</h2>
+                <p className='text-[#7D7D72]'>{t('aboutus_careers_join_our_team_text', { ns: 'common'})}</p>
                 <br/>
-                <h2>Check out our current job openings below. </h2>
-                <p className='text-[#7D7D72]'>If you find a role that aligns with your skills and aspirations, we'd love to hear from you. Don't hesitate to submit your application and be part of our journey!</p>
+                <h2>{t('aboutus_careers_current_job_openings', { ns: 'common'})}</h2>
+                <p className='text-[#7D7D72]'>{t('aboutus_careers_current_job_openings_text', { ns: 'common'})}</p>
                 <br/>
-                <h2>No Position that matches your skillset? No Problem!</h2>
+                <h2>{t('aboutus_careers_spont_candidation', { ns: 'common'})}</h2>
 
-                <p className='text-[#7D7D72]'>We're always on the lookout for exceptional talent. If you're enthusiastic about joining our team but don't see a suitable position listed, we encourage you to send us your portfolio and CV through a spontaneous application. We value initiative and are eager to discover passionate individuals who can contribute to our success.</p>
+                <p className='text-[#7D7D72]'>{t('aboutus_careers_spont_candidation_text', { ns: 'common'})}</p>
                 <br/>
-                <h1 className='text-black lg:text-left text-center drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[36px] text-[36px]'>Job Posts</h1>
+                <h1 className='text-black lg:text-left text-center drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[36px] text-[36px]'>{t('aboutus_careers_job_posts_title', { ns: 'common'})}</h1>
                 {
                     jobposts.map((item: any, index: any) => <div key={index}>
                         <JobPost category={item.category} position={item.position} location={item.location} markdown={item.markdown}/>
@@ -148,7 +148,7 @@ export default function Home({ blog, locale, faq, jobposts }: InferGetServerSide
         
         <ContactBox locale={locale}/>
       </main>
-      <Footer currentPage='mobilestudio' locale={locale}/>
+      <Footer currentPage='aboutus' locale={locale}/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     </>
   )
@@ -163,19 +163,19 @@ export const getServerSideProps = async (context: any) => {
     {
         category: JobPostCategory.SALES,
         position: 'Business Developer',
-        location: 'Monza, Italy',
+        location: 'aboutus_careers_location_monza',
         markdown: 'business-dev-0'
     },
     {
         category: JobPostCategory.DESIGN,
         position: 'UI/UX Designer',
-        location: 'Monza, Italy',
+        location: 'aboutus_careers_location_monza',
         markdown: 'uiux-designer-0'
     },
     {
         category: JobPostCategory.DEVELOPMENT,
         position: 'Flutter Developer',
-        location: 'Remote',
+        location: 'aboutus_careers_location_remote',
         markdown: 'flutter-dev-remoto-0'
     }
   ]

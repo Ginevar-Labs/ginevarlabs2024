@@ -276,9 +276,21 @@
     "mobile_studio_deployment_i": " per assicurarci del corretto funzionamento del sistema.",
     "eng_blog_back": "Indietro",
     "eng_blog_external_link": "Link Esterno",
+    "aboutus_careers_title": "Careers",
+    "aboutus_careers_marquee": "Lavora con noi",
+    "aboutus_careers_location_monza": "Monza, Italia",
+    "aboutus_careers_location_remote": "Remoto",
+    "aboutus_careers_job_posts_title": "Posizione aperte",
     "aboutus_careers_job_post_category_sales": "Sales",
     "aboutus_careers_job_post_category_design": "Design",
     "aboutus_careers_job_post_category_dev": "Sviluppo",
-    "aboutus_careers_job_post_category_close": "Chiudi",
-    "aboutus_careers_job_post_category_read_more": "Leggi più"
+    "aboutus_careers_job_post_category_close": "Cerrar",
+    "aboutus_careers_job_post_category_read_more": "Leggi più",
+    "aboutus_careers_job_post_apply": "Per applicare invia la tua candidatura a ",
+    "aboutus_careers_join_our_team": "Lavora con noi",
+    "aboutus_careers_join_our_team_text": "A Ginevar, crediamo nel potere dell'innovazione, della collaborazione e del talento. Siamo un team dinamico di sviluppatori software appassionati che lavorano per creare soluzioni all'avanguardia per i nostri clienti.",
+    "aboutus_careers_current_job_openings": "Dai un'occhiata alle nostre posizioni aperte attuali qui sotto.",
+    "aboutus_careers_current_job_openings_text": "Se trovi una posizione che si allinea con le tue competenze e aspirazioni, saremmo felici di sentirti. Non esitare a inviare la tua candidatura e a far parte di Ginevar!",
+    "aboutus_careers_spont_candidation": "Non c'e nessuna posizione che corrisponda al tuo profilo? Nessun problema!",
+    "aboutus_careers_spont_candidation_text": "Siamo sempre alla ricerca di talento eccezionale. Se sei entusiasta di unirti al nostro team ma non vedi una posizione adatta nell'elenco, ti incoraggiamo a inviarci il tuo portfolio e curriculum tramite una candidatura spontanea a careers@ginevar.com. Apprezziamo l'iniziativa e siamo desiderosi di scoprire individui appassionati che possano contribuire al nostro successo."
 }
