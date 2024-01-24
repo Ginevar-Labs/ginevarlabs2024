@@ -276,6 +276,7 @@
     "mobile_studio_deployment_i": " para poder seguir su correcta funcionalidad.",
     "eng_blog_back": "Atras",
     "eng_blog_external_link": "Link Externo",
+    "aboutus_faq_marquee": "Preguntas Frecuentes",
     "aboutus_careers_title": "Careers",
     "aboutus_careers_marquee": "Trabaja con Nosotros",
     "aboutus_careers_location_monza": "Monza, Italia",
@@ -292,5 +293,8 @@
     "aboutus_careers_current_job_openings": "Echa un vistazo a nuestras vacantes actuales a continuación.",
     "aboutus_careers_current_job_openings_text": "Si encuentras un puesto que se alinee con tus habilidades y aspiraciones, nos encantaría saber de ti. ¡No dudes en enviar tu solicitud y ser parte de Ginevar!",
     "aboutus_careers_spont_candidation": "¿No hay ninguna posición que encaje con tu perfil? ¡No hay problema!",
-    "aboutus_careers_spont_candidation_text": "Siempre estamos en busca de talento excepcional. Si tienes entusiasmo por unirte a nuestro equipo pero no ves una posición adecuada en la lista, te animamos a enviarnos tu portafolio y currículum a través de una solicitud espontánea a careers@ginevar.com. Valoramos la iniciativa y estamos ansiosos por descubrir personas apasionadas que puedan contribuir a nuestro éxito."
+    "aboutus_careers_spont_candidation_text": "Siempre estamos en busca de talento excepcional. Si tienes entusiasmo por unirte a nuestro equipo pero no ves una posición adecuada en la lista, te animamos a enviarnos tu portafolio y currículum a través de una solicitud espontánea a careers@ginevar.com. Valoramos la iniciativa y estamos ansiosos por descubrir personas apasionadas que puedan contribuir a nuestro éxito.",
+    "aboutus_team_nico_position": "Director Ejecutivo",
+    "aboutus_team_juan_position": "Director de Tecnologia",
+    "aboutus_team_lavi_position": "Director de Marketing"
 }

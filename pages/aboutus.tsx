@@ -54,17 +54,35 @@ export default function Home({ blog, locale, faq, jobposts }: InferGetServerSide
                     <div className='border-dashed border-[2px] border-gray-800 aspect-square'>
 
                     </div>
-                    <p className=' text-center'>Juan M. Curti</p>
-                    <p className=' text-center'>Chief Algo Officer</p>
+                    <p className=' text-center'>Nicolas Curti</p>
+                    <p className=' text-center'>{t('aboutus_team_nico_position', { ns: 'common'})}</p>
                     <div className='flex lg:my-0 my-6'>
                     <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
-                                        <li id='cbts-li' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://www.linkedin.com/company/ginevar" className='w-full'><i className="fab fa-linkedin linkedin flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full lg:ml-[-4px] ml-0'>LinkedIn</span></div></Link></li>
+                                        <li id='cbts-li' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://www.linkedin.com/in/ncurti/" className='w-full'><i className="fab fa-linkedin linkedin flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full lg:ml-[-4px] ml-0'>LinkedIn</span></div></Link></li>
                                     </ul>
-                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
+                                    {/* <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
                                         <li id='cbts-md' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://medium.com/ginevar-labs" className='w-full'><i className="fab fa-medium medium flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Medium</span></div></Link></li>
+                                    </ul> */}
+                                    {/* <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
+                                        <li id='cbts-github' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://github.com/Ginevar-Labs" className='w-full'><i className="fab fa-github github flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Github</span></div></Link></li>
+                                    </ul> */}
+                    </div>
+                </div>
+                <div className='col-span-2 text-justify px-10'>
+                    <div className='border-dashed border-[2px] border-gray-800 aspect-square'>
+
+                    </div>
+                    <p className=' text-center'>Juan Manuel Curti</p>
+                    <p className=' text-center'>{t('aboutus_team_juan_position', { ns: 'common'})}</p>
+                    <div className='flex lg:my-0 my-6'>
+                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
+                                        <li id='cbts-li' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://www.linkedin.com/in/jmcur/" className='w-full'><i className="fab fa-linkedin linkedin flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full lg:ml-[-4px] ml-0'>LinkedIn</span></div></Link></li>
                                     </ul>
                                     <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
-                                        <li id='cbts-github' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://github.com/Ginevar-Labs" className='w-full'><i className="fab fa-github github flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Github</span></div></Link></li>
+                                        <li id='cbts-md' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://juancurti.medium.com/" className='w-full'><i className="fab fa-medium medium flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Medium</span></div></Link></li>
+                                    </ul>
+                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
+                                        <li id='cbts-github' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://github.com/juancurti" className='w-full'><i className="fab fa-github github flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Github</span></div></Link></li>
                                     </ul>
                     </div>
                 </div>
@@ -72,41 +90,23 @@ export default function Home({ blog, locale, faq, jobposts }: InferGetServerSide
                     <div className='border-dashed border-[2px] border-gray-800 aspect-square'>
 
                     </div>
-                    <p className=' text-center'>Juan M. Curti</p>
-                    <p className=' text-center'>Chief Algo Officer</p>
+                    <p className=' text-center'>Lavinia Poggi</p>
+                    <p className=' text-center'>{t('aboutus_team_lavi_position', { ns: 'common'})}</p>
                     <div className='flex lg:my-0 my-6'>
                     <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
-                                        <li id='cbts-li' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://www.linkedin.com/company/ginevar" className='w-full'><i className="fab fa-linkedin linkedin flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full lg:ml-[-4px] ml-0'>LinkedIn</span></div></Link></li>
+                                        <li id='cbts-li' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://www.linkedin.com/in/lavinia-poggi-a67200176/" className='w-full'><i className="fab fa-linkedin linkedin flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full lg:ml-[-4px] ml-0'>LinkedIn</span></div></Link></li>
                                     </ul>
-                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
+                                    {/* <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
                                         <li id='cbts-md' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://medium.com/ginevar-labs" className='w-full'><i className="fab fa-medium medium flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Medium</span></div></Link></li>
                                     </ul>
                                     <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
                                         <li id='cbts-github' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://github.com/Ginevar-Labs" className='w-full'><i className="fab fa-github github flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Github</span></div></Link></li>
-                                    </ul>
-                    </div>
-                </div>
-                <div className='col-span-2 text-justify px-10'>
-                    <div className='border-dashed border-[2px] border-gray-800 aspect-square'>
-
-                    </div>
-                    <p className=' text-center'>Juan M. Curti</p>
-                    <p className=' text-center'>Chief Algo Officer</p>
-                    <div className='flex lg:my-0 my-6'>
-                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
-                                        <li id='cbts-li' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://www.linkedin.com/company/ginevar" className='w-full'><i className="fab fa-linkedin linkedin flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full lg:ml-[-4px] ml-0'>LinkedIn</span></div></Link></li>
-                                    </ul>
-                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
-                                        <li id='cbts-md' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://medium.com/ginevar-labs" className='w-full'><i className="fab fa-medium medium flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Medium</span></div></Link></li>
-                                    </ul>
-                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
-                                        <li id='cbts-github' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link  href="https://github.com/Ginevar-Labs" className='w-full'><i className="fab fa-github github flex justify-center" ></i> <div className='text-black font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Github</span></div></Link></li>
-                                    </ul>
+                                    </ul> */}
                     </div>
                 </div>
             </div>
 
-            <CommonMarquee text='FAQ'/>
+            <CommonMarquee text={t('aboutus_faq_marquee', { ns: 'common'})}/>
 
 
             <div id='faq' className='w-full lg:px-40 px-10 fontedBebas lg:text-left text-center'>

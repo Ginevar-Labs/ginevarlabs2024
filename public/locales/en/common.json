@@ -275,6 +275,7 @@
     "mobile_studio_deployment_i": " as well, so we can handle any unexpected behaviour within the app.",
     "eng_blog_back": "Back",
     "eng_blog_external_link": "External Link",
+    "aboutus_faq_marquee": "FAQ",
     "aboutus_careers_title": "Careers",
     "aboutus_careers_marquee": "Careers",
     "aboutus_careers_location_monza": "Monza, Italy",
@@ -291,6 +292,9 @@
     "aboutus_careers_current_job_openings": "Check out our current job openings below.",
     "aboutus_careers_current_job_openings_text": "If you find a role that aligns with your skills and aspirations, we'd love to hear from you. Don't hesitate to submit your application and be part of our journey!",
     "aboutus_careers_spont_candidation": "No Position that matches your skillset? No Problem!",
-    "aboutus_careers_spont_candidation_text": "We're always on the lookout for exceptional talent. If you're enthusiastic about joining our team but don't see a suitable position listed, we encourage you to send us your portfolio and CV through a spontaneous application to careers@ginevar.com. We value initiative and are eager to discover passionate individuals who can contribute to our success."
+    "aboutus_careers_spont_candidation_text": "We're always on the lookout for exceptional talent. If you're enthusiastic about joining our team but don't see a suitable position listed, we encourage you to send us your portfolio and CV through a spontaneous application to careers@ginevar.com. We value initiative and are eager to discover passionate individuals who can contribute to our success.",
+    "aboutus_team_nico_position": "Business Director",
+    "aboutus_team_juan_position": "Technology Director",
+    "aboutus_team_lavi_position": "Marketing Director"
     
 }
