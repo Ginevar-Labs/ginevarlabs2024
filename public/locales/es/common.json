@@ -275,5 +275,10 @@
     "mobile_studio_deployment_h": "lanzamiento",
     "mobile_studio_deployment_i": " para poder seguir su correcta funcionalidad.",
     "eng_blog_back": "Atras",
-    "eng_blog_external_link": "Link Externo"
+    "eng_blog_external_link": "Link Externo",
+    "aboutus_careers_job_post_category_sales": "Ventas",
+    "aboutus_careers_job_post_category_design": "Diseño",
+    "aboutus_careers_job_post_category_dev": "Desarrollo",
+    "aboutus_careers_job_post_category_close": "Cerrar",
+    "aboutus_careers_job_post_category_read_more": "Ver mas"
 }

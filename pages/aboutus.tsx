@@ -16,8 +16,11 @@ import 'flowbite';
 import { initFlowbite } from 'flowbite';
 import Link from 'next/link';
 import FAQItem from '@/components/FAQItem';
+import JobPost, { JobPostCategory } from '@/components/JobPost';
+import path from 'node:path';
+import fs from 'node:fs';
 
-export default function Home({ blog, locale, faq }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Home({ blog, locale, faq, jobposts }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
   const router = useRouter();
 
@@ -110,17 +113,36 @@ export default function Home({ blog, locale, faq }: InferGetServerSidePropsType<
                 <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>FAQ</h1>
             </div>
 
-            <div className='lg:px-40 px-10'>
+            <div className='lg:mx-40 mx-10'>
                 {
-                    faq.map((item: any, index) => <div key={index} className='relative w-full fontedBebas transition-all duration-500'>
+                    faq.map((item: any, index) => <div key={index} className='relative w-full fontedBebas transition-all duration-500 lg:mx-10'>
                         <FAQItem question={item.q} answer={item.a} />
                     </div>)
                 }
             </div>
 
             <CommonMarquee text='Careers'/>
-            <div id='faq' className='w-full lg:px-40 px-10 fontedBebas lg:text-left text-center'>
+            <div id='careers' className='w-full lg:px-40 px-10 fontedBebas lg:text-left text-center'>
                 <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>Careers</h1>
+            </div>
+
+            <div className='lg:px-40 px-10 fontedBebas text-left lg:mx-10 mx-0'>
+                <h2>Join our team</h2>
+                <p className='text-[#7D7D72]'>At Ginevar, we believe in the power of innovation, collaboration, and talent. We are a dynamic team of software developers who are passionate about crafting cutting-edge solutions for our clients.</p>
+                <br/>
+                <h2>Check out our current job openings below. </h2>
+                <p className='text-[#7D7D72]'>If you find a role that aligns with your skills and aspirations, we'd love to hear from you. Don't hesitate to submit your application and be part of our journey!</p>
+                <br/>
+                <h2>No Position that matches your skillset? No Problem!</h2>
+
+                <p className='text-[#7D7D72]'>We're always on the lookout for exceptional talent. If you're enthusiastic about joining our team but don't see a suitable position listed, we encourage you to send us your portfolio and CV through a spontaneous application. We value initiative and are eager to discover passionate individuals who can contribute to our success.</p>
+                <br/>
+                <h1 className='text-black lg:text-left text-center drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[36px] text-[36px]'>Job Posts</h1>
+                {
+                    jobposts.map((item: any, index: any) => <div key={index}>
+                        <JobPost category={item.category} position={item.position} location={item.location} markdown={item.markdown}/>
+                    </div>)
+                }
             </div>
         </div>
         
@@ -137,6 +159,44 @@ export const getServerSideProps = async (context: any) => {
   const _blogs = await fetch('http://localhost:3000/api/engineeringblog')
   const _blogData = await _blogs.json();
 
+  const _jobsOpenings = [
+    {
+        category: JobPostCategory.SALES,
+        position: 'Business Developer',
+        location: 'Monza, Italy',
+        markdown: 'business-dev-0'
+    },
+    {
+        category: JobPostCategory.DESIGN,
+        position: 'UI/UX Designer',
+        location: 'Monza, Italy',
+        markdown: 'uiux-designer-0'
+    },
+    {
+        category: JobPostCategory.DEVELOPMENT,
+        position: 'Flutter Developer',
+        location: 'Remote',
+        markdown: 'flutter-dev-remoto-0'
+    }
+  ]
+
+  var jobsOpenings: any[] = []
+
+  for(var i=0;i<_jobsOpenings.length;i++) {
+    const markdownFilePath = path.join(process.cwd(), 'public', 'jobs', _jobsOpenings[i].markdown+'-'+locale+'.md');
+    try{
+        const markdownContent = fs.readFileSync(markdownFilePath, 'utf-8');
+        jobsOpenings.push({
+            category: _jobsOpenings[i].category,
+            position: _jobsOpenings[i].position,
+            location: _jobsOpenings[i].location,
+            markdown: markdownContent
+        })
+    }catch(e){
+        console.log(e)
+    }
+  }
+
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common', 'eb'])),
@@ -145,7 +205,7 @@ export const getServerSideProps = async (context: any) => {
       faq: [
         {
             q: 'Question 1 about something we should clarify',
-            a: 'This is an answer to a question. Pure text, no images. Lorem ipsum dolor sit amet. Pure text, no images. Lorem ipsum dolor sit amet. Pure text, no images. Lorem ipsum dolor sit amet.'
+            a: 'This is an answer to a question. Pure text, no images. Lorem ipsum dolor sit amet. Pure text, no images. Lorem ipsum dolor sit amet. Pure text, no images. Lorem ipsum dolor sit amet.',
         },
 
         {
@@ -157,7 +217,8 @@ export const getServerSideProps = async (context: any) => {
             q: 'Question 3 about something we should clarify',
             a: 'This is yet another answer to a question. Pure text, no images. Lorem ipsum dolor sit amet. Pure text, no images. Lorem ipsum dolor sit amet. Pure text, no images. Lorem ipsum dolor sit amet.'
         }
-      ]
+      ],
+      jobposts: jobsOpenings
     },
   };
 };

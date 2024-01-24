@@ -274,6 +274,11 @@
     "mobile_studio_deployment_h": "online with you at launch",
     "mobile_studio_deployment_i": " as well, so we can handle any unexpected behaviour within the app.",
     "eng_blog_back": "Back",
-    "eng_blog_external_link": "External Link"
+    "eng_blog_external_link": "External Link",
+    "aboutus_careers_job_post_category_sales": "Sales",
+    "aboutus_careers_job_post_category_design": "Design",
+    "aboutus_careers_job_post_category_dev": "Development",
+    "aboutus_careers_job_post_category_close": "Close",
+    "aboutus_careers_job_post_category_read_more": "Read more"
     
 }
