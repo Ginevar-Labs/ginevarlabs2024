@@ -36,7 +36,7 @@ export default function Home({ blog, locale, faq, jobposts }: InferGetServerSide
       >
         <div id='home' className='my-10 w-full '>
             <div id='ourteam' className='w-full lg:px-40 px-10 fontedBebas lg:text-left text-center'>
-                <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>About us</h1>
+                <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>{t('aboutus_title', { ns: 'common'})}</h1>
             </div>
 
             <CommonMarquee text='Our team'/>
@@ -45,7 +45,7 @@ export default function Home({ blog, locale, faq, jobposts }: InferGetServerSide
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                 </div>
                 <div className='lg:col-span-1 col-span-0 lg:block hidden'>
-                    <img src='/assets/ginevar_logo_dark.png' className='transition duration-500 opacity-25 hover:opacity-100'></img>
+                    <img src='/assets/ginevar_logo_dark.png' alt='Ginevar logo' className='transition duration-500 opacity-25 hover:opacity-100'></img>
                 </div>
             </div>
 
@@ -110,7 +110,7 @@ export default function Home({ blog, locale, faq, jobposts }: InferGetServerSide
 
 
             <div id='faq' className='w-full lg:px-40 px-10 fontedBebas lg:text-left text-center'>
-                <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>FAQ</h1>
+                <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>{t('aboutus_faq_title', { ns: 'common'})}</h1>
             </div>
 
             <div className='lg:mx-40 mx-10'>
