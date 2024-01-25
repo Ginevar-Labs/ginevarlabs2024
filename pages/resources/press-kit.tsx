@@ -24,7 +24,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
     <>
       <Header currentPage='resources' locale={locale} />
       <main
-        className={`flex min-h-screen flex-col px-10 py-10 bg-[#1F1D1D] fontedBebas `}
+        className={`flex flex-col px-10 py-10 bg-[#1F1D1D] fontedBebas `}
       >
         <h1 className='text-white drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[72px] text-[42px]'>
             {t('resources_press_kit_media_kit', {ns: 'common'})}

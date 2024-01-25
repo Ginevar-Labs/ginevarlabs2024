@@ -100,7 +100,7 @@ export default function Header(props: HeaderProps) {
                         </div>
                     </li>
                     <li>
-                    <button className="flex underline decoration-4 decoration-[#403D0E] hover:decoration-[#FAFF00] items-center justify-between w-full py-2 px-3 text-white rounded lg:border-0 lg:p-0 lg:w-auto transition duration-500 fontedBebas hover:text-[#FAFF00] mt-1">{t('main_menu_item_get_in_touch', { ns: 'common'})}</button>
+                    <Link href='/get-in-touch' className="flex underline decoration-4 decoration-[#403D0E] hover:decoration-[#FAFF00] items-center justify-between w-full py-2 px-3 text-white rounded lg:border-0 lg:p-0 lg:w-auto transition duration-500 fontedBebas hover:text-[#FAFF00] mt-1">{t('main_menu_item_get_in_touch', { ns: 'common'})}</Link>
                     </li>
                 </ul>
                 </div>

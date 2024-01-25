@@ -24,5 +24,14 @@
     "resources_press_kit_light_logo": "Light Logo",
     "resources_press_kit_dark_banner_and_logo": "Dark Banner and Logo",
     "resources_press_kit_dark_banner": "Dark Banner",
-    "resources_press_kit_dark_logo": "Dark Logo"
+    "resources_press_kit_dark_logo": "Dark Logo",
+
+    "get_in_touch_say_hello": "Say Hello!",
+    "get_in_touch_lets_talk": "Let's talk.",
+    "get_in_touch_field_full_name": "Full Name",
+    "get_in_touch_field_email": "Email Address",
+    "get_in_touch_field_submit": "Submit",
+    "get_in_touch_field_message": "What can we do for you? tell us about your project, timelines, goals, budget, etc.",
+    "get_in_touch_contact_us": "Contact Us",
+    "get_in_touch_socials": "Socials"
 }

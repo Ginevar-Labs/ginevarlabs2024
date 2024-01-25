@@ -24,7 +24,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
     <>
       <Header currentPage='home' locale={locale} />
       <main
-        className={`flex min-h-screen flex-col`}
+        className={`flex min-h-screen flex-col px-10 py-10 bg-[#1F1D1D] fontedBebas `}
       >
         {/* <HomeHero/>
         <ServiceOfferingBox locale={locale}/>

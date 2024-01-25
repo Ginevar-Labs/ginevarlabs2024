@@ -30,6 +30,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+body{
+  background-color: black;
+}
+
 .fontedMontserrat {
   font-family: 'Montserrat', sans-serif;
   font-size: 22px;
