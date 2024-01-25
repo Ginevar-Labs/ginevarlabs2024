@@ -100,5 +100,27 @@
     ,"services_our_recipe_work_cycle_launch_section_web": "For web, shopify and blockchain",
     "services_our_recipe_work_cycle_launch_section_mobile": "For mobile apps",
     "services_our_recipe_work_cycle_launch_section_web_text": "For web applications or Shopify stores, the launch process is meticulous. We conduct thorough network testing in a production environment before initiating the launch. This ensures that your application is ready for prime time, delivering a seamless experience to users from the very start.",
-    "services_our_recipe_work_cycle_launch_section_mobile_text": "When it comes to mobile apps, our launch process involves a series of carefully orchestrated steps. This includes filling in all the necessary information for app stores, reaching out to the Google or Apple teams for potential feedback, and conducting extensive testing using platforms like TestFlight."
+    "services_our_recipe_work_cycle_launch_section_mobile_text": "When it comes to mobile apps, our launch process involves a series of carefully orchestrated steps. This includes filling in all the necessary information for app stores, reaching out to the Google or Apple teams for potential feedback, and conducting extensive testing using platforms like TestFlight.",
+
+    "main_menu_item_services_solutions_mobile_title": "Mobile Experiences",
+    "main_menu_item_services_solutions_web_title": "Web Applications",
+    "main_menu_item_services_solutions_shopify_title": "Shopify Stores",
+    "main_menu_item_services_solutions_blockchain_title": "Blockchain Products",
+
+    "main_menu_item_services_solutions_mobile_subtitle": "Crafting Seamless Digital Experiences",
+    "main_menu_item_services_solutions_web_subtitle": "Empowering with React.js + Next.js Stack",
+    "main_menu_item_services_solutions_shopify_subtitle": "Tailored Solutions",
+    "main_menu_item_services_solutions_blockchain_subtitle": "NFT Projects Expertise",
+
+    "main_menu_item_services_solutions_mobile_text_a": "We take pride in crafting mobile apps that not only meet but exceed user expectations. Whether you opt for a native app tailored to a specific platform or a cross-platform solution for broader reach, our approach remains the same — a perfect fusion of creativity, functionality, and user-centric design. ",
+    "main_menu_item_services_solutions_mobile_text_b": "From establishing a strong brand identity to creating stylesheets that resonate with your vision, mapping out wireframes for intuitive navigation, to designing a compelling UI/UX, every step is meticulously executed. ",
+    "main_menu_item_services_solutions_mobile_text_c": "Our commitment doesn't end at the app launch; we offer fixed-price monthly maintenance to ensure your app remains cutting-edge and performs at its peak."
+
+    ,"main_menu_item_services_solutions_web_text_a": "With our expertise in the React.js + Next.js stack, we bring dynamic web applications to life. Our focus extends beyond just functionality; we prioritize creating immersive and engaging user experiences. Whether you're launching a brand-new application or enhancing an existing one, our web development services are tailored to meet the evolving demands of the digital landscape."
+    ,"main_menu_item_services_solutions_shopify_text_a": "Elevate your e-commerce presence with a Shopify store crafted with care for the detail. We understand the nuances of the market, and our focus on internationalization ensures that your Shopify store is not just a platform for transactions but a seamless extension of your brand. From the initial setup to ongoing support, we provide end-to-end solutions for your online retail success."
+    ,"main_menu_item_services_solutions_blockchain_text_a": "Explore the limitless possibilities of Web3 development as we seamlessly integrate blockchain solutions into your projects. Our expertise goes beyond traditional applications, unlocking the potential of decentralized and trustless systems.",
+    "main_menu_item_services_solutions_blockchain_text_b": "Our team has successfully contributed to projects that have collectively generated more than $10 million at launch. "
+    ,"main_menu_item_services_check_our_portfolio": "Check our Portfolio"
+    ,"main_menu_item_services_how_we_work_title": "For a deeper dive into our methodologies and processes, head over to our 'How We Work' section. This comprehensive resource provides a detailed breakdown of our workflow, ensuring that you have a clear understanding of how we turn ideas into digital success stories."
+    ,"main_menu_item_services_how_we_work_button": "How we work"
 }

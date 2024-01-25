@@ -36,7 +36,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
       <main
         className={`flex flex-col bg-[#1F1D1D] fontedBebas `}
       >
-        <div className='relative w-full h-[300px] flex justify-center items-center'>
+        <div className='relative w-full h-[300px] flex justify-center items-center border-white border-dashed border-b-[2px]'>
             <img className='absolute top-0 left-0 w-full h-full object-cover' src='/assets/banners/banner-1.png' alt='Ginevar - Banner'/>
             <div className='w-full h-full absolute top-0 left-0 bg-black opacity-50'/>
             <p className='relative text-center text-white text-[72px]'>
