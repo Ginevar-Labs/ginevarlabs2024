@@ -129,12 +129,16 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
             <p className='text-white text-justify lg:text-[22px] text-[16px] opacity-75'>
             {t('about_our_clients_text_b', { ns: 'common'})}
             </p>
-            <div className='flex justify-center items-center my-10'>
-                <Link href='/get-in-touch' locale={locale}>
-                <Button light={true} title={t('main_menu_item_get_in_touch', { ns: 'common'})} textSize='text-[24px]'/>
-                </Link>
+            <div className='mt-20 relative w-full text-center fontedBebas h-[300px] flex content-center items-center justify-center my-10'>
+                    <div className='w-40 h-40 absolute top-0 left-20 border-t-[3px] border-l-[3px] border-dashed border-white'/>
+                    <div className='w-40 h-40 absolute bottom-0 right-20 border-b-[3px] border-r-[3px] border-dashed border-white'/>
+                    <div className='w-[200px]'>
+                        <Link href='/get-in-touch' locale={locale}>
+                            <Button light={true} title={t('main_menu_item_get_in_touch', { ns: 'common'})} textSize='text-[24px]'/>
+                        </Link>
+                    </div>
+                </div>
             </div>
-        </div>
         
       </main>
       <Footer currentPage='company' locale={locale}/>

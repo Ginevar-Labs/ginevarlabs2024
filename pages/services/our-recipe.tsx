@@ -12,6 +12,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useEffect, useState } from 'react';
 import 'flowbite';
 import { initFlowbite } from 'flowbite';
+import Link from 'next/link';
+import Button from '@/components/Button';
 
 export default function Home({ locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
@@ -427,6 +429,15 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </div>
             </div>
         </div>
+            <div className='mt-20 relative w-full text-center fontedBebas h-[300px] flex content-center items-center justify-center my-10'>
+                    <div className='w-40 h-40 absolute top-0 left-20 border-t-[3px] border-l-[3px] border-dashed border-white'/>
+                    <div className='w-40 h-40 absolute bottom-0 right-20 border-b-[3px] border-r-[3px] border-dashed border-white'/>
+                    <div className='w-[200px]'>
+                        <Link href='/get-in-touch' locale={locale}>
+                            <Button light={true} title={t('main_menu_item_get_in_touch', { ns: 'common'})} textSize='text-[24px]'/>
+                        </Link>
+                    </div>
+                </div>
         
       </main>
       <Footer currentPage='services' locale={locale}/>
