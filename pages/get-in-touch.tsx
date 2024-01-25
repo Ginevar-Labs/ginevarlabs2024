@@ -29,8 +29,16 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
     <>
       <Header currentPage='get-in-touch' locale={locale} />
       <main
-        className={`flex flex-col lg:px-20 px-10 py-10 bg-[#1F1D1D] fontedBebas `}
+        className={`flex flex-col bg-[#1F1D1D] fontedBebas `}
       >
+      <div className='relative w-full h-[300px] flex justify-center items-center'>
+          <img className='absolute top-0 left-0 w-full h-full object-cover' src='/assets/banners/banner-4.png' alt='Ginevar - Banner'/>
+          <div className='w-full h-full absolute top-0 left-0 bg-black opacity-50'/>
+          <p className='relative text-center text-white text-[72px]'>
+              {t('main_menu_item_get_in_touch', { ns: 'common'})}
+          </p>
+      </div>
+      <div className='lg:px-20 px-10 py-10 '>
         <div className='grid lg:grid-cols-3 grid-cols-1'>
             <div className='lg:col-span-2 col-span-1'>
                 <h1 className='text-white drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[72px] text-[42px]'>
@@ -102,7 +110,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                         </div>
             </div>
         </div>
-        
+        </div>
       </main>
       <Footer currentPage='get-in-touch' locale={locale}/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
