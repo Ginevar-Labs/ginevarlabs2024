@@ -325,6 +325,58 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </div>
             </div>
         </div>
+        <div className='flex'>
+            <div className='relative w-20'>
+            <div className='h-[70%] w-full border-l-[2px] border-dashed border-white'/>
+                <div className='h-[30%] w-full border-t-[2px] border-l-[2px] border-dashed border-white'/>
+            </div>
+        <h2 className='text-white drop-shadow-[2px_2px_rgba(255,242,56,1)] lg:text-[36px] text-[24px] mt-10'>
+            {t('services_our_recipe_work_cycle_testing', { ns: 'common'})} {t('services_our_recipe_work_cycle_building_extra_title', { ns: 'common'})}
+        </h2>
+        </div>
+        <div className='w-full border-l-[2px] border-dashed border-white lg:px-10 px-4 text-white'>
+            <p className='lg:text-[22px] text-[16px]'>
+                {t('services_our_recipe_work_cycle_testing_intro', { ns: 'common'})}
+            </p>
+            <br/>
+        </div>
+        <div className='flex'>
+            <div className='relative w-20'>
+            <div className='h-[70%] w-full border-l-[2px] border-dashed border-white'/>
+                <div className='h-[30%] w-full border-t-[2px] border-l-[2px] border-dashed border-white'/>
+            </div>
+        <h2 className='text-white drop-shadow-[2px_2px_rgba(255,242,56,1)] lg:text-[36px] text-[24px] mt-10'>
+            {t('services_our_recipe_work_cycle_launch', { ns: 'common'})}
+        </h2>
+        </div>
+        <div className='w-full border-l-[2px] border-dashed border-white lg:px-10 px-4 text-white'>
+            <p className='lg:text-[22px] text-[16px]'>
+                {t('services_our_recipe_work_cycle_launch_intro', { ns: 'common'})}
+            </p>
+
+            <div className='relative flex group lg:w-[50%] w-full my-2'>
+                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
+                            <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>1</p>
+                        </div>
+                        <p className='ml-4 mt-1 lg:text-[22px] text-[16px] transition duration-500 group-hover:text-[#FAFF00]'>{t('services_our_recipe_work_cycle_launch_section_web', { ns: 'common'})}</p>
+                        <div className='z-0 absolute bottom-[1px] w-full ml-6 h-[4px] bg-[#FAFF00] opacity-25 transition duration-500 group-hover:opacity-100'/>
+                    </div>
+                    <p className='lg:text-[22px] text-[16px]'>
+                {t('services_our_recipe_work_cycle_launch_section_web_text', { ns: 'common'})}
+            </p>
+            <br/>
+
+            <div className='relative flex group lg:w-[50%] w-full my-2'>
+                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
+                            <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>2</p>
+                        </div>
+                        <p className='ml-4 mt-1 lg:text-[22px] text-[16px] transition duration-500 group-hover:text-[#FAFF00]'>{t('services_our_recipe_work_cycle_launch_section_mobile', { ns: 'common'})}</p>
+                        <div className='z-0 absolute bottom-[1px] w-full ml-6 h-[4px] bg-[#FAFF00] opacity-25 transition duration-500 group-hover:opacity-100'/>
+                    </div><p className='lg:text-[22px] text-[16px]'>
+                {t('services_our_recipe_work_cycle_launch_section_mobile_text', { ns: 'common'})}
+            </p>
+            <br/>
+        </div>
         
     </div>
 

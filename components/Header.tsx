@@ -21,7 +21,7 @@ export default function Header(props: HeaderProps) {
     return (
       <header>
         <Head>
-            <title>{props.subtitle ? `${props.subtitle} - ` : ""} {t('app_title', { ns: 'common'})}</title>
+            <title>{props.subtitle ? `${props.subtitle.toString()} - ` : ""} {t('app_title', { ns: 'common'})}</title>
             <meta name="description" content={t('app_description', { ns: 'common'})} />
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <link rel="icon" href="/favicon.ico" />
