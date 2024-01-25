@@ -123,7 +123,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                     </p>
                 </div>
                 <div className='col-span-1 lg:pl-40 lg:pr-20 flex justify-end items-end'>
-                    <img src='/assets/map.png' className='w-full object-cover lg:my-0 my-4' alt={t('about_our_clients_map_alt', { ns: 'common'})}/>
+                    <img src='/assets/map.png' className='w-full opacity-75 object-cover lg:my-0 my-4' alt={t('about_our_clients_map_alt', { ns: 'common'})}/>
                 </div>
             </div>
             <p className='text-white text-justify lg:text-[22px] text-[16px] opacity-75'>
