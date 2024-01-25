@@ -60,12 +60,12 @@ body {
 }
 #comunidad-bts li a .fa-brands {
     font-size: 1.5em;
-    color: #222;
+    color: #fff;
     padding-top: 0.25em;
 }
 #comunidad-bts li a .fab {
     font-size: 3em;
-    color: #222;
+    color: #fff;
     padding-top: 0.25em;
 }
 #comunidad-bts li a::before {
@@ -98,8 +98,8 @@ body {
 }
 #comunidad-bts #cbts-md a::before {
     content: "\f23a";
-    color: black;
-    border-bottom: 4px solid black;
+    color: white;
+    border-bottom: 4px solid white;
 }
 #comunidad-bts #cbts-li a::before {
     content: "\f08c";
@@ -109,8 +109,8 @@ body {
 
 #comunidad-bts #cbts-github a::before {
     content: "\f09b";
-    color: #B3C73E;
-    border-bottom: 4px solid #B3C73E;
+    color: #FF7878;
+    border-bottom: 4px solid #FF7878;
 }
 
 #comunidad-bts #cbts-behance a::before {

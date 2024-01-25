@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 import 'flowbite';
 import { initFlowbite } from 'flowbite';
 
-export default function Home({ blog, locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Home({ locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -26,12 +26,12 @@ export default function Home({ blog, locale }: InferGetServerSidePropsType<typeo
       <main
         className={`flex min-h-screen flex-col`}
       >
-        <HomeHero/>
+        {/* <HomeHero/>
         <ServiceOfferingBox locale={locale}/>
         <TrustedByBox/>
         <HomeMessageBox message={t('home_message_box_message_1', { ns: 'common'})}/>
         <EngineeringBlogBox locale={locale} categories={blog.categories} posts={blog.posts} />
-        <ContactBox locale={locale}/>
+        <ContactBox locale={locale}/> */}
       </main>
       <Footer currentPage='home' locale={locale}/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
@@ -41,13 +41,10 @@ export default function Home({ blog, locale }: InferGetServerSidePropsType<typeo
 
 export const getServerSideProps = async (context: any) => {
   const { locale } = context;
-  const _blogs = await fetch('http://localhost:3000/api/engineeringblog')
-  const _blogData = await _blogs.json();
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'eb'])),
-      blog: _blogData,
+      ...(await serverSideTranslations(locale, ['common'])),
       locale: locale
     },
   };
