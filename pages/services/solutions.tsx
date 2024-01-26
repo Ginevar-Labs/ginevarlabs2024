@@ -14,9 +14,11 @@ import 'flowbite';
 import { initFlowbite } from 'flowbite';
 import Link from 'next/link';
 import Button from '@/components/Button';
+import { useRouter } from 'next/router';
 
 export default function Home({ locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
+  const router = useRouter();
 
   useEffect(() => {
     initFlowbite();
@@ -108,7 +110,9 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </div>
             </div>
 
-            <div className='my-10 transition-all duration-500 relative group border-dashed border-white lg:border-b-[2px] w-[80%] mx-[10%] lg:h-[300px] transition duration-500 opacity-50 hover:opacity-100'>
+            <div onClick={() => {
+                router.push('/services/portfolio', undefined, {locale: locale})
+            }} className='cursor-pointer my-10 transition-all duration-500 relative group border-dashed border-white lg:border-b-[2px] w-[80%] mx-[10%] lg:h-[300px] transition duration-500 opacity-50 hover:opacity-100'>
                 <div className='lg:absolute block lg:hidden lg:bottom-0 lg:left-20 border-dashed border-white border-b-[2px]'>
                         <img className='w-full h-[200px] object-cover' src='/assets/iphone_example.png' alt={t('main_menu_item_services_check_our_portfolio', { ns: 'common'})}  />
                     </div>

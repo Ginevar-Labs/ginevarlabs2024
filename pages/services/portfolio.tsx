@@ -39,6 +39,12 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
             {
                 [
                     {
+                        client: 'Blind Harpy Studios',
+                        slogan: t('deliverly_cyclops_slogan', { ns: 'common'}),
+                        desc: t('deliverly_cyclops_desc', { ns: 'common'}),
+                        img: '/assets/screens/CYCLOPS.png'
+                    },
+                    {
                         client: 'The Highlights App',
                         slogan: t('portfolio_highlights_slogan', { ns: 'common'}),
                         desc: t('portfolio_highlights_desc', { ns: 'common'}),
