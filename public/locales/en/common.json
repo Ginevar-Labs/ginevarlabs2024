@@ -122,5 +122,29 @@
     "main_menu_item_services_solutions_blockchain_text_b": "Our team has successfully contributed to projects that have collectively generated more than $10 million at launch. "
     ,"main_menu_item_services_check_our_portfolio": "Check our Portfolio"
     ,"main_menu_item_services_how_we_work_title": "For a deeper dive into our methodologies and processes, head over to our 'How We Work' section. This comprehensive resource provides a detailed breakdown of our workflow, ensuring that you have a clear understanding of how we turn ideas into digital success stories."
-    ,"main_menu_item_services_how_we_work_button": "How we work"
+    ,"main_menu_item_services_how_we_work_button": "How we work",
+
+    "home_hero_left_text_a": "Crafting ",
+    "home_hero_left_text_b": "Digital ",
+    "home_hero_left_text_c": "Excellence ",
+    "home_hero_right_text_a": "In the palm ",
+    "home_hero_right_text_b": "of your hand",
+
+    "home_mission_intro": "Founded in 2019, our mission is clear — to help businesses and professionals bring modern, efficient, and conversion-driven products to life. With over a decade of experience in mobile and web application development, our journey has taken us around the globe, collaborating with clients of all sizes.",
+    "home_mark_text_block_a": "We assist entrepreneurs transforming their ideas into reality, improving the world we live through technology."
+    ,"home_trusted_by": "Trusted by"
+    ,"home_what_we_do": "What we do"
+    ,"home_what_we_do_mobile_development": "Mobile Development"
+    ,"home_what_we_do_web_development": "Web Development"
+    ,"home_what_we_do_uiux_design": "UI/UX Design"
+    ,"home_what_we_do_shopify": "Shopify"
+    ,"home_what_we_do_blockchain": "Blockchain"
+    ,"home_what_we_do_brand_identity": "Brand Identity"
+
+
+    ,"portfolio_highlights_slogan": "Catch the best moments"
+    ,"portfolio_highlights_desc": "The Highlights App helps fans stay connected to their favorite sports, teams, and athletes by leveraging our intuitive mobile interface and advanced AI to aggregate full highlights across all sports and leagues and personalize them to fans' preferences."
+
+    ,"deliverly_highlights_slogan": "The hood on your hand"
+    ,"deliverly_highlights_desc": "Connect with a world of flavors, delivering your favorite dishes directly to your doorstep. Browse through a diverse range of restaurants, place orders effortlessly, and track your delivery in real-time. Elevate your dining experience with the ease and efficiency of our delivery app – because great food should come to you, wherever you are"
 }

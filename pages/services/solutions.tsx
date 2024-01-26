@@ -108,23 +108,26 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </div>
             </div>
 
-            <div className='relative cursor-pointer border-dashed border-white border-[2px] w-[80%] mx-[10%] h-[300px] transition duration-500 opacity-50 hover:opacity-100'>
-                <div className='grid grid-cols-3'>
-                    <div className='col-span-2'></div>
-                    <div className='col-span-1 h-[300px] flex justify-center items-center text-white text-center px-10'>
-                        <p>{t('main_menu_item_services_check_our_portfolio', { ns: 'common'})}</p>
+            <div className='my-10 transition-all duration-500 relative group border-dashed border-white lg:border-b-[2px] w-[80%] mx-[10%] lg:h-[300px] transition duration-500 opacity-50 hover:opacity-100'>
+                <div className='lg:absolute block lg:hidden lg:bottom-0 lg:left-20 border-dashed border-white border-b-[2px]'>
+                        <img className='w-full h-[200px] object-cover' src='/assets/iphone_example.png' alt={t('main_menu_item_services_check_our_portfolio', { ns: 'common'})}  />
+                    </div>
+                    <div className='grid lg:grid-cols-4 grid-cols-1'>
+                        <div className='lg:col-span-3 col-span-0'></div>
+                        <div className='col-span-1 lg:h-[300px] flex justify-center items-center text-white text-center lg:px-10'>
+                            <div>
+                            <p className='text-[20px] opacity-50 w-full text-center'>{t('main_menu_item_services_check_our_portfolio', { ns: 'common'})}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='lg:absolute lg:block hidden lg:bottom-0 lg:left-20'>
+                        <img className='w-full h-[300px] object-contain' src='/assets/iphone_example.png' alt={t('main_menu_item_services_check_our_portfolio', { ns: 'common'})} />
                     </div>
                 </div>
-                <div className='absolute bottom-0 left-20'>
-                    <img className='w-full h-[200px]' src='/assets/iphone_example.png' alt={t('main_menu_item_services_check_our_portfolio', { ns: 'common'})} />
-                </div>
-            </div> 
             
-
-
             <div className='mt-20 relative w-full text-center fontedBebas h-[300px] flex content-center items-center justify-center my-10'>
-                    <div className='w-40 h-40 absolute top-0 left-20 border-t-[3px] border-l-[3px] border-dashed border-white'/>
-                    <div className='w-40 h-40 absolute bottom-0 right-20 border-b-[3px] border-r-[3px] border-dashed border-white'/>
+                    <div className='lg:w-40 lg:h-40 w-20 h-20 absolute top-0 left-0 lg:left-20 border-t-[3px] border-l-[3px] border-dashed border-white'/>
+                    <div className='lg:w-40 lg:h-40 w-20 h-20 absolute bottom-0 right-0 lg:right-20 border-b-[3px] border-r-[3px] border-dashed border-white'/>
                     <div className='w-[200px]'>
                         <Link href='/get-in-touch' locale={locale}>
                             <Button light={true} title={t('main_menu_item_get_in_touch', { ns: 'common'})} textSize='text-[24px]'/>
