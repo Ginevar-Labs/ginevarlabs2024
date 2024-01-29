@@ -9,6 +9,7 @@ type PortfolioItems = {
     desc: string;
     img: string;
     link: string;
+    category: string[];
 }
 
 type Data = {
@@ -28,8 +29,9 @@ export default function handler(
             slogan: 'deliverly_cyclops_slogan',
             desc: 'deliverly_cyclops_desc',
             img: '/assets/screens/CYCLOPS.png',
-            date: '17/01/2024',
-            link: '#'
+            date: '29/01/2024',
+            link: '#',
+            category: ['Mobile', 'Web3']
         },
         {
             client: 'The Highlights App',
@@ -37,8 +39,9 @@ export default function handler(
             desc: 'portfolio_highlights_desc',
             img: '/assets/screens/HIGHLI.png',
 
-            date: '17/01/2024',
-            link: '#'
+            date: '28/01/2024',
+            link: '#',
+            category: ['Mobile']
         },
         {
             client: 'J. Joshua',
@@ -46,7 +49,71 @@ export default function handler(
             desc: 'deliverly_highlights_desc',
             img: '/assets/screens/DELIVER.png',
             date: '17/01/2024',
-            link: '#'
+            link: '#',
+            category: ['Mobile']
+        },
+        {
+            client: 'ICAO4PILOTS',
+            slogan: 'icao_slogan',
+            desc: 'icao_desc',
+            img: '/assets/screens/ICAO4.png',
+            date: '18/01/2024',
+            link: '#',
+            category: ['Mobile']
+        },
+        {
+            client: 'Chilton',
+            slogan: 'chilton_slogan',
+            desc: 'chilton_desc',
+            img: '/assets/screens/chilton_b.png',
+            date: '19/01/2024',
+            link: 'https://www.chiltons.com/',
+            category: ['Shopify']
+        },
+        {
+            client: 'Korca',
+            slogan: 'korca_slogan',
+            desc: 'korca_desc',
+            img: '/assets/screens/korca.png',
+            date: '20/01/2024',
+            link: 'https://www.birrakorca.com.al',
+            category: ['Shopify']
+        },
+        {
+            client: 'Sezon Decor',
+            slogan: 'sezon_slogan',
+            desc: 'sezon_desc',
+            img: '/assets/screens/sezon.png',
+            date: '14/01/2024',
+            link: 'https://sezondecor.al',
+            category: ['Shopify']
+        },
+        {
+            client: 'ISOVOX',
+            slogan: 'isovox_slogan',
+            desc: 'isovox_desc',
+            img: '/assets/screens/isovox.png',
+            date: '15/01/2024',
+            link: 'https://isovoxbooth.com/',
+            category: ['Shopify']
+        },
+        {
+            client: 'Alpacadabraz',
+            slogan: 'alpaca_slogan',
+            desc: 'alpaca_desc',
+            img: '/assets/screens/alpaca.png',
+            date: '20/01/2024',
+            link: 'https://alpacadabraz.io/',
+            category: ['Web3']
+        },
+        {
+            client: 'Zwickies',
+            slogan: 'zwickies_slogan',
+            desc: 'zwickies_desc',
+            img: '/assets/screens/zwickies.png',
+            date: '20/01/2024',
+            link: '#',
+            category: ['Web3']
         }
     ]
   })
