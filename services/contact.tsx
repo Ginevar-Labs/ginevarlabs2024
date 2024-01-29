@@ -48,7 +48,7 @@ export const sendContact = async(email: string, message: string): Promise<any | 
         return false;
       }
     
-    return await axios.post(`${host}routes/contact`, {
+    return await axios.post(`${host}routes/ginevar/contact`, {
         content: message,
         email: email
     }, {
