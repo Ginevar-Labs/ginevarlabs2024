@@ -65,9 +65,9 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
           </div>
 
           <div className='text-center lg:px-20'>
-            <h2 className='text-white opacity-50 lg:text-[56px] text-[24px]'>Made by Ginevar</h2>
-            <p className='text-white'><u>We are architects of digital transformation </u></p>
-            <p className='text-white opacity-75'>Explore a world where ideas come to life, where innovation meets functionality, and where user experiences are not just crafted but perfected.</p>
+            <h2 className='text-white opacity-50 lg:text-[56px] text-[24px]'>{t('home_portfolio_made_by_ginevar', { ns: 'common'})}</h2>
+            <p className='text-white'><u>{t('home_portfolio_made_by_ginevar_subtitle', { ns: 'common'})} </u></p>
+            <p className='text-white opacity-75'>{t('home_portfolio_made_by_ginevar_text', { ns: 'common'})}</p>
 
             <div className='sm:col-span-5 w-full col-span-1 fontedBebas lg:text-left text-center border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block my-10'>
                     {
@@ -89,7 +89,7 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
                                     
                                     <figure className={`overflow-visible relative w-full h-full transition-all duration-500 cursor-pointer filter grayscale hover:grayscale-0 group`}>
                                         
-                                            <img src={item.img} alt={t(item.client, { ns: 'common'})} className={`transition duration-500 overflow-visible w-full object-contain ${portfolioIndexSelected == index ? 'h-[140%] absolute bottom-0' : 'h-[100%] '} `} />
+                                            <img src={item.img} alt={t(item.client, { ns: 'common'})} className={`transition duration-500 overflow-visible w-full object-contain ${portfolioIndexSelected == index ? 'h-[140%] absolute bottom-0 left-0' : 'h-[100%] absolute bottom-0 left-0'} `} />
                                         
                                     </figure>
                                     
@@ -236,13 +236,13 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
           </div>
 
           <div className='text-center lg:px-20'>
-            <h2 className='text-white lg:text-[56px] text-[24px]'>Latest from</h2>
-            <h2 className='text-white lg:text-[56px] text-[24px]'>our blog</h2>
+            <h2 className='text-white lg:text-[56px] text-[24px]'>{t('blog_pre_latest_from', { ns: 'common'})}</h2>
+            <h2 className='text-white lg:text-[56px] text-[24px]'>{t('blog_pre_latest_from2', { ns: 'common'})}</h2>
 
             <div className='sm:col-span-5 w-full col-span-1 fontedBebas lg:text-left text-center border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
                     {
                         blog.posts.length == 0 ? <div className='lg:h-[300px] h-[100px] text-center flex justify-center items-center'>
-                            <p>No articles (yet!)</p>
+                            <p>{t('blog_pre_null', { ns: 'common'})}</p>
                         </div> : null
                     }
                     {

@@ -74,11 +74,11 @@ export default function Footer(props: FooterProps) {
                         <Link href='/resources/blog' className='block text-white hover:text-[#FAFF00] opacity-50 hover:opacity-75 transition duration-500'>{t('main_menu_item_resources_blog', { ns: 'common'})}</Link>
                         <Link href='/resources/press-kit' className='block text-white hover:text-[#FAFF00] opacity-50 hover:opacity-75 transition duration-500'>{t('main_menu_item_resources_press_kit', { ns: 'common'})}</Link>
                         <br/>
-                        <p className='block text-white hover:text-[#FAFF00] transition duration-500'>{t('footer_subscribe_label', { ns: 'common'})}</p>
+                        {/* <p className='block text-white hover:text-[#FAFF00] transition duration-500'>{t('footer_subscribe_label', { ns: 'common'})}</p>
                         <input className='fontedBebas px-2 py-1 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-500 text-black placeholder-opacity-[0.25]' value={suscriptionEmail} onChange={(e) => setSuscriptionEmail(e.target.value)} placeholder={t('footer_subscribe_placeholder', { ns: 'common'})} />
                         <div className='w-[140px] py-4'>
                             <Button light={true} title='Submit'/>
-                        </div>
+                        </div> */}
                  </div>
                 </div>
             </div>
