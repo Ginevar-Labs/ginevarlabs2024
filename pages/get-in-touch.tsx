@@ -14,6 +14,7 @@ import 'flowbite';
 import { initFlowbite } from 'flowbite';
 import Button from '@/components/Button';
 import Link from 'next/link';
+import { sendContact } from '@/services/contact';
 
 export default function Home({ locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
@@ -24,6 +25,15 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
   useEffect(() => {
     initFlowbite();
   }, [])
+
+  const submit = async() => {
+    
+    let _result = await sendContact(contactEmail, 'Message from '+contactFullName+': '+contactFullName);
+    
+    if(_result == true) {
+      alert(t('get_in_touch_sent', { ns: 'common'}))
+    }
+  }
 
   return (
     <>
@@ -57,7 +67,9 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </div>
                 <textarea rows={8} style={{resize: 'none'}} className='mt-1 fontedBebas px-2 py-1 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-500 text-black placeholder-opacity-[0.25]' value={contactMessage} onChange={(e) => setContactMessage(e.target.value)} placeholder={t('get_in_touch_field_message', { ns: 'common'})} />
                 <div className='w-full'>
-                    <div className='flex items-end content-end justify-end'><Button light={true} title={t('get_in_touch_field_submit', { ns: 'common'})}/></div>
+                    <div onClick={() => {
+                      submit();
+                    }} className='flex items-end content-end justify-end'><Button light={true} title={t('get_in_touch_field_submit', { ns: 'common'})}/></div>
                 </div>
             </div>
             <div className='col-span-1 lg:px-10'>
