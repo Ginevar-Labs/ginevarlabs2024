@@ -30,7 +30,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
     
     let _result = await sendContact(contactEmail, 'Message from '+contactFullName+': '+contactFullName);
     
-    if(_result == true) {
+    if(_result.id > 0) {
       alert(t('get_in_touch_sent', { ns: 'common'}))
     }
   }

@@ -49,13 +49,12 @@ export const sendContact = async(email: string, message: string): Promise<any | 
       }
     
     return await axios.post(`${host}routes/contact`, {
-        message: message,
+        content: message,
         email: email
     }, {
         headers: {
           "Content-Type": "application/json",
-          "Permission": `Token: ${process.env.NEXT_PUBLIC_ACCESS_KEY}`,
-          "Authorization": `Token: ${token}`,
+          "Permission": `Token: ${token}`,
         }
     }).then(async (response: any) =>{
         try{
