@@ -83,13 +83,13 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
                                     portfolioItems.items.sort((a: any, b: any) => a.date.split('/').reverse().join('/') > b.date.split('/').reverse().join('/') ? -1 : 1).map((item: any, index: any) => index >= 3 ? null : <div className={`lg:block hidden ${index == portfolioIndexSelected ? 
                                         (portfolioItems.items.length == 1 ? 'w-full' : portfolioItems.items.length == 2 ? 'w-[65%]' : 'w-[50%]') : 
                                         (portfolioItems.items.length == 1 ? 'w-full' : portfolioItems.items.length == 2 ? 'w-[35%]' : 'w-[25%]')
-                                    } transition-all duration-300 h-full cursor-pointer`} onClick={() => {
+                                    } transition-all duration-500 h-full cursor-pointer`} onClick={() => {
                                         setPortfolioIndexSelected(index)
                                     }} key={index}>
                                     
-                                    <figure className={` relative w-full h-full transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0`}>
+                                    <figure className={`overflow-visible relative w-full h-full transition-all duration-500 cursor-pointer filter grayscale hover:grayscale-0 group`}>
                                         
-                                            <img src={item.img} alt={t(item.client, { ns: 'common'})} className='w-full h-full object-cover' />
+                                            <img src={item.img} alt={t(item.client, { ns: 'common'})} className={`transition duration-500 overflow-visible w-full object-contain ${portfolioIndexSelected == index ? 'h-[140%] absolute bottom-0' : 'h-[100%] '} `} />
                                         
                                     </figure>
                                     

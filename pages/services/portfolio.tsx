@@ -52,7 +52,7 @@ export default function Home({ portfolioItems, locale }: InferGetServerSideProps
                         </div>
                     </div>
                     <div className='filter grayscale hover:grayscale-0 transition duration-500 lg:absolute lg:block hidden lg:bottom-0 lg:left-20'>
-                        <img className='w-full h-[300px] w-[300px] object-contain' src={item.img} alt={t('portfolio_highlights_slogan', { ns: 'common'})} />
+                        <img className={`w-full ${item.category.indexOf('Mobile') == -1 ? 'w-[300px]' : 'w-[360px]'}  h-[300px]  object-contain`} src={item.img} alt={t('portfolio_highlights_slogan', { ns: 'common'})} />
                     </div>
                 </div> )
             }
