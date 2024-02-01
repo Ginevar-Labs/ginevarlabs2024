@@ -59,13 +59,13 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </p>
                 <div className='grid grid-cols-2 gap-1'>
                     <div className='col-span-1'>
-                    <input className='fontedBebas px-2 py-1 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-500 text-black placeholder-opacity-[0.25]' value={contactFullName} onChange={(e) => setContactFullName(e.target.value)} placeholder={t('get_in_touch_field_full_name', { ns: 'common'})} />
+                      <input className='fontedBebas p-4 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-900 text-black placeholder-opacity-[0.25]' value={contactFullName} onChange={(e) => setContactFullName(e.target.value)} placeholder={t('get_in_touch_field_full_name', { ns: 'common'})} />
                     </div>
                     <div className='col-span-1'>
-                    <input className='fontedBebas px-2 py-1 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-500 text-black placeholder-opacity-[0.25]' value={contactEmail} onChange={(e) => setContactEmail(e.target.value)} placeholder={t('get_in_touch_field_email', { ns: 'common'})} />
+                      <input className='fontedBebas p-4 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-900 text-black placeholder-opacity-[0.25]' value={contactEmail} onChange={(e) => setContactEmail(e.target.value)} placeholder={t('get_in_touch_field_email', { ns: 'common'})} />
                     </div>
                 </div>
-                <textarea rows={8} style={{resize: 'none'}} className='mt-1 fontedBebas px-2 py-1 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-500 text-black placeholder-opacity-[0.25]' value={contactMessage} onChange={(e) => setContactMessage(e.target.value)} placeholder={t('get_in_touch_field_message', { ns: 'common'})} />
+                <textarea rows={8} style={{resize: 'none'}} className='mt-1 fontedBebas p-4 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-900 text-black placeholder-opacity-[0.25]' value={contactMessage} onChange={(e) => setContactMessage(e.target.value)} placeholder={t('get_in_touch_field_message', { ns: 'common'})} />
                 <div className='w-full'>
                     <div onClick={() => {
                       submit();
@@ -76,7 +76,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
             <h1 className='text-white drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[72px] text-[42px]'>
                     {t('get_in_touch_contact_us', { ns: 'common'})}
                 </h1>
-                <Link href='mailto:info@ginevar.com'>
+                <Link className='leading-[25px]' href='mailto:info@ginevar.com'>
                 <div className={`flex cursor-pointer group text-center bg-black text-white hover:text-[#FFF238] px-4 text-[14px] py-2 transition duration-500  drop-shadow-[0px_4px_rgba(255,242,56,0.25)] hover:drop-shadow-[4px_4px_rgba(255,242,56,1)]`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className='lg:w-6 lg:h-6 lg:bottom-0 bottom-4 w-6 h-6 mr-4 transition duration-200 fill-white group-hover:fill-[#FAFF00]' viewBox="0 0 79 78" fill="none">
                     <g clip-path="url(#clip0_296_404)">
@@ -90,7 +90,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                     </svg> info@ginevar.com
                 </div>
                 </Link><br/>
-                <Link href='mailto:careers@ginevar.com'>
+                <Link className='leading-[25px]' href='mailto:careers@ginevar.com'>
                 <div className={`flex cursor-pointer group text-center bg-black text-white hover:text-[#FFF238] px-4 text-[14px] py-2 transition duration-500  drop-shadow-[0px_4px_rgba(255,242,56,0.25)] hover:drop-shadow-[4px_4px_rgba(255,242,56,1)]`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className='lg:w-6 lg:h-6 lg:bottom-0 bottom-4 w-6 h-6 mr-4 transition duration-200 fill-white group-hover:fill-[#FAFF00]' viewBox="0 0 79 78" fill="none">
                     <g clip-path="url(#clip0_296_404)">

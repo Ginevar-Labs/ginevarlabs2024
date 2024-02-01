@@ -64,7 +64,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
             <Link href='/get-in-touch' className='transition duration-500 underline decoration-4 decoration-[#403D0E] hover:decoration-[#FAFF00]' locale={locale}>{t('about_our_history_connect_link', { ns: 'common'})}</Link>{t('about_our_history_connect_text', { ns: 'common'})}
             </p>
 
-            <div className='w-full mt-10 grid lg:grid-cols-6 grid-cols-2 w-full lg:px-40 px-0 fontedBebas my-0'>
+            <div className='w-full mt-10 grid lg:grid-cols-6 grid-cols-2 w-full lg:px-25 2xl:px-40 px-0 fontedBebas my-0'>
                 <div className='col-span-2 text-justify lg:px-10 text-white'>
                     <div className='lg:m-0 m-10 mt-0 mb-2 border-dashed border-[1px] border-white aspect-square'>
 
@@ -87,14 +87,14 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                     <p className=' text-center lg:text-[22px] text-[16px]'>Juan Manuel Curti</p>
                     <p className=' text-center lg:text-[22px] text-[16px]'>{t('about_position_juan', { ns: 'common'})}</p>
                     <div className='flex lg:my-0 my-6'>
-                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
-                                        <li id='cbts-li' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link target='_blank' href="https://www.linkedin.com/in/jmcur/" className='w-full'><i className="fab fa-linkedin linkedin flex justify-center" ></i> <div className='text-white font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full lg:ml-[-4px] ml-0'>LinkedIn</span></div></Link></li>
+                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 '>
+                                        <li id='cbts-li' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100 '><Link target='_blank' href="https://www.linkedin.com/in/jmcur/" className='w-full'><i className="fab fa-linkedin linkedin flex justify-center" ></i> <div className='text-white font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full lg:ml-[-4px] ml-0'>LinkedIn</span></div></Link></li>
                                     </ul>
-                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
+                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 '>
                                         <li id='cbts-md' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link target='_blank' href="https://juancurti.medium.com/" className='w-full'><i className="fab fa-medium medium flex justify-center" ></i> <div className='text-white font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Medium</span></div></Link></li>
                                     </ul>
-                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
-                                        <li id='cbts-github' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link target='_blank' href="https://github.com/juancurti" className='w-full'><i className="fab fa-github github flex justify-center" ></i> <div className='text-white font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full'>Github</span></div></Link></li>
+                                    <ul id='comunidad-bts' className='w-full h-full lg:scale-50 '>
+                                        <li id='cbts-github' className='my-0 w-full transition-all duration-500 opacity-25 hover:opacity-100'><Link target='_blank' href="https://github.com/juancurti" className='w-full'><i className="fab fa-github github flex justify-center" ></i> <div className='text-white font-bold w-full text-center' style={{fontSize: '24px'}}><span className='text-center w-full '>Github</span></div></Link></li>
                                     </ul>
                     </div>
                 </div>
@@ -116,22 +116,22 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
             <h1 className='text-white drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[72px] text-[42px]'>
                 Our Clients
             </h1>
-            <div className='grid lg:grid-cols-2 grid-cols-1 w-full my-4'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 w-full my-8'>
                 <div className='col-span-1  flex justify-center items-center'>
                     <p className='text-white text-justify lg:text-[22px] text-[16px] opacity-75'>
                     {t('about_our_clients_text_a', { ns: 'common'})}
                     </p>
                 </div>
-                <div className='col-span-1 lg:pl-40 lg:pr-20 flex justify-end items-end'>
-                    <img src='/assets/map.png' className='w-full opacity-75 object-cover lg:my-0 my-4' alt={t('about_our_clients_map_alt', { ns: 'common'})}/>
+                <div className='col-span-1 lg:pl-40  flex justify-end items-end'>
+                    <img src='/assets/map.png' className='w-[70%] opacity-75 object-cover lg:my-0 my-4' alt={t('about_our_clients_map_alt', { ns: 'common'})}/>
                 </div>
             </div>
             <p className='text-white text-justify lg:text-[22px] text-[16px] opacity-75'>
             {t('about_our_clients_text_b', { ns: 'common'})}
             </p>
             <div className='mt-20 relative w-full text-center fontedBebas h-[300px] flex content-center items-center justify-center my-10'>
-                    <div className='lg:w-40 lg:h-40 w-20 h-20 absolute top-0 left-0 lg:left-20 border-t-[3px] border-l-[3px] border-dashed border-white'/>
-                    <div className='lg:w-40 lg:h-40 w-20 h-20 absolute bottom-0 right-0 lg:right-20 border-b-[3px] border-r-[3px] border-dashed border-white'/>
+                    <div className='lg:w-40 lg:h-40 w-20 h-20 absolute top-0 left-0  border-t-[3px] border-l-[3px] border-dashed border-white'/>
+                    <div className='lg:w-40 lg:h-40 w-20 h-20 absolute bottom-0 right-0  border-b-[3px] border-r-[3px] border-dashed border-white'/>
                     <div className='w-[200px]'>
                         <Link href='/get-in-touch' locale={locale}>
                             <Button light={true} title={t('main_menu_item_get_in_touch', { ns: 'common'})} textSize='text-[24px]'/>
