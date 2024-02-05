@@ -20,7 +20,7 @@ export default function EngineeringBlogBox(props: EngineeringBlogBoxProps) {
                     <h1 className='text-black drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[82px] text-[42px]'>{t('engineering_blog_title_part_1', { ns: 'common'})} <span className='text-[#78A6FF]'>{t('engineering_blog_title_part_2', { ns: 'common'})}</span></h1>
                 </div>
                 <div className='sm:col-span-1 w-full col-span-1 flex items-center justify-center'>
-                    <Link locale={props.locale} href="/blog/" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button title={t('engineering_blog_explore_button', { ns: 'common'})}></Button></Link>
+                    <Link locale={props.locale} href="/blog/" className="block py-2 px-3 rounded lg:bg-transparent text-black lg:p-0 transition duration-200 fontedBebas hover:text-[#B3C73E]" aria-current="page"><Button light={false}  title={t('engineering_blog_explore_button', { ns: 'common'})}></Button></Link>
                 </div>
             </div>
             <div className='grid sm:grid-cols-6 grid-cols-1 lg:px-40 px-10'>
