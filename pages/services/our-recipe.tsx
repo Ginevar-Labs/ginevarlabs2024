@@ -1,11 +1,6 @@
-import ContactBox from '@/components/ContactBox';
-import EngineeringBlogBox from '@/components/EngineeringBlogBox';
+
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import HomeHero from '@/components/HomeHero';
-import HomeMessageBox from '@/components/HomeMessageBox';
-import ServiceOfferingBox from '@/components/ServiceOfferingBox';
-import TrustedByBox from '@/components/TrustedByBox';
 import { InferGetServerSidePropsType } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -50,13 +45,13 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
       <main
         className={`flex flex-col bg-[#1F1D1D] fontedBebas `}
       >
-        <div className='relative w-full h-[300px] flex justify-center items-center border-white border-dashed border-b-[2px] box-shadow-[4px_4px_rgba(255,242,56,1)]'>
+        <motion.div initial={{height:0}}  animate={{ height: "revert-layer" }}  transition={{ type: "spring", bounce: 0.25 }} className='relative w-full h-[300px] flex justify-center items-center border-white border-dashed border-b-[2px] box-shadow-[4px_4px_rgba(255,242,56,1)]'>
             <img className='absolute top-0 left-0 w-full h-full object-cover' src='/assets/banners/banner-1.png' alt='Ginevar - Banner'/>
             <div className='w-full h-full absolute top-0 left-0 bg-black opacity-50'/>
             <p className='relative text-center text-white text-[72px]'>
                 {t('main_menu_item_services_our_recipe', { ns: 'common'})}
             </p>
-        </div>
+        </motion.div>
         <div className='lg:px-20 px-10 py-10 relative'>
             <h1 ref={ref} className='text-white drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[72px] text-[42px]'>
                 {t('services_our_recipe_work_cycle', { ns: 'common'})}
@@ -402,14 +397,14 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 Tech Stack
             </h1>
             <div className='grid lg:grid-cols-2 grid-cols-1 gap-4 text-white text-center'>
-                <div className='col-span-1 border-dashed border-[2px] border-white p-2'>
+                <motion.div className='col-span-1 border-dashed border-[2px] border-white p-2 hover:border-[#FAFF00] hover:text-[#FAFF00] transition ease-in-out delay-100'>
                     <p>Native Mobile Development</p>
                     <div className='w-full flex content-center justify-center py-10'>
                         <img src='/assets/icons/techstack/icon_swift.png' className='w-20 m-5' alt='Swift'/>
                         <img src='/assets/icons/techstack/icon_kotlin.png' className='w-20 m-5' alt='Kotlin'/>
                     </div>
-                </div>
-                <div className='col-span-1 border-dashed border-[2px] border-white p-2'>
+                </motion.div>
+                <div className='col-span-1 border-dashed border-[2px] border-white p-2 hover:border-[#FAFF00] hover:text-[#FAFF00] transition ease-in-out delay-100'>
                     <p>Cross Platform Mobile Development</p>
                     <div className='w-full flex content-center justify-center py-10'>
                         <img src='/assets/icons/techstack/icon_flutter.png' className='w-20 m-5' alt='Flutter'/>
@@ -418,7 +413,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </div>
             </div>
             <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 text-white text-center'>
-                <div className='lg:col-span-2 col-span-1 border-dashed border-[2px] border-white p-2 mt-10'>
+                <div className='lg:col-span-2 col-span-1 border-dashed border-[2px] border-white p-2 mt-10 hover:border-[#FAFF00] hover:text-[#FAFF00] transition ease-in-out delay-100'>
                     <p>Web and Blockchain</p>
                     <div className='w-full flex content-center justify-center py-5'>
                         <img src='/assets/icons/techstack/icon_solidity.png' className='lg:w-20 lg:h-20 w-10 h-10 lg:m-5 m-5' alt='Solidity'/>
@@ -433,7 +428,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                         <img src='/assets/icons/techstack/icon_python.png' className='lg:w-20 lg:h-20 w-10 h-10 lg:m-5 m-5'  alt='Python'/>
                     </div>
                 </div>
-                <div className='col-span-1 border-dashed border-[2px] border-white p-2 mt-10'>
+                <div className='col-span-1 border-dashed border-[2px] border-white p-2 mt-10 hover:border-[#FAFF00] hover:text-[#FAFF00] transition ease-in-out delay-100'>
                     <p>Shopify</p>
                     <div className='w-full flex content-center justify-center lg:py-5 py-2'>
                         <img src='/assets/icons/techstack/icon_shopify.png'className='lg:w-20 lg:h-20 w-10 h-10 lg:m-5 m-5'  alt='Shopify'/>

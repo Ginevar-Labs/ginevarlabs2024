@@ -1,11 +1,6 @@
-import ContactBox from '@/components/ContactBox';
-import EngineeringBlogBox from '@/components/EngineeringBlogBox';
+
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import HomeHero from '@/components/HomeHero';
-import HomeMessageBox from '@/components/HomeMessageBox';
-import ServiceOfferingBox from '@/components/ServiceOfferingBox';
-import TrustedByBox from '@/components/TrustedByBox';
 import { InferGetServerSidePropsType } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -15,6 +10,7 @@ import { initFlowbite } from 'flowbite';
 import Button from '@/components/Button';
 import Link from 'next/link';
 import { sendContact } from '@/services/contact';
+import {motion } from 'framer-motion'
 
 export default function Home({ locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
@@ -41,13 +37,13 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
       <main
         className={`flex flex-col bg-[#1F1D1D] fontedBebas `}
       >
-      <div className='relative w-full h-[300px] flex justify-center items-center border-white border-dashed border-b-[2px]'>
+      <motion.div initial={{height:0}}  animate={{ height: "revert-layer" }}  transition={{ type: "spring", bounce: 0.25 }} className='relative w-full h-[300px] flex justify-center items-center border-white border-dashed border-b-[2px]'>
           <img className='absolute top-0 left-0 w-full h-full object-cover' src='/assets/banners/banner-4.png' alt='Ginevar - Banner'/>
           <div className='w-full h-full absolute top-0 left-0 bg-black opacity-50'/>
           <p className='relative text-center text-white text-[72px]'>
               {t('main_menu_item_get_in_touch', { ns: 'common'})}
           </p>
-      </div>
+      </motion.div>
       <div className='lg:px-20 px-10 py-10 '>
         <div className='grid lg:grid-cols-3 grid-cols-1'>
             <div className='lg:col-span-2 col-span-1'>
