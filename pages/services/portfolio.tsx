@@ -33,7 +33,7 @@ export default function Home({ portfolioItems, locale }: InferGetServerSideProps
         <div className='lg:px-20 px-10 py-10'>
             {
                 portfolioItems.items.sort((a: any, b: any) => a.date.split('/').reverse().join('/') > b.date.split('/').reverse().join('/') ? -1 : 1).map((item:any, index:any) => 
-                <PortItem item={item} index={index} /> )
+                <PortItem key={index} item={item} index={index} /> )
             }
         </div>
         
