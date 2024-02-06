@@ -2,7 +2,7 @@ import { useTranslation } from 'next-i18next';
 
 interface ButtonProps {
     title: string;
-    light: boolean;
+    light?: boolean;
     textSize?: string;
 }
 

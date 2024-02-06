@@ -1,11 +1,6 @@
-import ContactBox from '@/components/ContactBox';
-import EngineeringBlogBox from '@/components/EngineeringBlogBox';
+
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import HomeHero from '@/components/HomeHero';
-import HomeMessageBox from '@/components/HomeMessageBox';
-import ServiceOfferingBox from '@/components/ServiceOfferingBox';
-import TrustedByBox from '@/components/TrustedByBox';
 import { InferGetServerSidePropsType } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -15,6 +10,7 @@ import { initFlowbite } from 'flowbite';
 import Link from 'next/link';
 import Button from '@/components/Button';
 import { useRouter } from 'next/router';
+import {motion } from 'framer-motion'
 
 export default function Home({ blog, portfolioItems, locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
@@ -32,30 +28,30 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
       <main
         className={`flex min-h-screen flex-col bg-[#1F1D1D] fontedBebas `}
       >
-        <div className='relative w-full lg:h-[460px] h-[220px] flex justify-center items-center border-white border-dashed border-b-[2px]'>
-            <img className='absolute top-0 left-0 w-full h-full object-cover' src='/assets/banners/banner-1.png' alt='Ginevar - Banner'/>
+        <motion.div initial={{height:0}}  animate={{ height: "revert-layer" }}  transition={{ type: "spring", bounce: 0.25 }} className='relative w-full lg:h-[460px] h-[220px] flex justify-center items-center border-white border-dashed border-b-[2px]'>
+            <motion.img  className='absolute top-0 left-0 w-full h-full object-cover' src='/assets/banners/banner-1.png' alt='Ginevar - Banner'/>
             <div className='w-full h-full absolute top-0 left-0 bg-black opacity-50'/>
-            <div className='relative grid grid-cols-3 lg:mx-10 mx-2 w-full h-full'>
-              <div className='relative col-span-1 flex content-start justify-start items-top lg:my-10 my-2'>
+            <div className='relative grid grid-cols-3 lg:mx-10 mx-2 w-full h-full p-2'>
+              <motion.div initial={{scale:0}} animate={{scale:1}}  transition={{ type: "spring", bounce: 0.25 }}    className='relative col-span-1 flex content-start justify-start items-top lg:my-10 my-2'>
                 <p className='relative text-left text-white lg:text-[56px] text-[24px] leading-none'>
                   {t('home_hero_left_text_a', { ns: 'common'})} <br/> {t('home_hero_left_text_b', { ns: 'common'})} <br/> {t('home_hero_left_text_c', { ns: 'common'})}
-              </p>
-              </div>
+                </p>
+              </motion.div>
               <div className='relative w-full col-span-1 flex content-center justify-center items-center'>
-                <img src='/assets/ginevar_logo_dark.png' alt='Ginevar dark logo' className='lg:w-[150px] w-[100px] object-fit' />
+                <motion.img initial={{height:0}} animate={{height:"auto"}}  transition={{ type: "spring", bounce: 0.25 }}  src='/assets/ginevar_logo_dark.png' alt='Ginevar dark logo' className='lg:w-[150px] w-[100px] object-fit' />
               </div>
-              <div className='relative col-span-1 flex content-end justify-end items-end lg:my-10 my-2'>
+              <motion.div initial={{scale:0}} animate={{scale:1}}  transition={{ type: "spring", bounce: 0.25 }}   className='relative col-span-1 flex content-end justify-end items-end lg:my-10 my-2'>
                 <p className='relative text-right text-white lg:text-[56px] text-[24px] leading-none'>
                   {t('home_hero_right_text_a', { ns: 'common'})} <br/>{t('home_hero_right_text_b', { ns: 'common'})}
               </p>
-              </div>
+              </motion.div>
             </div>
-        </div>
+        </motion.div>
 
         <div className='lg:mx-20 mx-10 lg:py-10 py-0'>
           <div className='grid lg:grid-cols-4 grid-cols-1 w-full py-10'>
             <div className='lg:col-span-3 col-span-1'>
-              <p className='text-white'>{t('home_mission_intro', { ns: 'common'})}</p>
+              <p className='text-white text-center md:text-start'>{t('home_mission_intro', { ns: 'common'})}</p>
             </div>
             <div className='lg:my-0 my-4 col-span-1 flex content-center items-center justify-center'>
             <Link href='/services/our-recipe' locale={locale}>
@@ -66,7 +62,7 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
 
           <div className='text-center lg:px-20'>
             <h2 className='text-white opacity-50 lg:text-[56px] text-[24px]'>{t('home_portfolio_made_by_ginevar', { ns: 'common'})}</h2>
-            <p className='text-white'><u>{t('home_portfolio_made_by_ginevar_subtitle', { ns: 'common'})} </u></p>
+            <p className='text-white my-4'><u>{t('home_portfolio_made_by_ginevar_subtitle', { ns: 'common'})} </u></p>
             <p className='text-white opacity-75'>{t('home_portfolio_made_by_ginevar_text', { ns: 'common'})}</p>
 
             <div className='sm:col-span-5 w-full col-span-1 fontedBebas lg:text-left text-center border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block my-10'>
@@ -184,60 +180,59 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
             </div>
       </div>
 
-      <div className='py-2 mb-4'>
-        <h1 className='lg:text-[56px] text-[32px] fontedBebas text-center text-white'>{t('home_what_we_do', { ns: 'common'})}</h1>
-            
+          <div className='py-2 mb-4'>
+            <h1 className='lg:text-[56px] text-[32px] fontedBebas text-center text-white'>{t('home_what_we_do', { ns: 'common'})}</h1>
           </div>
 
-          <div className='grid lg:grid-cols-3 grid-cols-1 w-full'>
-            <div className='transition duration-500 opacity-50 hover:opacity-100 col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
+          <div  className='grid lg:grid-cols-3 grid-cols-1 w-full'>
+            <motion.div  className='transition duration-500 opacity-50 hover:opacity-100 hover:cursor-default hover:text-[#FAFF00] hover:border-[#FAFF00]  col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
               <div className='my-auto'><p>{t('home_what_we_do_mobile_development', { ns: 'common'})}</p></div>
-            </div>
+            </motion.div>
 
-            <div className='transition duration-500 opacity-50 hover:opacity-100 col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
+            <motion.div  className='transition duration-500 opacity-50 hover:opacity-100 hover:cursor-default hover:text-[#FAFF00] hover:border-[#FAFF00]  col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
               <div className='my-auto'><p>{t('home_what_we_do_web_development', { ns: 'common'})}</p></div>
-            </div>
+            </motion.div>
 
-            <div className='transition duration-500 opacity-50 hover:opacity-100 col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
+            <motion.div  className='transition duration-500 opacity-50 hover:opacity-100 hover:cursor-default hover:text-[#FAFF00] hover:border-[#FAFF00]  col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
               <div className='my-auto'><p>{t('home_what_we_do_uiux_design', { ns: 'common'})}</p></div>
-            </div>
+            </motion.div>
           </div>
+
           <div className='grid lg:grid-cols-3 grid-cols-1 w-full lg:mt-10'>
-            <div className='transition duration-500 opacity-50 hover:opacity-100 col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
+            <motion.div  className='transition duration-500 opacity-50 hover:opacity-100 hover:cursor-default hover:text-[#FAFF00] hover:border-[#FAFF00]  col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
               <div className='my-auto'><p>{t('home_what_we_do_shopify', { ns: 'common'})}</p></div>
-            </div>
+            </motion.div>
 
-            <div className='transition duration-500 opacity-50 hover:opacity-100 col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
+            <motion.div  className='transition duration-500 opacity-50 hover:opacity-100 hover:cursor-default hover:text-[#FAFF00] hover:border-[#FAFF00]  col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
               <div className='my-auto'><p>{t('home_what_we_do_blockchain', { ns: 'common'})}</p></div>
-            </div>
+            </motion.div>
 
-            <div className='transition duration-500 opacity-50 hover:opacity-100 col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
+            <motion.div  className='transition duration-500 opacity-50 hover:opacity-100 hover:cursor-default hover:text-[#FAFF00] hover:border-[#FAFF00] col-span-1 lg:my-0 my-4 lg:h-[140px] h-[100px] lg:m-10 border-dashed border-[2px] border-white text-white flex content-center justify-center align-center'>
               <div className='my-auto'><p>{t('home_what_we_do_brand_identity', { ns: 'common'})}</p></div>
-            </div>
+            </motion.div>
           </div>
           
           <div className='w-full my-10'>
-            <div className='grid lg:grid-cols-2 grid-cols-1 w-[70%] mx-[15%]'>
-              <div className='col-span-1 flex justify-center content-center  my-4'>
-                <Link href='/services/our-recipe' locale={locale}>
-                  <div className='w-[200px]'>
-                  <Button textSize='text-[24px]' title={t('main_menu_item_services_our_recipe', { ns: 'common'})} light={true} />
-                  </div>
-                </Link>
-              </div>
-              <div className='col-span-1 flex justify-center content-center  my-4'>
-                <Link href='/services/solutions' locale={locale}>
-                  <div className='w-[200px]'>
-                  <Button textSize='text-[24px]' title={t('main_menu_item_services_solutions', { ns: 'common'})} light={true} />
-                  </div>
-                </Link>
+              <div className='grid lg:grid-cols-2 grid-cols-1 w-[70%] mx-[15%]'>
+                <div className='col-span-1 flex justify-center content-center  my-4'>
+                  <Link href='/services/our-recipe' locale={locale}>
+                    <div className='w-[200px]'>
+                    <Button textSize='text-[24px]' title={t('main_menu_item_services_our_recipe', { ns: 'common'})} light={true} />
+                    </div>
+                  </Link>
+                </div>
+                <div className='col-span-1 flex justify-center content-center  my-4'>
+                  <Link href='/services/solutions' locale={locale}>
+                    <div className='w-[200px]'>
+                    <Button textSize='text-[24px]' title={t('main_menu_item_services_solutions', { ns: 'common'})} light={true} />
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
 
           <div className='text-center lg:px-20'>
-            <h2 className='text-white lg:text-[56px] text-[24px]'>{t('blog_pre_latest_from', { ns: 'common'})}</h2>
-            <h2 className='text-white lg:text-[56px] text-[24px]'>{t('blog_pre_latest_from2', { ns: 'common'})}</h2>
+            <h2 className='text-white lg:text-[56px] text-[24px]'>{t('blog_pre_latest_from', { ns: 'common'})} {t('blog_pre_latest_from2', { ns: 'common'})}</h2>
 
             <div className='sm:col-span-5 w-full col-span-1 fontedBebas lg:text-left text-center border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
                     {
@@ -257,15 +252,15 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
                                         setBlogIndexSelected(index)
                                     }} key={index}>
                                     
-                                    <figure className={`relative w-full h-full transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0`}>
+                                    <figure className={`relative w-full h-full transition-all duration-300 cursor-pointer filter `}>
                                         
                                             <img src={item.image} alt={t(item.title, { ns: 'common'})} className='w-full h-full object-cover' />
                                         
                                         <figcaption className={`absolute px-8 py-4 text-lg bottom-0 bg-[#FFF238] transition duration-200  text-white hover:text-[#82A5F8] hover:bg-opacity-100 bg-opacity-75 w-full h-[140px] text-left`}>
                                         <div className='flex'> <img src={item.category.icon} className='w-6 h-6 mr-2' /> <p className={`line-clamp-1 text-black opacity-75 drop-shadow-[1px_1px_rgba(255,242,56,1)]`}>{t(item.category.title, {ns: 'common'})}</p></div>
                                         <Link href={`${item.externallink}`} target='_blank' locale={locale}>
-                                        <p className={`leading-none line-clamp-2 mt-0 text-[30px] drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(item.title, {ns: 'common'})}</p>
-                                        <p className='absolute bottom-0 text-[16px] text-black transition duration-200 opacity-50'>{item.date}</p>
+                                          <p className={`leading-none line-clamp-2 mt-0 text-[30px] text-black drop-shadow-[1px_1px_rgba(255,242,56,1)] transition duration-100`}>{t(item.title, {ns: 'common'})}</p>
+                                          <p className='absolute bottom-0 text-[16px] text-black transition duration-200 opacity-50'>{item.date}</p>
                                         </Link>
                                         <div></div>
                                     </figcaption>
@@ -301,7 +296,7 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
                     }
                 </div>
 
-            <div className='w-full flex content-center justify-center'>
+            <div className='w-full flex content-center justify-center my-4'>
               <Link href='https://medium.com/ginevar-labs' target='_blank'><div className='w-[140px]'>
                 <Button textSize='text-[22px]' light={true} title={'See all'} />
               </div></Link>
@@ -328,9 +323,9 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
 
 export const getServerSideProps = async (context: any) => {
   const { locale } = context;
-  const _blogs = await fetch('http://localhost:3000/api/engineeringblog')
+  const _blogs = await fetch('https://italinda.net/api/engineeringblog')
   const _blogData = await _blogs.json();
-  const _portfolioItems = await fetch('http://localhost:3000/api/portfolio')
+  const _portfolioItems = await fetch('https://italinda.net/api/portfolio')
   const _portfolioItemsData = await _portfolioItems.json();
 
   return {

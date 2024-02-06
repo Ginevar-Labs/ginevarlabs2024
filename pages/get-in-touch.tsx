@@ -1,11 +1,6 @@
-import ContactBox from '@/components/ContactBox';
-import EngineeringBlogBox from '@/components/EngineeringBlogBox';
+
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import HomeHero from '@/components/HomeHero';
-import HomeMessageBox from '@/components/HomeMessageBox';
-import ServiceOfferingBox from '@/components/ServiceOfferingBox';
-import TrustedByBox from '@/components/TrustedByBox';
 import { InferGetServerSidePropsType } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -15,6 +10,7 @@ import { initFlowbite } from 'flowbite';
 import Button from '@/components/Button';
 import Link from 'next/link';
 import { sendContact } from '@/services/contact';
+import {motion } from 'framer-motion'
 
 export default function Home({ locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
@@ -28,7 +24,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
 
   const submit = async() => {
     
-    let _result = await sendContact(contactEmail, 'Message from '+contactFullName+': '+contactFullName);
+    let _result = await sendContact(contactEmail, 'Message from '+contactFullName+': '+contactMessage);
     
     if(_result.id > 0) {
       alert(t('get_in_touch_sent', { ns: 'common'}))
@@ -41,13 +37,13 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
       <main
         className={`flex flex-col bg-[#1F1D1D] fontedBebas `}
       >
-      <div className='relative w-full h-[300px] flex justify-center items-center border-white border-dashed border-b-[2px]'>
+      <motion.div initial={{height:0}}  animate={{ height: "revert-layer" }}  transition={{ type: "spring", bounce: 0.25 }} className='relative w-full h-[300px] flex justify-center items-center border-white border-dashed border-b-[2px]'>
           <img className='absolute top-0 left-0 w-full h-full object-cover' src='/assets/banners/banner-4.png' alt='Ginevar - Banner'/>
           <div className='w-full h-full absolute top-0 left-0 bg-black opacity-50'/>
           <p className='relative text-center text-white text-[72px]'>
               {t('main_menu_item_get_in_touch', { ns: 'common'})}
           </p>
-      </div>
+      </motion.div>
       <div className='lg:px-20 px-10 py-10 '>
         <div className='grid lg:grid-cols-3 grid-cols-1'>
             <div className='lg:col-span-2 col-span-1'>
@@ -59,13 +55,13 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </p>
                 <div className='grid grid-cols-2 gap-1'>
                     <div className='col-span-1'>
-                    <input className='fontedBebas px-2 py-1 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-500 text-black placeholder-opacity-[0.25]' value={contactFullName} onChange={(e) => setContactFullName(e.target.value)} placeholder={t('get_in_touch_field_full_name', { ns: 'common'})} />
+                      <input className='fontedBebas p-4 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-900 text-black placeholder-opacity-[0.25]' value={contactFullName} onChange={(e) => setContactFullName(e.target.value)} placeholder={t('get_in_touch_field_full_name', { ns: 'common'})} />
                     </div>
                     <div className='col-span-1'>
-                    <input className='fontedBebas px-2 py-1 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-500 text-black placeholder-opacity-[0.25]' value={contactEmail} onChange={(e) => setContactEmail(e.target.value)} placeholder={t('get_in_touch_field_email', { ns: 'common'})} />
+                      <input className='fontedBebas p-4 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-900 text-black placeholder-opacity-[0.25]' value={contactEmail} onChange={(e) => setContactEmail(e.target.value)} placeholder={t('get_in_touch_field_email', { ns: 'common'})} />
                     </div>
                 </div>
-                <textarea rows={8} style={{resize: 'none'}} className='mt-1 fontedBebas px-2 py-1 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-500 text-black placeholder-opacity-[0.25]' value={contactMessage} onChange={(e) => setContactMessage(e.target.value)} placeholder={t('get_in_touch_field_message', { ns: 'common'})} />
+                <textarea rows={8} style={{resize: 'none'}} className='mt-1 fontedBebas p-4 leading-none w-full appearance-none bg-white border-none focus:outline-none focus:outline-non placeholder-gray-900 text-black placeholder-opacity-[0.25]' value={contactMessage} onChange={(e) => setContactMessage(e.target.value)} placeholder={t('get_in_touch_field_message', { ns: 'common'})} />
                 <div className='w-full'>
                     <div onClick={() => {
                       submit();
@@ -76,7 +72,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
             <h1 className='text-white drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[72px] text-[42px]'>
                     {t('get_in_touch_contact_us', { ns: 'common'})}
                 </h1>
-                <Link href='mailto:info@ginevar.com'>
+                <Link className='leading-[25px]' href='mailto:info@ginevar.com'>
                 <div className={`flex cursor-pointer group text-center bg-black text-white hover:text-[#FFF238] px-4 text-[14px] py-2 transition duration-500  drop-shadow-[0px_4px_rgba(255,242,56,0.25)] hover:drop-shadow-[4px_4px_rgba(255,242,56,1)]`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className='lg:w-6 lg:h-6 lg:bottom-0 bottom-4 w-6 h-6 mr-4 transition duration-200 fill-white group-hover:fill-[#FAFF00]' viewBox="0 0 79 78" fill="none">
                     <g clip-path="url(#clip0_296_404)">
@@ -90,7 +86,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                     </svg> info@ginevar.com
                 </div>
                 </Link><br/>
-                <Link href='mailto:careers@ginevar.com'>
+                <Link className='leading-[25px]' href='mailto:careers@ginevar.com'>
                 <div className={`flex cursor-pointer group text-center bg-black text-white hover:text-[#FFF238] px-4 text-[14px] py-2 transition duration-500  drop-shadow-[0px_4px_rgba(255,242,56,0.25)] hover:drop-shadow-[4px_4px_rgba(255,242,56,1)]`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className='lg:w-6 lg:h-6 lg:bottom-0 bottom-4 w-6 h-6 mr-4 transition duration-200 fill-white group-hover:fill-[#FAFF00]' viewBox="0 0 79 78" fill="none">
                     <g clip-path="url(#clip0_296_404)">

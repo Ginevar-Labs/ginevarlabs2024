@@ -1,19 +1,15 @@
-import ContactBox from '@/components/ContactBox';
-import EngineeringBlogBox from '@/components/EngineeringBlogBox';
+
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import HomeHero from '@/components/HomeHero';
-import HomeMessageBox from '@/components/HomeMessageBox';
-import ServiceOfferingBox from '@/components/ServiceOfferingBox';
-import TrustedByBox from '@/components/TrustedByBox';
 import { InferGetServerSidePropsType } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import 'flowbite';
 import { initFlowbite } from 'flowbite';
 import Link from 'next/link';
 import Button from '@/components/Button';
+import {motion, useScroll, useInView, useTransform, useMotionValueEvent } from 'framer-motion'
 
 export default function Home({ locale }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { t } = useTranslation();
@@ -26,9 +22,22 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
   const [buildingStageSelected, setBuildingStageSelected] = useState(1);
   const [triggerBuildingStageSelected, setTriggerBuildingStageSelected] = useState(false);
 
+  const [scrolled, setScrolled] = useState(false)
+
   useEffect(() => {
     initFlowbite();
   }, [])
+
+  const { scrollYProgress } = useScroll();
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if(latest>=0.1328) {
+        setScrolled(true)
+    } else {setScrolled(false)}
+  })
+  const scaleX = useTransform(scrollYProgress,[0, 0.625],[0.12, 1])
+
+  const ref = useRef(null)
+  const isInView = useInView(ref)
 
   return (
     <>
@@ -36,42 +45,43 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
       <main
         className={`flex flex-col bg-[#1F1D1D] fontedBebas `}
       >
-        <div className='relative w-full h-[300px] flex justify-center items-center border-white border-dashed border-b-[2px]'>
+        <motion.div initial={{height:0}}  animate={{ height: "revert-layer" }}  transition={{ type: "spring", bounce: 0.25 }} className='relative w-full h-[300px] flex justify-center items-center border-white border-dashed border-b-[2px] box-shadow-[4px_4px_rgba(255,242,56,1)]'>
             <img className='absolute top-0 left-0 w-full h-full object-cover' src='/assets/banners/banner-1.png' alt='Ginevar - Banner'/>
             <div className='w-full h-full absolute top-0 left-0 bg-black opacity-50'/>
             <p className='relative text-center text-white text-[72px]'>
                 {t('main_menu_item_services_our_recipe', { ns: 'common'})}
             </p>
-        </div>
-        <div className='lg:px-20 px-10 py-10'>
-            <h1 className='text-white drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[72px] text-[42px]'>
+        </motion.div>
+        <div className='lg:px-20 px-10 py-10 relative'>
+            <h1 ref={ref} className='text-white drop-shadow-[4px_4px_rgba(255,242,56,1)] lg:text-[72px] text-[42px]'>
                 {t('services_our_recipe_work_cycle', { ns: 'common'})}
             </h1>
-            <div className=' w-full lg:grid hidden grid-cols-7 text-white'>
-                <div className='col-span-1 px-4'>
-                    <p>{t('services_our_recipe_work_cycle_research', { ns: 'common'})}</p>
+            <motion.div id='containerTop' className={`py-[2em] ${isInView? "":"fixed"} bg-[#1F1D1D] z-50 w-[90vw]  top-0`}>
+                <div className=' w-full lg:grid hidden grid-cols-7 text-white'>
+                    <div className='col-span-1 px-4'>
+                        <p>{t('services_our_recipe_work_cycle_research', { ns: 'common'})}</p>
+                    </div>
+                    <div className='col-span-2 px-4'>
+                        <p>{t('services_our_recipe_work_cycle_brand_prototyping', { ns: 'common'})}</p>
+                    </div>
+                    <div className='col-span-2 px-4'>
+                        <p>{t('services_our_recipe_work_cycle_building', { ns: 'common'})}</p>
+                    </div>
+                    <div className='col-span-1 px-4'>
+                        <p>{t('services_our_recipe_work_cycle_testing', { ns: 'common'})}</p>
+                    </div>
+                    <div className='col-span-1 px-4'>
+                        <p>{t('services_our_recipe_work_cycle_launch', { ns: 'common'})}</p>
+                    </div>
                 </div>
-                <div className='col-span-2 px-4'>
-                    <p>{t('services_our_recipe_work_cycle_brand_prototyping', { ns: 'common'})}</p>
+                <div className='relative w-full mt-4'>
+                    <p className='invisible md:visible  lg:hidden text-white'>[Current status]</p>
+                    <div className='invisible md:visible w-full h-[5px] bg-[#FAFF00] opacity-25'/>
+                    <motion.div style={{ scaleX }} id='progressbar'/>
                 </div>
-                <div className='col-span-2 px-4'>
-                    <p>{t('services_our_recipe_work_cycle_building', { ns: 'common'})}</p>
-                </div>
-                <div className='col-span-1 px-4'>
-                    <p>{t('services_our_recipe_work_cycle_testing', { ns: 'common'})}</p>
-                </div>
-                <div className='col-span-1 px-4'>
-                    <p>{t('services_our_recipe_work_cycle_launch', { ns: 'common'})}</p>
-                </div>
-            </div>
-            <div className='relative w-full mt-4'>
-                <p className='lg:hidden text-white'>[Current status]</p>
-                <div className='w-full h-[5px] bg-[#FAFF00] opacity-25'/>
-                <div className='absolute bottom-0 left-0 w-[50%] h-[5px] bg-[#FAFF00] opacity-100'/>
-            </div>
-
-            <div>
-        <div className='flex'>
+            </motion.div>
+            <div >
+        <div className={`flex ${isInView? "":"mt-[9rem]"}`}>
             <div className='relative w-20'>
             <div className='h-[70%] '/>
                 <div className='h-[30%] w-full border-t-[2px] border-l-[2px] border-dashed border-white'/>
@@ -93,7 +103,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setResearchStageSelected(1)
                             setTriggerResearchStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
                         <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
                             <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>1</p>
                         </div>
@@ -106,7 +116,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setResearchStageSelected(2)
                             setTriggerResearchStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
                         <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
                         <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>2</p>
                         </div>
@@ -119,7 +129,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setResearchStageSelected(3)
                             setTriggerResearchStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
                         <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
                         <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>3</p>
                         </div>
@@ -132,7 +142,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setResearchStageSelected(4)
                             setTriggerResearchStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
                         <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
                         <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>4</p>
                         </div>
@@ -145,7 +155,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setResearchStageSelected(5)
                             setTriggerResearchStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
                         <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
                         <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>5</p>
                         </div>
@@ -204,8 +214,8 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setBrandStageSelected(1)
                             setTriggerBrandStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
-                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
+                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)] z-0'>
                             <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>1</p>
                         </div>
                         <p className='ml-4 mt-1 lg:text-[22px] text-[16px] transition duration-500 group-hover:text-[#FAFF00]'>{t('services_our_recipe_work_cycle_brand_stage_1', { ns: 'common'})}</p>
@@ -217,8 +227,8 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setBrandStageSelected(2)
                             setTriggerBrandStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
-                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
+                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)] z-0'>
                         <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>2</p>
                         </div>
                         <p className='ml-4 mt-1 lg:text-[22px] text-[16px] transition duration-500 group-hover:text-[#FAFF00]'>{t('services_our_recipe_work_cycle_brand_stage_2', { ns: 'common'})}</p>
@@ -230,8 +240,8 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setBrandStageSelected(3)
                             setTriggerBrandStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
-                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
+                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)] z-0'>
                         <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>3</p>
                         </div>
                         <p className='ml-4 mt-1 lg:text-[22px] text-[16px] transition duration-500 group-hover:text-[#FAFF00]'>{t('services_our_recipe_work_cycle_brand_stage_3', { ns: 'common'})}</p>
@@ -243,8 +253,8 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setBrandStageSelected(4)
                             setTriggerBrandStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
-                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
+                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)] z-0'>
                         <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>4</p>
                         </div>
                         <p className='ml-4 mt-1 lg:text-[22px] text-[16px] transition duration-500 group-hover:text-[#FAFF00]'>{t('services_our_recipe_work_cycle_brand_stage_4', { ns: 'common'})}</p>
@@ -293,8 +303,8 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setBuildingStageSelected(1)
                             setTriggerBuildingStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
-                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
+                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)] z-0'>
                             <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>1</p>
                         </div>
                         <p className='ml-4 mt-1 lg:text-[22px] text-[16px] transition duration-500 group-hover:text-[#FAFF00]'>{t('services_our_recipe_work_cycle_building_stage_1', { ns: 'common'})}</p>
@@ -306,8 +316,8 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                             setBuildingStageSelected(2)
                             setTriggerBuildingStageSelected(false);
                         }, 500)
-                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2'>
-                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
+                    }} className='cursor-pointer relative flex group lg:w-[70%] w-full my-2 z-0'>
+                        <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)] z-0'>
                         <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>2</p>
                         </div>
                         <p className='ml-4 mt-1 lg:text-[22px] text-[16px] transition duration-500 group-hover:text-[#FAFF00]'>{t('services_our_recipe_work_cycle_building_stage_2', { ns: 'common'})}</p>
@@ -356,7 +366,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 {t('services_our_recipe_work_cycle_launch_intro', { ns: 'common'})}
             </p>
 
-            <div className='relative flex group lg:w-[50%] w-full my-2'>
+            <div className='relative flex group lg:w-[50%] w-full my-2 z-0'>
                         <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
                             <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>1</p>
                         </div>
@@ -368,7 +378,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
             </p>
             <br/>
 
-            <div className='relative flex group lg:w-[50%] w-full my-2'>
+            <div className='relative flex group lg:w-[50%] w-full my-2 z-0'>
                         <div className='z-50 w-8 h-8 bg-black drop-shadow-[4px_4px_rgba(255,242,56,1)]'>
                             <p className='lg:text-[22px] text-[16px] lg:pt-0 pt-1 text-center transition duration-500 group-hover:text-[#FAFF00]'>2</p>
                         </div>
@@ -387,14 +397,14 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 Tech Stack
             </h1>
             <div className='grid lg:grid-cols-2 grid-cols-1 gap-4 text-white text-center'>
-                <div className='col-span-1 border-dashed border-[2px] border-white p-2'>
+                <motion.div className='col-span-1 border-dashed border-[2px] border-white p-2 hover:border-[#FAFF00] hover:text-[#FAFF00] transition ease-in-out delay-100'>
                     <p>Native Mobile Development</p>
                     <div className='w-full flex content-center justify-center py-10'>
                         <img src='/assets/icons/techstack/icon_swift.png' className='w-20 m-5' alt='Swift'/>
                         <img src='/assets/icons/techstack/icon_kotlin.png' className='w-20 m-5' alt='Kotlin'/>
                     </div>
-                </div>
-                <div className='col-span-1 border-dashed border-[2px] border-white p-2'>
+                </motion.div>
+                <div className='col-span-1 border-dashed border-[2px] border-white p-2 hover:border-[#FAFF00] hover:text-[#FAFF00] transition ease-in-out delay-100'>
                     <p>Cross Platform Mobile Development</p>
                     <div className='w-full flex content-center justify-center py-10'>
                         <img src='/assets/icons/techstack/icon_flutter.png' className='w-20 m-5' alt='Flutter'/>
@@ -403,7 +413,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </div>
             </div>
             <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 text-white text-center'>
-                <div className='lg:col-span-2 col-span-1 border-dashed border-[2px] border-white p-2 mt-10'>
+                <div className='lg:col-span-2 col-span-1 border-dashed border-[2px] border-white p-2 mt-10 hover:border-[#FAFF00] hover:text-[#FAFF00] transition ease-in-out delay-100'>
                     <p>Web and Blockchain</p>
                     <div className='w-full flex content-center justify-center py-5'>
                         <img src='/assets/icons/techstack/icon_solidity.png' className='lg:w-20 lg:h-20 w-10 h-10 lg:m-5 m-5' alt='Solidity'/>
@@ -418,7 +428,7 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                         <img src='/assets/icons/techstack/icon_python.png' className='lg:w-20 lg:h-20 w-10 h-10 lg:m-5 m-5'  alt='Python'/>
                     </div>
                 </div>
-                <div className='col-span-1 border-dashed border-[2px] border-white p-2 mt-10'>
+                <div className='col-span-1 border-dashed border-[2px] border-white p-2 mt-10 hover:border-[#FAFF00] hover:text-[#FAFF00] transition ease-in-out delay-100'>
                     <p>Shopify</p>
                     <div className='w-full flex content-center justify-center lg:py-5 py-2'>
                         <img src='/assets/icons/techstack/icon_shopify.png'className='lg:w-20 lg:h-20 w-10 h-10 lg:m-5 m-5'  alt='Shopify'/>
