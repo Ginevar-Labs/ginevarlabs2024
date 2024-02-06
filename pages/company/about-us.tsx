@@ -63,9 +63,10 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
             <div className='w-full mt-10 grid lg:grid-cols-6 grid-cols-2 w-full lg:px-25 2xl:px-40 px-0 fontedBebas my-0'>
                 <div className='col-span-2 text-justify lg:px-10 text-white'>
                     <div className='lg:m-0 m-10 mt-0 mb-2 border-dashed border-[1px] border-white aspect-square'>
+                        <img className='w-full h-full object-cover' src='/assets/yo.png'/>
 
                     </div>
-                    <p className=' text-center lg:text-[22px] text-[16px]'>Nicolas Curti</p>
+                    <p className=' text-center lg:text-[22px] text-[16px] mt-2'>Nicolas Curti</p>
                     <p className=' text-center lg:text-[22px] text-[16px]'>{t('about_position_nico', { ns: 'common'})}</p>
                     <div className='w-full flex w-full lg:my-0 my-6'>
                     <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
@@ -78,9 +79,9 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </div>
                 <div className='col-span-2 text-justify lg:px-10 text-white'>
                     <div className='lg:m-0 m-10 mt-0 mb-2 border-dashed border-[1px] border-white aspect-square'>
-
+                        <img className='w-full h-full ' src='/assets/j2.png'/>
                     </div>
-                    <p className=' text-center lg:text-[22px] text-[16px]'>Juan Manuel Curti</p>
+                    <p className=' text-center lg:text-[22px] text-[16px] mt-2'>Juan Manuel Curti</p>
                     <p className=' text-center lg:text-[22px] text-[16px]'>{t('about_position_juan', { ns: 'common'})}</p>
                     <div className='flex lg:my-0 my-6'>
                                     <ul id='comunidad-bts' className='w-full h-full lg:scale-50 '>
@@ -96,9 +97,10 @@ export default function Home({ locale }: InferGetServerSidePropsType<typeof getS
                 </div>
                 <div className='col-span-2 text-justify lg:px-10 text-white'>
                     <div className='lg:m-0 m-10 mt-0 mb-2 border-dashed border-[1px] border-white aspect-square'>
+                        <img className='w-full h-full object-cover' src='/assets/lavi.png'/>
 
                     </div>
-                    <p className=' text-center lg:text-[22px] text-[16px]'>Lavinia Poggi</p>
+                    <p className=' text-center lg:text-[22px] text-[16px] mt-2'>Lavinia Poggi</p>
                     <p className=' text-center lg:text-[22px] text-[16px]'>{t('about_position_lavi', { ns: 'common'})}</p>
                     <div className='flex lg:my-0 my-6'>
                     <ul id='comunidad-bts' className='w-full h-full lg:scale-50 scale-50]'>
