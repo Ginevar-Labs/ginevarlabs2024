@@ -324,16 +324,16 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
 export const getServerSideProps = async (context: any) => {
   const { locale } = context;
   const _blogs = await fetch('https://italinda.net/api/engineeringblog')
-  const _blogData = await _blogs.json();
-  const _portfolioItems = await fetch('https://italinda.net/api/portfolio')
-  const _portfolioItemsData = await _portfolioItems.json();
+    const _blogData = await _blogs.json();
+    const _portfolioItems = await fetch('https://italinda.net/api/portfolio')
+    const _portfolioItemsData = await _portfolioItems.json();
 
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-      blog: _blogData,
-      portfolioItems: _portfolioItemsData,
-      locale: locale
-    },
-  };
+    return {
+      props: {
+        ...(await serverSideTranslations(locale, ['common'])),
+        blog: _blogData,
+        portfolioItems: _portfolioItemsData,
+        locale: locale
+      },
+    };
 };
