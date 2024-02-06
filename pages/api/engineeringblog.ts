@@ -69,29 +69,29 @@ export default function handler(
         _categoryBusinessDevelopment
     ],
     posts: [
-        {
-            title: "eb-0test-title",
-            category: _categoryIosDevelopment,
-            date: '17/01/2024',
-            image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*cZpzFkhsMFQoW2f4",
-            externallink: 'https://juancurti.medium.com/how-to-build-a-chrome-extension-to-analyze-text-as-you-write-a1c0ab1923f9'
-        },
+        // {
+        //     title: "eb-0test-title",
+        //     category: _categoryIosDevelopment,
+        //     date: '17/01/2024',
+        //     image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*cZpzFkhsMFQoW2f4",
+        //     externallink: 'https://juancurti.medium.com/how-to-build-a-chrome-extension-to-analyze-text-as-you-write-a1c0ab1923f9'
+        // },
 
-        {
-            title: "eb-1test-title",
-            category: _categoryUiDevelopment,
-            date: '10/01/2024',
-            image: "/assets/blog/eb-1test.png",
-            externallink: 'https://medium.com'
-        },
+        // {
+        //     title: "eb-1test-title",
+        //     category: _categoryUiDevelopment,
+        //     date: '10/01/2024',
+        //     image: "/assets/blog/eb-1test.png",
+        //     externallink: 'https://medium.com'
+        // },
 
-        {
-            title: "eb-2test-title",
-            category: _categoryBusinessDevelopment,
-            date: '02/01/2024',
-            image: "/assets/blog/eb-2test.png",
-            externallink: 'https://medium.com'
-        },
+        // {
+        //     title: "eb-2test-title",
+        //     category: _categoryBusinessDevelopment,
+        //     date: '02/01/2024',
+        //     image: "/assets/blog/eb-2test.png",
+        //     externallink: 'https://medium.com'
+        // },
       ]
   })
 }

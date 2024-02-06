@@ -237,7 +237,7 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
             <div className='sm:col-span-5 w-full col-span-1 fontedBebas lg:text-left text-center border-dashed lg:border-[2px] border-[0px] border-gray-800 inline-block'>
                     {
                         blog.posts.length == 0 ? <div className='lg:h-[300px] h-[100px] text-center flex justify-center items-center'>
-                            <p>{t('blog_pre_null', { ns: 'common'})}</p>
+                            <p className='text-white'>{t('blog_pre_null', { ns: 'common'})}</p>
                         </div> : null
                     }
                     {
@@ -323,9 +323,9 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
 
 export const getServerSideProps = async (context: any) => {
   const { locale } = context;
-  const _blogs = await fetch('https://italinda.net/api/engineeringblog')
+  const _blogs = await fetch('http://localhost:3000/api/engineeringblog')
     const _blogData = await _blogs.json();
-    const _portfolioItems = await fetch('https://italinda.net/api/portfolio')
+    const _portfolioItems = await fetch('http://localhost:3000/api/portfolio')
     const _portfolioItemsData = await _portfolioItems.json();
 
     return {

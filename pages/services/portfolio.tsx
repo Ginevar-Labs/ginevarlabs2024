@@ -48,7 +48,7 @@ export const getServerSideProps = async (context: any) => {
   const { locale } = context;
 
 
-  const _portfolioItems = await fetch('https://italinda.net/api/portfolio')
+  const _portfolioItems = await fetch('http://localhost:3000/api/portfolio')
   const _portfolioItemsData = await _portfolioItems.json();
 
   return {
