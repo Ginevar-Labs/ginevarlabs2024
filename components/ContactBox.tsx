@@ -164,7 +164,7 @@ export default function ContactBox(props: ContactBoxProps) {
             </div>
             <div className='w-full'>
                 <div className='mx-auto w-[200px] my-4 fontedBebas'>
-                    <Button title={t('contact_box_send_now', { ns: 'common'})}/>
+                    <Button light={true} title={t('contact_box_send_now', { ns: 'common'})}/>
                 </div>
             </div>
         </div>

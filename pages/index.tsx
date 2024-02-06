@@ -321,7 +321,7 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
 
       </main>
       <Footer currentPage='home' locale={locale}/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js" async></script>
     </>
   )
 }

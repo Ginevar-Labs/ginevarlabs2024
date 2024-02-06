@@ -60,7 +60,7 @@ export default function Home({ portfolioItems, locale }: InferGetServerSideProps
         
       </main>
       <Footer currentPage='services' locale={locale}/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js" async></script>
     </>
   )
 }
