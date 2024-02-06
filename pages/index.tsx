@@ -322,10 +322,10 @@ export default function Home({ blog, portfolioItems, locale }: InferGetServerSid
 }
 
 export const getServerSideProps = async (context: any) => {
-  const { locale } = context;
-  const _blogs = await fetch('http://localhost:3000/api/engineeringblog')
+  const { locale, req } = context;
+  const _blogs = await fetch(`http://${req.headers.host}/api/engineeringblog`)
     const _blogData = await _blogs.json();
-    const _portfolioItems = await fetch('http://localhost:3000/api/portfolio')
+    const _portfolioItems = await fetch(`http://${req.headers.host}/api/portfolio`)
     const _portfolioItemsData = await _portfolioItems.json();
 
     return {

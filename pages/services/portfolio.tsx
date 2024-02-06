@@ -45,10 +45,10 @@ export default function Home({ portfolioItems, locale }: InferGetServerSideProps
 }
 
 export const getServerSideProps = async (context: any) => {
-  const { locale } = context;
+  const { locale, req } = context;
 
 
-  const _portfolioItems = await fetch('http://localhost:3000/api/portfolio')
+  const _portfolioItems = await fetch(`http://${req.headers.host}/api/portfolio`)
   const _portfolioItemsData = await _portfolioItems.json();
 
   return {
